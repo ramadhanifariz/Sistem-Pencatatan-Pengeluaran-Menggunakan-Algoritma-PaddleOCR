@@ -1,0 +1,136 @@
+{
+  "filename": "receipt_00240.png",
+  "folder": "train",
+  "processed_path": "data\\processed\\processed_train_receipt_00240.jpg",
+  "original_path": "data\\raw\\train\\image\\receipt_00240.png",
+  "extracted_data": [
+    {
+      "text": "RB0006RBAbon Sagi",
+      "confidence": 0.862571656703949,
+      "bbox": [
+        [
+          32.0,
+          562.0
+        ],
+        [
+          491.0,
+          590.0
+        ],
+        [
+          488.0,
+          640.0
+        ],
+        [
+          29.0,
+          612.0
+        ]
+      ]
+    },
+    {
+      "text": "9.000",
+      "confidence": 0.7915294170379639,
+      "bbox": [
+        [
+          456.0,
+          647.0
+        ],
+        [
+          576.0,
+          647.0
+        ],
+        [
+          576.0,
+          703.0
+        ],
+        [
+          456.0,
+          703.0
+        ]
+      ]
+    },
+    {
+      "text": "9.000",
+      "confidence": 0.9780489802360535,
+      "bbox": [
+        [
+          725.0,
+          657.0
+        ],
+        [
+          838.0,
+          662.0
+        ],
+        [
+          835.0,
+          715.0
+        ],
+        [
+          723.0,
+          709.0
+        ]
+      ]
+    },
+    {
+      "text": "Total",
+      "confidence": 0.9281236529350281,
+      "bbox": [
+        [
+          460.0,
+          772.0
+        ],
+        [
+          568.0,
+          776.0
+        ],
+        [
+          566.0,
+          828.0
+        ],
+        [
+          458.0,
+          824.0
+        ]
+      ]
+    },
+    {
+      "text": "9.000",
+      "confidence": 0.9421914219856262,
+      "bbox": [
+        [
+          713.0,
+          783.0
+        ],
+        [
+          824.0,
+          783.0
+        ],
+        [
+          824.0,
+          836.0
+        ],
+        [
+          713.0,
+          836.0
+        ]
+      ]
+    }
+  ],
+  "parsed_data": {
+    "items": [
+      {
+        "name": "Total",
+        "quantity": 0,
+        "price": 9000.0,
+        "total": 0.0
+      }
+    ],
+    "total": 9000.0,
+    "tax": null,
+    "discount": null,
+    "cash": null,
+    "change": null,
+    "subtotal": null,
+    "service_charge": null
+  },
+  "timestamp": "2026-04-24T22:02:35.625930"
+}

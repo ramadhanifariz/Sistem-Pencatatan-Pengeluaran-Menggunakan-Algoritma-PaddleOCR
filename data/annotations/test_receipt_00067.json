@@ -1,0 +1,85 @@
+{
+  "filename": "receipt_00067.png",
+  "folder": "test",
+  "processed_path": "data\\processed\\processed_test_receipt_00067.jpg",
+  "original_path": "data\\raw\\test\\image\\receipt_00067.png",
+  "extracted_data": [
+    {
+      "text": "cotal",
+      "confidence": 0.6405969858169556,
+      "bbox": [
+        [
+          159.0,
+          910.0
+        ],
+        [
+          212.0,
+          910.0
+        ],
+        [
+          212.0,
+          934.0
+        ],
+        [
+          159.0,
+          934.0
+        ]
+      ]
+    },
+    {
+      "text": "0",
+      "confidence": 0.5808877348899841,
+      "bbox": [
+        [
+          485.0,
+          911.0
+        ],
+        [
+          588.0,
+          911.0
+        ],
+        [
+          588.0,
+          942.0
+        ],
+        [
+          485.0,
+          942.0
+        ]
+      ]
+    },
+    {
+      "text": "as",
+      "confidence": 0.9438410997390747,
+      "bbox": [
+        [
+          165.0,
+          940.0
+        ],
+        [
+          190.0,
+          940.0
+        ],
+        [
+          190.0,
+          959.0
+        ],
+        [
+          165.0,
+          959.0
+        ]
+      ]
+    }
+  ],
+  "parsed_data": {
+    "items": [],
+    "total": null,
+    "tax": null,
+    "discount": null,
+    "cash": null,
+    "change": null,
+    "subtotal": null,
+    "service_charge": null
+  },
+  "timestamp": "2026-04-24T22:21:14.827804"
+}

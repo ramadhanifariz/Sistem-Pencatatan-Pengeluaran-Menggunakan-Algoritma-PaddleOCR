@@ -1,0 +1,107 @@
+{
+  "filename": "receipt_00064.png",
+  "folder": "test",
+  "processed_path": "data\\processed\\processed_test_receipt_00064.jpg",
+  "original_path": "data\\raw\\test\\image\\receipt_00064.png",
+  "extracted_data": [
+    {
+      "text": "TOTAL",
+      "confidence": 0.9169681668281555,
+      "bbox": [
+        [
+          161.0,
+          699.0
+        ],
+        [
+          295.0,
+          808.0
+        ],
+        [
+          223.0,
+          896.0
+        ],
+        [
+          89.0,
+          787.0
+        ]
+      ]
+    },
+    {
+      "text": "CAREND",
+      "confidence": 0.6887876391410828,
+      "bbox": [
+        [
+          29.0,
+          824.0
+        ],
+        [
+          126.0,
+          735.0
+        ],
+        [
+          280.0,
+          905.0
+        ],
+        [
+          183.0,
+          993.0
+        ]
+      ]
+    },
+    {
+      "text": "CHANGE",
+      "confidence": 0.8642570972442627,
+      "bbox": [
+        [
+          42.0,
+          827.0
+        ],
+        [
+          220.0,
+          948.0
+        ],
+        [
+          160.0,
+          1038.0
+        ],
+        [
+          0.0,
+          917.0
+        ]
+      ]
+    },
+    {
+      "text": "16.000",
+      "confidence": 0.9259943962097168,
+      "bbox": [
+        [
+          540.0,
+          915.0
+        ],
+        [
+          707.0,
+          1028.0
+        ],
+        [
+          652.0,
+          1109.0
+        ],
+        [
+          485.0,
+          996.0
+        ]
+      ]
+    }
+  ],
+  "parsed_data": {
+    "items": [],
+    "total": null,
+    "tax": null,
+    "discount": null,
+    "cash": null,
+    "change": 16000.0,
+    "subtotal": null,
+    "service_charge": null
+  },
+  "timestamp": "2026-04-24T22:21:06.001301"
+}

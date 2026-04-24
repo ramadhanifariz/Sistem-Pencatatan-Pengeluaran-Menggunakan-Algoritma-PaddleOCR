@@ -1,0 +1,114 @@
+{
+  "filename": "receipt_00074.png",
+  "folder": "train",
+  "processed_path": "data\\processed\\processed_train_receipt_00074.jpg",
+  "original_path": "data\\raw\\train\\image\\receipt_00074.png",
+  "extracted_data": [
+    {
+      "text": "TOTAL",
+      "confidence": 0.9968823194503784,
+      "bbox": [
+        [
+          170.0,
+          388.0
+        ],
+        [
+          264.0,
+          395.0
+        ],
+        [
+          261.0,
+          441.0
+        ],
+        [
+          167.0,
+          434.0
+        ]
+      ]
+    },
+    {
+      "text": "26,000",
+      "confidence": 0.9541347622871399,
+      "bbox": [
+        [
+          347.0,
+          398.0
+        ],
+        [
+          464.0,
+          403.0
+        ],
+        [
+          462.0,
+          450.0
+        ],
+        [
+          345.0,
+          445.0
+        ]
+      ]
+    },
+    {
+      "text": "CHANGE",
+      "confidence": 0.9958375096321106,
+      "bbox": [
+        [
+          166.0,
+          446.0
+        ],
+        [
+          277.0,
+          449.0
+        ],
+        [
+          276.0,
+          491.0
+        ],
+        [
+          165.0,
+          488.0
+        ]
+      ]
+    },
+    {
+      "text": "74.000",
+      "confidence": 0.8466015458106995,
+      "bbox": [
+        [
+          347.0,
+          450.0
+        ],
+        [
+          461.0,
+          457.0
+        ],
+        [
+          458.0,
+          505.0
+        ],
+        [
+          344.0,
+          498.0
+        ]
+      ]
+    }
+  ],
+  "parsed_data": {
+    "items": [
+      {
+        "name": "CHANGE",
+        "quantity": 0,
+        "price": 74000.0,
+        "total": 0.0
+      }
+    ],
+    "total": null,
+    "tax": null,
+    "discount": null,
+    "cash": null,
+    "change": 74000.0,
+    "subtotal": null,
+    "service_charge": null
+  },
+  "timestamp": "2026-04-24T21:49:09.999123"
+}

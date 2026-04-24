@@ -1,0 +1,41 @@
+{
+  "filename": "receipt_00079.png",
+  "folder": "train",
+  "processed_path": "data\\processed\\processed_train_receipt_00079.jpg",
+  "original_path": "data\\raw\\train\\image\\receipt_00079.png",
+  "extracted_data": [
+    {
+      "text": "QARA",
+      "confidence": 0.6993147134780884,
+      "bbox": [
+        [
+          133.0,
+          116.0
+        ],
+        [
+          383.0,
+          92.0
+        ],
+        [
+          393.0,
+          198.0
+        ],
+        [
+          143.0,
+          222.0
+        ]
+      ]
+    }
+  ],
+  "parsed_data": {
+    "items": [],
+    "total": null,
+    "tax": null,
+    "discount": null,
+    "cash": null,
+    "change": null,
+    "subtotal": null,
+    "service_charge": null
+  },
+  "timestamp": "2026-04-24T21:49:23.882063"
+}

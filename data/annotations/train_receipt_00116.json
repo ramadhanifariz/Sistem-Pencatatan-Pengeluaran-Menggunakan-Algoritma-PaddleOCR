@@ -1,0 +1,151 @@
+{
+  "filename": "receipt_00116.png",
+  "folder": "train",
+  "processed_path": "data\\processed\\processed_train_receipt_00116.jpg",
+  "original_path": "data\\raw\\train\\image\\receipt_00116.png",
+  "extracted_data": [
+    {
+      "text": "AST",
+      "confidence": 0.5055775046348572,
+      "bbox": [
+        [
+          748.0,
+          239.0
+        ],
+        [
+          787.0,
+          229.0
+        ],
+        [
+          807.0,
+          304.0
+        ],
+        [
+          768.0,
+          315.0
+        ]
+      ]
+    },
+    {
+      "text": "Direpes",
+      "confidence": 0.7965621948242188,
+      "bbox": [
+        [
+          764.0,
+          358.0
+        ],
+        [
+          834.0,
+          358.0
+        ],
+        [
+          834.0,
+          562.0
+        ],
+        [
+          764.0,
+          562.0
+        ]
+      ]
+    },
+    {
+      "text": "Dr",
+      "confidence": 0.6324430704116821,
+      "bbox": [
+        [
+          752.0,
+          646.0
+        ],
+        [
+          864.0,
+          634.0
+        ],
+        [
+          923.0,
+          1176.0
+        ],
+        [
+          812.0,
+          1188.0
+        ]
+      ]
+    },
+    {
+      "text": "OCurelOnanse",
+      "confidence": 0.5799626111984253,
+      "bbox": [
+        [
+          199.0,
+          818.0
+        ],
+        [
+          508.0,
+          822.0
+        ],
+        [
+          508.0,
+          870.0
+        ],
+        [
+          198.0,
+          866.0
+        ]
+      ]
+    },
+    {
+      "text": "Subotal:",
+      "confidence": 0.8312784433364868,
+      "bbox": [
+        [
+          461.0,
+          902.0
+        ],
+        [
+          631.0,
+          902.0
+        ],
+        [
+          631.0,
+          952.0
+        ],
+        [
+          461.0,
+          952.0
+        ]
+      ]
+    },
+    {
+      "text": "Potale",
+      "confidence": 0.6305257678031921,
+      "bbox": [
+        [
+          449.0,
+          1034.0
+        ],
+        [
+          594.0,
+          1034.0
+        ],
+        [
+          594.0,
+          1114.0
+        ],
+        [
+          449.0,
+          1114.0
+        ]
+      ]
+    }
+  ],
+  "parsed_data": {
+    "items": [],
+    "total": null,
+    "tax": null,
+    "discount": null,
+    "cash": null,
+    "change": null,
+    "subtotal": null,
+    "service_charge": null
+  },
+  "timestamp": "2026-04-24T21:52:01.490137"
+}

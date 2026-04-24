@@ -1,0 +1,114 @@
+{
+  "filename": "receipt_00338.png",
+  "folder": "train",
+  "processed_path": "data\\processed\\processed_train_receipt_00338.jpg",
+  "original_path": "data\\raw\\train\\image\\receipt_00338.png",
+  "extracted_data": [
+    {
+      "text": "THAI TEA",
+      "confidence": 0.9585541486740112,
+      "bbox": [
+        [
+          61.0,
+          545.0
+        ],
+        [
+          227.0,
+          545.0
+        ],
+        [
+          227.0,
+          585.0
+        ],
+        [
+          61.0,
+          585.0
+        ]
+      ]
+    },
+    {
+      "text": "22.000",
+      "confidence": 0.9830982685089111,
+      "bbox": [
+        [
+          398.0,
+          541.0
+        ],
+        [
+          548.0,
+          543.0
+        ],
+        [
+          548.0,
+          587.0
+        ],
+        [
+          398.0,
+          585.0
+        ]
+      ]
+    },
+    {
+      "text": "CASH",
+      "confidence": 0.9874275922775269,
+      "bbox": [
+        [
+          61.0,
+          582.0
+        ],
+        [
+          150.0,
+          582.0
+        ],
+        [
+          150.0,
+          621.0
+        ],
+        [
+          61.0,
+          621.0
+        ]
+      ]
+    },
+    {
+      "text": "22.000",
+      "confidence": 0.9367709159851074,
+      "bbox": [
+        [
+          304.0,
+          577.0
+        ],
+        [
+          542.0,
+          581.0
+        ],
+        [
+          542.0,
+          621.0
+        ],
+        [
+          304.0,
+          617.0
+        ]
+      ]
+    }
+  ],
+  "parsed_data": {
+    "items": [
+      {
+        "name": "CASH",
+        "quantity": 0,
+        "price": 22000.0,
+        "total": 0.0
+      }
+    ],
+    "total": null,
+    "tax": null,
+    "discount": null,
+    "cash": 22000.0,
+    "change": null,
+    "subtotal": null,
+    "service_charge": null
+  },
+  "timestamp": "2026-04-24T22:10:30.216970"
+}

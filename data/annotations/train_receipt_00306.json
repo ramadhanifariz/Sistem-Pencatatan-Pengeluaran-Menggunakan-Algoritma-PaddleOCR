@@ -1,0 +1,114 @@
+{
+  "filename": "receipt_00306.png",
+  "folder": "train",
+  "processed_path": "data\\processed\\processed_train_receipt_00306.jpg",
+  "original_path": "data\\raw\\train\\image\\receipt_00306.png",
+  "extracted_data": [
+    {
+      "text": "TCP SUEFTAJASMINE GREENTE",
+      "confidence": 0.7742184996604919,
+      "bbox": [
+        [
+          42.0,
+          340.0
+        ],
+        [
+          370.0,
+          345.0
+        ],
+        [
+          370.0,
+          373.0
+        ],
+        [
+          42.0,
+          368.0
+        ]
+      ]
+    },
+    {
+      "text": "272",
+      "confidence": 0.6551200747489929,
+      "bbox": [
+        [
+          484.0,
+          548.0
+        ],
+        [
+          555.0,
+          548.0
+        ],
+        [
+          555.0,
+          581.0
+        ],
+        [
+          484.0,
+          581.0
+        ]
+      ]
+    },
+    {
+      "text": "Total",
+      "confidence": 0.8661577105522156,
+      "bbox": [
+        [
+          137.0,
+          613.0
+        ],
+        [
+          229.0,
+          617.0
+        ],
+        [
+          227.0,
+          676.0
+        ],
+        [
+          135.0,
+          672.0
+        ]
+      ]
+    },
+    {
+      "text": "30.000",
+      "confidence": 0.9263737797737122,
+      "bbox": [
+        [
+          444.0,
+          617.0
+        ],
+        [
+          558.0,
+          614.0
+        ],
+        [
+          560.0,
+          678.0
+        ],
+        [
+          446.0,
+          681.0
+        ]
+      ]
+    }
+  ],
+  "parsed_data": {
+    "items": [
+      {
+        "name": "Total",
+        "quantity": 272,
+        "price": 30000.0,
+        "total": 8160000.0
+      }
+    ],
+    "total": 30000.0,
+    "tax": null,
+    "discount": null,
+    "cash": null,
+    "change": null,
+    "subtotal": null,
+    "service_charge": null
+  },
+  "timestamp": "2026-04-24T22:07:22.024319"
+}

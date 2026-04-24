@@ -1,0 +1,63 @@
+{
+  "filename": "receipt_00066.png",
+  "folder": "test",
+  "processed_path": "data\\processed\\processed_test_receipt_00066.jpg",
+  "original_path": "data\\raw\\test\\image\\receipt_00066.png",
+  "extracted_data": [
+    {
+      "text": "0.0007",
+      "confidence": 0.8280351161956787,
+      "bbox": [
+        [
+          545.0,
+          751.0
+        ],
+        [
+          684.0,
+          755.0
+        ],
+        [
+          682.0,
+          817.0
+        ],
+        [
+          544.0,
+          814.0
+        ]
+      ]
+    },
+    {
+      "text": "50.000",
+      "confidence": 0.6265592575073242,
+      "bbox": [
+        [
+          552.0,
+          956.0
+        ],
+        [
+          683.0,
+          965.0
+        ],
+        [
+          678.0,
+          1032.0
+        ],
+        [
+          547.0,
+          1022.0
+        ]
+      ]
+    }
+  ],
+  "parsed_data": {
+    "items": [],
+    "total": null,
+    "tax": null,
+    "discount": null,
+    "cash": null,
+    "change": null,
+    "subtotal": null,
+    "service_charge": null
+  },
+  "timestamp": "2026-04-24T22:21:12.304908"
+}

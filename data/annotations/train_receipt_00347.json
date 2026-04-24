@@ -1,0 +1,85 @@
+{
+  "filename": "receipt_00347.png",
+  "folder": "train",
+  "processed_path": "data\\processed\\processed_train_receipt_00347.jpg",
+  "original_path": "data\\raw\\train\\image\\receipt_00347.png",
+  "extracted_data": [
+    {
+      "text": "Ces",
+      "confidence": 0.5481427311897278,
+      "bbox": [
+        [
+          415.0,
+          969.0
+        ],
+        [
+          466.0,
+          957.0
+        ],
+        [
+          473.0,
+          988.0
+        ],
+        [
+          422.0,
+          999.0
+        ]
+      ]
+    },
+    {
+      "text": "347,655",
+      "confidence": 0.9179733991622925,
+      "bbox": [
+        [
+          674.0,
+          1000.0
+        ],
+        [
+          880.0,
+          987.0
+        ],
+        [
+          883.0,
+          1029.0
+        ],
+        [
+          677.0,
+          1042.0
+        ]
+      ]
+    },
+    {
+      "text": "TOTAL",
+      "confidence": 0.9455274343490601,
+      "bbox": [
+        [
+          363.0,
+          1010.0
+        ],
+        [
+          504.0,
+          1005.0
+        ],
+        [
+          505.0,
+          1054.0
+        ],
+        [
+          365.0,
+          1059.0
+        ]
+      ]
+    }
+  ],
+  "parsed_data": {
+    "items": [],
+    "total": null,
+    "tax": null,
+    "discount": null,
+    "cash": null,
+    "change": null,
+    "subtotal": null,
+    "service_charge": null
+  },
+  "timestamp": "2026-04-24T22:11:30.446585"
+}

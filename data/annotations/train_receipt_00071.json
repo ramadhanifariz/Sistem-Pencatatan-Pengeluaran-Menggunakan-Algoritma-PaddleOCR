@@ -1,0 +1,41 @@
+{
+  "filename": "receipt_00071.png",
+  "folder": "train",
+  "processed_path": "data\\processed\\processed_train_receipt_00071.jpg",
+  "original_path": "data\\raw\\train\\image\\receipt_00071.png",
+  "extracted_data": [
+    {
+      "text": "HI STEPS TO YOUR POOD JOURNEY",
+      "confidence": 0.8758801817893982,
+      "bbox": [
+        [
+          184.0,
+          465.0
+        ],
+        [
+          224.0,
+          466.0
+        ],
+        [
+          212.0,
+          982.0
+        ],
+        [
+          171.0,
+          981.0
+        ]
+      ]
+    }
+  ],
+  "parsed_data": {
+    "items": [],
+    "total": null,
+    "tax": null,
+    "discount": null,
+    "cash": null,
+    "change": null,
+    "subtotal": null,
+    "service_charge": null
+  },
+  "timestamp": "2026-04-24T21:49:02.224251"
+}

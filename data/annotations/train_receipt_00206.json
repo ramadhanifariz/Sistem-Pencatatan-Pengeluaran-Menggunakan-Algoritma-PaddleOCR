@@ -1,0 +1,41 @@
+{
+  "filename": "receipt_00206.png",
+  "folder": "train",
+  "processed_path": "data\\processed\\processed_train_receipt_00206.jpg",
+  "original_path": "data\\raw\\train\\image\\receipt_00206.png",
+  "extracted_data": [
+    {
+      "text": "AFUNGAFUNG",
+      "confidence": 0.9888884425163269,
+      "bbox": [
+        [
+          497.0,
+          134.0
+        ],
+        [
+          551.0,
+          129.0
+        ],
+        [
+          575.0,
+          514.0
+        ],
+        [
+          529.0,
+          519.0
+        ]
+      ]
+    }
+  ],
+  "parsed_data": {
+    "items": [],
+    "total": null,
+    "tax": null,
+    "discount": null,
+    "cash": null,
+    "change": null,
+    "subtotal": null,
+    "service_charge": null
+  },
+  "timestamp": "2026-04-24T22:00:14.453011"
+}

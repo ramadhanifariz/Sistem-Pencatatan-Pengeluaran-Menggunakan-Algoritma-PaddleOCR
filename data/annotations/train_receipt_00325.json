@@ -1,0 +1,41 @@
+{
+  "filename": "receipt_00325.png",
+  "folder": "train",
+  "processed_path": "data\\processed\\processed_train_receipt_00325.jpg",
+  "original_path": "data\\raw\\train\\image\\receipt_00325.png",
+  "extracted_data": [
+    {
+      "text": "TOTAA",
+      "confidence": 0.7933136820793152,
+      "bbox": [
+        [
+          152.0,
+          820.0
+        ],
+        [
+          331.0,
+          824.0
+        ],
+        [
+          330.0,
+          879.0
+        ],
+        [
+          151.0,
+          876.0
+        ]
+      ]
+    }
+  ],
+  "parsed_data": {
+    "items": [],
+    "total": null,
+    "tax": null,
+    "discount": null,
+    "cash": null,
+    "change": null,
+    "subtotal": null,
+    "service_charge": null
+  },
+  "timestamp": "2026-04-24T22:09:10.860943"
+}

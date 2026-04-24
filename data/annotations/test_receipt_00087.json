@@ -1,0 +1,151 @@
+{
+  "filename": "receipt_00087.png",
+  "folder": "test",
+  "processed_path": "data\\processed\\processed_test_receipt_00087.jpg",
+  "original_path": "data\\raw\\test\\image\\receipt_00087.png",
+  "extracted_data": [
+    {
+      "text": "NOOTLE-BHU NOODLE",
+      "confidence": 0.7347244024276733,
+      "bbox": [
+        [
+          735.0,
+          30.0
+        ],
+        [
+          850.0,
+          37.0
+        ],
+        [
+          808.0,
+          757.0
+        ],
+        [
+          693.0,
+          750.0
+        ]
+      ]
+    },
+    {
+      "text": "VIETNA",
+      "confidence": 0.9956831932067871,
+      "bbox": [
+        [
+          0.0,
+          244.0
+        ],
+        [
+          44.0,
+          239.0
+        ],
+        [
+          69.0,
+          463.0
+        ],
+        [
+          22.0,
+          468.0
+        ]
+      ]
+    },
+    {
+      "text": "S",
+      "confidence": 0.6336339116096497,
+      "bbox": [
+        [
+          47.0,
+          571.0
+        ],
+        [
+          74.0,
+          571.0
+        ],
+        [
+          74.0,
+          598.0
+        ],
+        [
+          47.0,
+          598.0
+        ]
+      ]
+    },
+    {
+      "text": "E",
+      "confidence": 0.8138633370399475,
+      "bbox": [
+        [
+          47.0,
+          606.0
+        ],
+        [
+          74.0,
+          606.0
+        ],
+        [
+          74.0,
+          636.0
+        ],
+        [
+          47.0,
+          636.0
+        ]
+      ]
+    },
+    {
+      "text": "PHO",
+      "confidence": 0.9771018028259277,
+      "bbox": [
+        [
+          750.0,
+          749.0
+        ],
+        [
+          792.0,
+          747.0
+        ],
+        [
+          797.0,
+          890.0
+        ],
+        [
+          755.0,
+          891.0
+        ]
+      ]
+    },
+    {
+      "text": "E",
+      "confidence": 0.9085619449615479,
+      "bbox": [
+        [
+          57.0,
+          981.0
+        ],
+        [
+          89.0,
+          981.0
+        ],
+        [
+          89.0,
+          1014.0
+        ],
+        [
+          57.0,
+          1014.0
+        ]
+      ]
+    }
+  ],
+  "parsed_data": {
+    "items": [],
+    "total": null,
+    "tax": null,
+    "discount": null,
+    "cash": null,
+    "change": null,
+    "subtotal": null,
+    "service_charge": null
+  },
+  "timestamp": "2026-04-24T22:23:29.996475"
+}

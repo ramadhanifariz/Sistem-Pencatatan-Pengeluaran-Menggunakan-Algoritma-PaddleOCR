@@ -1,0 +1,41 @@
+{
+  "filename": "receipt_00376.png",
+  "folder": "train",
+  "processed_path": "data\\processed\\processed_train_receipt_00376.jpg",
+  "original_path": "data\\raw\\train\\image\\receipt_00376.png",
+  "extracted_data": [
+    {
+      "text": "DUE181271",
+      "confidence": 0.8584359884262085,
+      "bbox": [
+        [
+          164.0,
+          963.0
+        ],
+        [
+          682.0,
+          953.0
+        ],
+        [
+          684.0,
+          1047.0
+        ],
+        [
+          166.0,
+          1058.0
+        ]
+      ]
+    }
+  ],
+  "parsed_data": {
+    "items": [],
+    "total": 181271.0,
+    "tax": null,
+    "discount": null,
+    "cash": null,
+    "change": null,
+    "subtotal": null,
+    "service_charge": null
+  },
+  "timestamp": "2026-04-24T22:14:17.232233"
+}

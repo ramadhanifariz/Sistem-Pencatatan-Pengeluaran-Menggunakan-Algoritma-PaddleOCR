@@ -1,0 +1,114 @@
+{
+  "filename": "receipt_00113.png",
+  "folder": "train",
+  "processed_path": "data\\processed\\processed_train_receipt_00113.jpg",
+  "original_path": "data\\raw\\train\\image\\receipt_00113.png",
+  "extracted_data": [
+    {
+      "text": "ICED CM",
+      "confidence": 0.9018608927726746,
+      "bbox": [
+        [
+          59.0,
+          830.0
+        ],
+        [
+          262.0,
+          830.0
+        ],
+        [
+          262.0,
+          884.0
+        ],
+        [
+          59.0,
+          884.0
+        ]
+      ]
+    },
+    {
+      "text": "-22,000",
+      "confidence": 0.8775120973587036,
+      "bbox": [
+        [
+          523.0,
+          840.0
+        ],
+        [
+          715.0,
+          851.0
+        ],
+        [
+          712.0,
+          901.0
+        ],
+        [
+          520.0,
+          890.0
+        ]
+      ]
+    },
+    {
+      "text": "CASH",
+      "confidence": 0.9929308295249939,
+      "bbox": [
+        [
+          53.0,
+          879.0
+        ],
+        [
+          176.0,
+          879.0
+        ],
+        [
+          176.0,
+          932.0
+        ],
+        [
+          53.0,
+          932.0
+        ]
+      ]
+    },
+    {
+      "text": "22,000",
+      "confidence": 0.9063284397125244,
+      "bbox": [
+        [
+          394.0,
+          876.0
+        ],
+        [
+          706.0,
+          900.0
+        ],
+        [
+          702.0,
+          954.0
+        ],
+        [
+          390.0,
+          930.0
+        ]
+      ]
+    }
+  ],
+  "parsed_data": {
+    "items": [
+      {
+        "name": "CASH",
+        "quantity": 0,
+        "price": 22.0,
+        "total": 0.0
+      }
+    ],
+    "total": null,
+    "tax": null,
+    "discount": null,
+    "cash": 22.0,
+    "change": null,
+    "subtotal": null,
+    "service_charge": null
+  },
+  "timestamp": "2026-04-24T21:51:53.001117"
+}

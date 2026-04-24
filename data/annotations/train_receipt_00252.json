@@ -1,0 +1,63 @@
+{
+  "filename": "receipt_00252.png",
+  "folder": "train",
+  "processed_path": "data\\processed\\processed_train_receipt_00252.jpg",
+  "original_path": "data\\raw\\train\\image\\receipt_00252.png",
+  "extracted_data": [
+    {
+      "text": "fota",
+      "confidence": 0.5512369275093079,
+      "bbox": [
+        [
+          59.0,
+          673.0
+        ],
+        [
+          101.0,
+          673.0
+        ],
+        [
+          101.0,
+          692.0
+        ],
+        [
+          59.0,
+          692.0
+        ]
+      ]
+    },
+    {
+      "text": "MtetCad",
+      "confidence": 0.6300082802772522,
+      "bbox": [
+        [
+          50.0,
+          724.0
+        ],
+        [
+          166.0,
+          731.0
+        ],
+        [
+          164.0,
+          762.0
+        ],
+        [
+          48.0,
+          755.0
+        ]
+      ]
+    }
+  ],
+  "parsed_data": {
+    "items": [],
+    "total": null,
+    "tax": null,
+    "discount": null,
+    "cash": null,
+    "change": null,
+    "subtotal": null,
+    "service_charge": null
+  },
+  "timestamp": "2026-04-24T22:03:53.540830"
+}

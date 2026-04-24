@@ -1,0 +1,41 @@
+{
+  "filename": "receipt_00007.png",
+  "folder": "test",
+  "processed_path": "data\\processed\\processed_test_receipt_00007.jpg",
+  "original_path": "data\\raw\\test\\image\\receipt_00007.png",
+  "extracted_data": [
+    {
+      "text": "1,",
+      "confidence": 0.5749264359474182,
+      "bbox": [
+        [
+          418.0,
+          613.0
+        ],
+        [
+          493.0,
+          613.0
+        ],
+        [
+          493.0,
+          666.0
+        ],
+        [
+          418.0,
+          666.0
+        ]
+      ]
+    }
+  ],
+  "parsed_data": {
+    "items": [],
+    "total": null,
+    "tax": null,
+    "discount": null,
+    "cash": null,
+    "change": null,
+    "subtotal": null,
+    "service_charge": null
+  },
+  "timestamp": "2026-04-24T22:16:27.335849"
+}

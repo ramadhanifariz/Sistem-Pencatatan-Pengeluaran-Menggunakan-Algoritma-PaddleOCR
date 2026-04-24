@@ -1,0 +1,107 @@
+{
+  "filename": "receipt_00217.png",
+  "folder": "train",
+  "processed_path": "data\\processed\\processed_train_receipt_00217.jpg",
+  "original_path": "data\\raw\\train\\image\\receipt_00217.png",
+  "extracted_data": [
+    {
+      "text": "22.000",
+      "confidence": 0.9969353079795837,
+      "bbox": [
+        [
+          422.0,
+          449.0
+        ],
+        [
+          512.0,
+          455.0
+        ],
+        [
+          510.0,
+          490.0
+        ],
+        [
+          420.0,
+          484.0
+        ]
+      ]
+    },
+    {
+      "text": "22.000",
+      "confidence": 0.9848601818084717,
+      "bbox": [
+        [
+          398.0,
+          643.0
+        ],
+        [
+          486.0,
+          652.0
+        ],
+        [
+          482.0,
+          687.0
+        ],
+        [
+          394.0,
+          678.0
+        ]
+      ]
+    },
+    {
+      "text": "50.000",
+      "confidence": 0.9831961989402771,
+      "bbox": [
+        [
+          448.0,
+          713.0
+        ],
+        [
+          539.0,
+          725.0
+        ],
+        [
+          535.0,
+          757.0
+        ],
+        [
+          444.0,
+          745.0
+        ]
+      ]
+    },
+    {
+      "text": "28.000",
+      "confidence": 0.8323731422424316,
+      "bbox": [
+        [
+          450.0,
+          744.0
+        ],
+        [
+          538.0,
+          757.0
+        ],
+        [
+          533.0,
+          790.0
+        ],
+        [
+          445.0,
+          777.0
+        ]
+      ]
+    }
+  ],
+  "parsed_data": {
+    "items": [],
+    "total": null,
+    "tax": null,
+    "discount": null,
+    "cash": null,
+    "change": null,
+    "subtotal": null,
+    "service_charge": null
+  },
+  "timestamp": "2026-04-24T22:00:58.036252"
+}

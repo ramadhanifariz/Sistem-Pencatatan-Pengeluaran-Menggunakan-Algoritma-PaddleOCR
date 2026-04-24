@@ -1,0 +1,136 @@
+{
+  "filename": "receipt_00030.png",
+  "folder": "test",
+  "processed_path": "data\\processed\\processed_test_receipt_00030.jpg",
+  "original_path": "data\\raw\\test\\image\\receipt_00030.png",
+  "extracted_data": [
+    {
+      "text": "cototal",
+      "confidence": 0.5515128374099731,
+      "bbox": [
+        [
+          130.0,
+          938.0
+        ],
+        [
+          245.0,
+          941.0
+        ],
+        [
+          244.0,
+          979.0
+        ],
+        [
+          129.0,
+          976.0
+        ]
+      ]
+    },
+    {
+      "text": "Casn",
+      "confidence": 0.5715758800506592,
+      "bbox": [
+        [
+          120.0,
+          1145.0
+        ],
+        [
+          182.0,
+          1145.0
+        ],
+        [
+          182.0,
+          1181.0
+        ],
+        [
+          120.0,
+          1181.0
+        ]
+      ]
+    },
+    {
+      "text": "050,00",
+      "confidence": 0.5572381019592285,
+      "bbox": [
+        [
+          591.0,
+          1140.0
+        ],
+        [
+          713.0,
+          1136.0
+        ],
+        [
+          715.0,
+          1176.0
+        ],
+        [
+          592.0,
+          1179.0
+        ]
+      ]
+    },
+    {
+      "text": "Chong",
+      "confidence": 0.7897289395332336,
+      "bbox": [
+        [
+          124.0,
+          1218.0
+        ],
+        [
+          200.0,
+          1226.0
+        ],
+        [
+          196.0,
+          1261.0
+        ],
+        [
+          120.0,
+          1253.0
+        ]
+      ]
+    },
+    {
+      "text": "010.00",
+      "confidence": 0.6480391621589661,
+      "bbox": [
+        [
+          589.0,
+          1209.0
+        ],
+        [
+          716.0,
+          1204.0
+        ],
+        [
+          717.0,
+          1250.0
+        ],
+        [
+          591.0,
+          1255.0
+        ]
+      ]
+    }
+  ],
+  "parsed_data": {
+    "items": [
+      {
+        "name": "Chong",
+        "quantity": 0,
+        "price": 10.0,
+        "total": 0.0
+      }
+    ],
+    "total": null,
+    "tax": null,
+    "discount": null,
+    "cash": null,
+    "change": null,
+    "subtotal": null,
+    "service_charge": null
+  },
+  "timestamp": "2026-04-24T22:17:47.134313"
+}

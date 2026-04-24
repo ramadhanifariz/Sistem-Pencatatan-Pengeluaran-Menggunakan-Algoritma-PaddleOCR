@@ -1,0 +1,11 @@
+stages:
+  preparation:
+    cmd: python src/prepare.py
+    deps:
+    - data/raw/test
+    - data/raw/train
+    - src/prepare.py
+    outs:
+    - data/prepared/test.csv
+    - data/prepared/train.csv
+    - plots/data_distribution.png

@@ -1,0 +1,85 @@
+{
+  "filename": "receipt_00235.png",
+  "folder": "train",
+  "processed_path": "data\\processed\\processed_train_receipt_00235.jpg",
+  "original_path": "data\\raw\\train\\image\\receipt_00235.png",
+  "extracted_data": [
+    {
+      "text": "91",
+      "confidence": 0.5511481761932373,
+      "bbox": [
+        [
+          611.0,
+          669.0
+        ],
+        [
+          786.0,
+          680.0
+        ],
+        [
+          762.0,
+          1071.0
+        ],
+        [
+          587.0,
+          1060.0
+        ]
+      ]
+    },
+    {
+      "text": "153",
+      "confidence": 0.5677334666252136,
+      "bbox": [
+        [
+          99.0,
+          680.0
+        ],
+        [
+          202.0,
+          680.0
+        ],
+        [
+          202.0,
+          710.0
+        ],
+        [
+          99.0,
+          710.0
+        ]
+      ]
+    },
+    {
+      "text": "THAYDTCONH",
+      "confidence": 0.5403730869293213,
+      "bbox": [
+        [
+          65.0,
+          919.0
+        ],
+        [
+          306.0,
+          909.0
+        ],
+        [
+          309.0,
+          963.0
+        ],
+        [
+          68.0,
+          973.0
+        ]
+      ]
+    }
+  ],
+  "parsed_data": {
+    "items": [],
+    "total": null,
+    "tax": null,
+    "discount": null,
+    "cash": null,
+    "change": null,
+    "subtotal": null,
+    "service_charge": null
+  },
+  "timestamp": "2026-04-24T22:02:20.899066"
+}

@@ -1,0 +1,129 @@
+{
+  "filename": "receipt_00011.png",
+  "folder": "test",
+  "processed_path": "data\\processed\\processed_test_receipt_00011.jpg",
+  "original_path": "data\\raw\\test\\image\\receipt_00011.png",
+  "extracted_data": [
+    {
+      "text": "1BABERREREAMCAR2J",
+      "confidence": 0.7171770930290222,
+      "bbox": [
+        [
+          115.0,
+          383.0
+        ],
+        [
+          367.0,
+          372.0
+        ],
+        [
+          368.0,
+          396.0
+        ],
+        [
+          116.0,
+          407.0
+        ]
+      ]
+    },
+    {
+      "text": "TOTAL",
+      "confidence": 0.9955133199691772,
+      "bbox": [
+        [
+          126.0,
+          418.0
+        ],
+        [
+          217.0,
+          418.0
+        ],
+        [
+          217.0,
+          460.0
+        ],
+        [
+          126.0,
+          460.0
+        ]
+      ]
+    },
+    {
+      "text": "230,000",
+      "confidence": 0.9571782350540161,
+      "bbox": [
+        [
+          282.0,
+          412.0
+        ],
+        [
+          405.0,
+          404.0
+        ],
+        [
+          408.0,
+          445.0
+        ],
+        [
+          285.0,
+          453.0
+        ]
+      ]
+    },
+    {
+      "text": "CASH",
+      "confidence": 0.9243295788764954,
+      "bbox": [
+        [
+          131.0,
+          453.0
+        ],
+        [
+          168.0,
+          452.0
+        ],
+        [
+          168.0,
+          469.0
+        ],
+        [
+          131.0,
+          470.0
+        ]
+      ]
+    },
+    {
+      "text": "CHANGE",
+      "confidence": 0.9968731999397278,
+      "bbox": [
+        [
+          123.0,
+          469.0
+        ],
+        [
+          234.0,
+          460.0
+        ],
+        [
+          237.0,
+          498.0
+        ],
+        [
+          126.0,
+          507.0
+        ]
+      ]
+    }
+  ],
+  "parsed_data": {
+    "items": [],
+    "total": null,
+    "tax": null,
+    "discount": null,
+    "cash": null,
+    "change": null,
+    "subtotal": null,
+    "service_charge": null
+  },
+  "timestamp": "2026-04-24T22:16:38.653843"
+}

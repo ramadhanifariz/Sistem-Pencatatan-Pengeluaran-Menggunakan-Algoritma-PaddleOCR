@@ -1,0 +1,18 @@
+{
+  "filename": "receipt_00121.png",
+  "folder": "train",
+  "processed_path": "data\\processed\\processed_train_receipt_00121.jpg",
+  "original_path": "data\\raw\\train\\image\\receipt_00121.png",
+  "extracted_data": [],
+  "parsed_data": {
+    "items": [],
+    "total": null,
+    "tax": null,
+    "discount": null,
+    "cash": null,
+    "change": null,
+    "subtotal": null,
+    "service_charge": null
+  },
+  "timestamp": "2026-04-24T21:52:14.996679"
+}

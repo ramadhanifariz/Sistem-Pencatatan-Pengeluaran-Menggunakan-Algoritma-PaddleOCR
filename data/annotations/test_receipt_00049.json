@@ -1,0 +1,85 @@
+{
+  "filename": "receipt_00049.png",
+  "folder": "test",
+  "processed_path": "data\\processed\\processed_test_receipt_00049.jpg",
+  "original_path": "data\\raw\\test\\image\\receipt_00049.png",
+  "extracted_data": [
+    {
+      "text": "CPSM",
+      "confidence": 0.5509282946586609,
+      "bbox": [
+        [
+          163.0,
+          615.0
+        ],
+        [
+          215.0,
+          615.0
+        ],
+        [
+          215.0,
+          641.0
+        ],
+        [
+          163.0,
+          641.0
+        ]
+      ]
+    },
+    {
+      "text": "CHANGE",
+      "confidence": 0.9543436169624329,
+      "bbox": [
+        [
+          155.0,
+          639.0
+        ],
+        [
+          244.0,
+          639.0
+        ],
+        [
+          244.0,
+          693.0
+        ],
+        [
+          155.0,
+          693.0
+        ]
+      ]
+    },
+    {
+      "text": "TOTALQTY2ITEMPC",
+      "confidence": 0.8444854617118835,
+      "bbox": [
+        [
+          85.0,
+          747.0
+        ],
+        [
+          416.0,
+          747.0
+        ],
+        [
+          416.0,
+          780.0
+        ],
+        [
+          85.0,
+          780.0
+        ]
+      ]
+    }
+  ],
+  "parsed_data": {
+    "items": [],
+    "total": null,
+    "tax": null,
+    "discount": null,
+    "cash": null,
+    "change": null,
+    "subtotal": null,
+    "service_charge": null
+  },
+  "timestamp": "2026-04-24T22:19:50.973005"
+}

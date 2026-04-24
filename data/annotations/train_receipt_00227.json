@@ -1,0 +1,85 @@
+{
+  "filename": "receipt_00227.png",
+  "folder": "train",
+  "processed_path": "data\\processed\\processed_train_receipt_00227.jpg",
+  "original_path": "data\\raw\\train\\image\\receipt_00227.png",
+  "extracted_data": [
+    {
+      "text": "500.00",
+      "confidence": 0.8656564354896545,
+      "bbox": [
+        [
+          460.0,
+          826.0
+        ],
+        [
+          579.0,
+          817.0
+        ],
+        [
+          582.0,
+          853.0
+        ],
+        [
+          463.0,
+          862.0
+        ]
+      ]
+    },
+    {
+      "text": "Total",
+      "confidence": 0.6237063407897949,
+      "bbox": [
+        [
+          90.0,
+          857.0
+        ],
+        [
+          165.0,
+          850.0
+        ],
+        [
+          168.0,
+          884.0
+        ],
+        [
+          93.0,
+          891.0
+        ]
+      ]
+    },
+    {
+      "text": "Caa",
+      "confidence": 0.590505838394165,
+      "bbox": [
+        [
+          95.0,
+          886.0
+        ],
+        [
+          160.0,
+          886.0
+        ],
+        [
+          160.0,
+          920.0
+        ],
+        [
+          95.0,
+          920.0
+        ]
+      ]
+    }
+  ],
+  "parsed_data": {
+    "items": [],
+    "total": null,
+    "tax": null,
+    "discount": null,
+    "cash": null,
+    "change": null,
+    "subtotal": null,
+    "service_charge": null
+  },
+  "timestamp": "2026-04-24T22:01:28.879677"
+}

@@ -1,0 +1,41 @@
+{
+  "filename": "receipt_00135.png",
+  "folder": "train",
+  "processed_path": "data\\processed\\processed_train_receipt_00135.jpg",
+  "original_path": "data\\raw\\train\\image\\receipt_00135.png",
+  "extracted_data": [
+    {
+      "text": "DYA",
+      "confidence": 0.5742955803871155,
+      "bbox": [
+        [
+          123.0,
+          939.0
+        ],
+        [
+          178.0,
+          933.0
+        ],
+        [
+          180.0,
+          960.0
+        ],
+        [
+          126.0,
+          966.0
+        ]
+      ]
+    }
+  ],
+  "parsed_data": {
+    "items": [],
+    "total": null,
+    "tax": null,
+    "discount": null,
+    "cash": null,
+    "change": null,
+    "subtotal": null,
+    "service_charge": null
+  },
+  "timestamp": "2026-04-24T21:53:23.012907"
+}
