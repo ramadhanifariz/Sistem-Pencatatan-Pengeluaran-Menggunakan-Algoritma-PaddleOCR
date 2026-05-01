@@ -1,9 +1,3 @@
-"""
-demo_pipeline.py
-Menampilkan pipeline lengkap: preprocessing robust -> OCR -> parsing.
-Gunakan untuk menguji satu gambar struk.
-"""
-
 import cv2
 import matplotlib.pyplot as plt
 import sys
@@ -22,7 +16,6 @@ def show_images(original, processed, title_orig="Original", title_proc="Preproce
     plt.axis('off')
     
     plt.subplot(1, 2, 2)
-    # Jika processed grayscale, konversi ke RGB untuk ditampilkan
     if len(processed.shape) == 2:
         processed = cv2.cvtColor(processed, cv2.COLOR_GRAY2RGB)
     else:
@@ -35,36 +28,27 @@ def show_images(original, processed, title_orig="Original", title_proc="Preproce
     plt.show()
 
 def run_pipeline(image_path):
-    """
-    Jalankan pipeline lengkap pada satu gambar.
-    """
     print("="*60)
     print(f"Processing: {image_path}")
     print("="*60)
     
-    # 1. Load gambar asli
     original = cv2.imread(str(image_path))
     if original is None:
         print(f"ERROR: Tidak bisa membaca {image_path}")
         return
     
-    # 2. Preprocessing robust (menyimpan hasil ke file sementara)
     temp_proc_path = "temp_preprocessed.jpg"
     preprocess_image(str(image_path), temp_proc_path)
     processed = cv2.imread(temp_proc_path)
     
-    # Tampilkan perbandingan visual
     show_images(original, processed, "Original Receipt", "Robust Preprocessing")
     
-    # 3. Inisialisasi OCR
     print("\n[OCR] Initializing PaddleOCR...")
     extractor = ReceiptExtractor(lang='id')
     
-    # 4. Ekstraksi teks dan parsing
     print("[OCR] Extracting text...")
     extracted_data, parsed_data = extractor.process_image(temp_proc_path)
     
-    # 5. Tampilkan hasil OCR
     print("\n" + "-"*40)
     print("EXTRACTED TEXT (OCR RESULTS):")
     print("-"*40)
@@ -74,7 +58,6 @@ def run_pipeline(image_path):
     else:
         print("No text detected!")
     
-    # 6. Tampilkan hasil parsing
     print("\n" + "-"*40)
     print("PARSED RECEIPT DATA:")
     print("-"*40)
@@ -92,15 +75,10 @@ def run_pipeline(image_path):
     print(f"Cash       : Rp {parsed_data['cash']:,.0f}" if parsed_data['cash'] else "Cash       : Not detected")
     print(f"Change     : Rp {parsed_data['change']:,.0f}" if parsed_data['change'] else "Change     : Not detected")
     
-    # Bersihkan file sementara
     Path(temp_proc_path).unlink(missing_ok=True)
     
-    print("\n" + "="*60)
-    print("Pipeline demo selesai.")
-    print("="*60)
 
 if __name__ == "__main__":
-    # Ganti dengan path gambar struk Anda
     train_folder = Path("data/raw/train/image")
     test_folder = Path("data/raw/test/image")
     
@@ -117,7 +95,6 @@ if __name__ == "__main__":
     
     if receipt_image is None:
         print("Tidak ada gambar ditemukan di folder data/raw/train/image/ atau data/raw/test/image/")
-        print("Pastikan Anda sudah meletakkan file gambar di folder tersebut.")
         sys.exit(1)
     
     run_pipeline(receipt_image)

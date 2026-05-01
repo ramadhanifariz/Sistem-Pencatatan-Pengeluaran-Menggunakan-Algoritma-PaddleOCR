@@ -3,30 +3,7 @@
   "folder": "train",
   "processed_path": "data\\processed\\processed_train_receipt_00073.jpg",
   "original_path": "data\\raw\\train\\image\\receipt_00073.png",
-  "extracted_data": [
-    {
-      "text": "300.0",
-      "confidence": 0.7184671759605408,
-      "bbox": [
-        [
-          603.0,
-          761.0
-        ],
-        [
-          695.0,
-          710.0
-        ],
-        [
-          715.0,
-          745.0
-        ],
-        [
-          622.0,
-          796.0
-        ]
-      ]
-    }
-  ],
+  "extracted_data": [],
   "parsed_data": {
     "items": [],
     "total": null,
@@ -37,5 +14,5 @@
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-24T21:49:07.291926"
+  "timestamp": "2026-04-30T13:23:48.440938"
 }

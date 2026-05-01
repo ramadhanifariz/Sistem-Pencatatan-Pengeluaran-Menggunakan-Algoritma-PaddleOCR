@@ -1,4 +1,8 @@
 {
-  "timestamp": "2026-04-24T22:24:13.757931",
-  "total_images": 1044
+  "timestamp": "2026-04-30T14:32:07.386320",
+  "total_images": 1044,
+  "per_folder": {
+    "test": 100,
+    "train": 944
+  }
 }

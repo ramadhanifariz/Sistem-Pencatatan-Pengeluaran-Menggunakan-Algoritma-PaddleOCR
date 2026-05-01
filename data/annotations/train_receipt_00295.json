@@ -3,7 +3,52 @@
   "folder": "train",
   "processed_path": "data\\processed\\processed_train_receipt_00295.jpg",
   "original_path": "data\\raw\\train\\image\\receipt_00295.png",
-  "extracted_data": [],
+  "extracted_data": [
+    {
+      "text": "88829",
+      "confidence": 0.7634227871894836,
+      "bbox": [
+        [
+          202.0,
+          23.0
+        ],
+        [
+          667.0,
+          29.0
+        ],
+        [
+          666.0,
+          116.0
+        ],
+        [
+          201.0,
+          110.0
+        ]
+      ]
+    },
+    {
+      "text": "99019",
+      "confidence": 0.6580928564071655,
+      "bbox": [
+        [
+          652.0,
+          778.0
+        ],
+        [
+          778.0,
+          778.0
+        ],
+        [
+          778.0,
+          1081.0
+        ],
+        [
+          652.0,
+          1081.0
+        ]
+      ]
+    }
+  ],
   "parsed_data": {
     "items": [],
     "total": null,
@@ -14,5 +59,5 @@
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-24T22:06:45.141019"
+  "timestamp": "2026-04-30T13:55:32.217937"
 }

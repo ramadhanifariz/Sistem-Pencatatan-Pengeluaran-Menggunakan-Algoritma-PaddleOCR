@@ -3,7 +3,30 @@
   "folder": "train",
   "processed_path": "data\\processed\\processed_train_receipt_00288.jpg",
   "original_path": "data\\raw\\train\\image\\receipt_00288.png",
-  "extracted_data": [],
+  "extracted_data": [
+    {
+      "text": "SAE",
+      "confidence": 0.5053450465202332,
+      "bbox": [
+        [
+          167.0,
+          313.0
+        ],
+        [
+          504.0,
+          313.0
+        ],
+        [
+          504.0,
+          489.0
+        ],
+        [
+          167.0,
+          489.0
+        ]
+      ]
+    }
+  ],
   "parsed_data": {
     "items": [],
     "total": null,
@@ -14,5 +37,5 @@
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-24T22:06:22.860054"
+  "timestamp": "2026-04-30T13:54:54.921130"
 }

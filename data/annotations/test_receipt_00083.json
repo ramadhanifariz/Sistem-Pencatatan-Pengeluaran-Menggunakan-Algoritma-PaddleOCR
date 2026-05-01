@@ -3,30 +3,7 @@
   "folder": "test",
   "processed_path": "data\\processed\\processed_test_receipt_00083.jpg",
   "original_path": "data\\raw\\test\\image\\receipt_00083.png",
-  "extracted_data": [
-    {
-      "text": "T",
-      "confidence": 0.6841127276420593,
-      "bbox": [
-        [
-          745.0,
-          383.0
-        ],
-        [
-          763.0,
-          383.0
-        ],
-        [
-          763.0,
-          410.0
-        ],
-        [
-          745.0,
-          410.0
-        ]
-      ]
-    }
-  ],
+  "extracted_data": [],
   "parsed_data": {
     "items": [],
     "total": null,
@@ -37,5 +14,5 @@
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-24T22:23:08.655003"
+  "timestamp": "2026-04-30T14:23:51.909522"
 }

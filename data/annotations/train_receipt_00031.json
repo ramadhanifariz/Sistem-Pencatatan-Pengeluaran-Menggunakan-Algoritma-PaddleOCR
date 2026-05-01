@@ -5,53 +5,60 @@
   "original_path": "data\\raw\\train\\image\\receipt_00031.png",
   "extracted_data": [
     {
-      "text": "30",
-      "confidence": 0.5902127027511597,
+      "text": "lule",
+      "confidence": 0.8154533505439758,
       "bbox": [
         [
-          262.0,
-          640.0
+          184.0,
+          624.0
         ],
         [
-          305.0,
-          640.0
+          222.0,
+          656.0
         ],
         [
-          305.0,
-          694.0
+          204.0,
+          677.0
         ],
         [
-          262.0,
-          694.0
+          166.0,
+          645.0
         ]
       ]
     },
     {
-      "text": "10",
-      "confidence": 0.747327446937561,
+      "text": "31.500",
+      "confidence": 0.9744687676429749,
       "bbox": [
         [
-          228.0,
-          659.0
+          258.0,
+          736.0
         ],
         [
-          246.0,
-          655.0
+          313.0,
+          695.0
         ],
         [
-          252.0,
-          682.0
+          374.0,
+          780.0
         ],
         [
-          234.0,
-          686.0
+          318.0,
+          820.0
         ]
       ]
     }
   ],
   "parsed_data": {
-    "items": [],
-    "total": null,
+    "items": [
+      {
+        "name": "lule",
+        "quantity": 1,
+        "price": 31500.0,
+        "total": 31500.0
+      }
+    ],
+    "total": 31500.0,
     "tax": null,
     "discount": null,
     "cash": null,
@@ -59,5 +66,5 @@
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-24T21:46:10.753696"
+  "timestamp": "2026-04-30T13:18:30.050504"
 }

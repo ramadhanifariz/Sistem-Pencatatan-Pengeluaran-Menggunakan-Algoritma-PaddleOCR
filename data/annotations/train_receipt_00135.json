@@ -5,24 +5,24 @@
   "original_path": "data\\raw\\train\\image\\receipt_00135.png",
   "extracted_data": [
     {
-      "text": "DYA",
-      "confidence": 0.5742955803871155,
+      "text": "E",
+      "confidence": 0.8385456204414368,
       "bbox": [
         [
-          123.0,
-          939.0
+          574.0,
+          830.0
         ],
         [
-          178.0,
-          933.0
+          744.0,
+          817.0
         ],
         [
-          180.0,
-          960.0
+          762.0,
+          1062.0
         ],
         [
-          126.0,
-          966.0
+          592.0,
+          1074.0
         ]
       ]
     }
@@ -37,5 +37,5 @@
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-24T21:53:23.012907"
+  "timestamp": "2026-04-30T13:31:33.122514"
 }

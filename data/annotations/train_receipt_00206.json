@@ -5,24 +5,24 @@
   "original_path": "data\\raw\\train\\image\\receipt_00206.png",
   "extracted_data": [
     {
-      "text": "AFUNGAFUNG",
-      "confidence": 0.9888884425163269,
+      "text": "AFUNG AFUNG",
+      "confidence": 0.9682077765464783,
       "bbox": [
         [
-          497.0,
-          134.0
-        ],
-        [
-          551.0,
-          129.0
-        ],
-        [
           575.0,
-          514.0
+          156.0
         ],
         [
-          529.0,
-          519.0
+          635.0,
+          150.0
+        ],
+        [
+          665.0,
+          606.0
+        ],
+        [
+          616.0,
+          612.0
         ]
       ]
     }
@@ -37,5 +37,5 @@
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-24T22:00:14.453011"
+  "timestamp": "2026-04-30T13:44:02.335826"
 }

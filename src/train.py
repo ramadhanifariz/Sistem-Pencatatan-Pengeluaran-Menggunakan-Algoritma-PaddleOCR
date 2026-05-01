@@ -1,150 +1,270 @@
-import os
 import json
 import numpy as np
 import pandas as pd
 from pathlib import Path
 from datetime import datetime
-from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 import sys
-sys.path.append('src')
-from utils import ReceiptExtractor
+import re
+import joblib
+import os
+import tempfile
+import traceback
 
-# Setup paths
-DATA_DIR = Path('data')
-PROCESSED_DIR = DATA_DIR / 'processed'
+import mlflow
+import mlflow.sklearn
+
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.preprocessing import StandardScaler
+from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
+from sklearn.model_selection import GridSearchCV
+
+# KONFIGURASI PATH YANG FLEKSIBEL 
+current_file = Path(__file__).resolve()
+src_dir = current_file.parent  
+root_candidate = src_dir.parent
+
+if (root_candidate / 'data').exists():
+    PROJECT_ROOT = root_candidate
+else:
+    PROJECT_ROOT = src_dir
+    print(f" Tidak ditemukan folder 'data' di {root_candidate}, menggunakan {PROJECT_ROOT} sebagai root.")
+
+DATA_DIR = PROJECT_ROOT / 'data'
 ANNOTATIONS_DIR = DATA_DIR / 'annotations'
 SPLITS_DIR = DATA_DIR / 'splits'
-MODELS_DIR = Path('models')
-MODELS_DIR.mkdir(exist_ok=True)
+MODELS_DIR = PROJECT_ROOT / 'models'
+MODELS_DIR.mkdir(parents=True, exist_ok=True)
 
-def load_training_data():
-    """Load training and validation data"""
-    with open(SPLITS_DIR / 'data_splits.json', 'r') as f:
-        splits = json.load(f)
-    
-    train_data = []
-    val_data = []
-    
-    # Load training annotations
-    for ann_path in splits['train']:
-        with open(ann_path, 'r') as f:
-            data = json.load(f)
-            train_data.append(data)
-    
-    # Load validation annotations
-    for ann_path in splits['validation']:
-        with open(ann_path, 'r') as f:
-            data = json.load(f)
-            val_data.append(data)
-    
-    return train_data, val_data
+MLFLOW_DB_PATH = PROJECT_ROOT / "mlflow.db"
+MLFLOW_DB_URI = f"sqlite:///{MLFLOW_DB_PATH}"
+mlflow.set_tracking_uri(MLFLOW_DB_URI)
+mlflow.set_experiment("Receipt_Total_Prediction")
 
-def extract_features(data):
-    """Extract features from receipt data"""
+print(f" Root proyek: {PROJECT_ROOT}")
+print(f" Anotasi: {ANNOTATIONS_DIR}")
+print(f" MLflow DB: {MLFLOW_DB_PATH}")
+
+# LOAD DATA 
+def load_annotations_from_split(split_key):
+    """Load annotations from data_splits.json, dengan fallback ke semua file anotasi jika split tidak ada."""
+    splits_path = SPLITS_DIR / 'data_splits.json'
+    if not splits_path.exists():
+        print(f" {splits_path} tidak ditemukan. Mencoba menggunakan semua anotasi sebagai training.")
+        all_ann = list(ANNOTATIONS_DIR.glob('*.json'))
+        if not all_ann:
+            print(f" Tidak ada file anotasi di {ANNOTATIONS_DIR}")
+            return []
+        data = []
+        for p in all_ann:
+            with open(p, 'r') as f:
+                data.append(json.load(f))
+        print(f" Fallback: memuat {len(data)} anotasi untuk training.")
+        return data
+    else:
+        with open(splits_path, 'r') as f:
+            splits = json.load(f)
+        ann_paths = splits.get(split_key, [])
+        if not ann_paths:
+            print(f" Key '{split_key}' kosong di data_splits.json. Isi: {list(splits.keys())}")
+        data = []
+        for p in ann_paths:
+            p_path = Path(p)
+            if p_path.exists():
+                with open(p_path, 'r') as f:
+                    data.append(json.load(f))
+            else:
+                print(f" File anotasi tidak ditemukan: {p}")
+        print(f" Loaded {len(data)} samples from '{split_key}' set")
+        return data
+
+def extract_features_and_target(data):
     features = []
     targets = []
-    
     for d in data:
         parsed = d.get('parsed_data', {})
+        extracted = d.get('extracted_data', [])
         
-        # Features
         num_items = len(parsed.get('items', []))
         has_tax = 1 if parsed.get('tax') else 0
         has_discount = 1 if parsed.get('discount') else 0
+        has_service_charge = 1 if parsed.get('service_charge') else 0
         
-        # Confidence scores from OCR
-        extracted = d.get('extracted_data', [])
-        confidences = [item['confidence'] for item in extracted]
-        avg_confidence = np.mean(confidences) if confidences else 0
-        min_confidence = np.min(confidences) if confidences else 0
+        confs = [item['confidence'] for item in extracted]
+        avg_conf = np.mean(confs) if confs else 0.0
+        min_conf = np.min(confs) if confs else 0.0
+        std_conf = np.std(confs) if confs else 0.0
         
-        # Target (total amount)
-        total = parsed.get('total', 0)
+        all_text = ' '.join([item['text'] for item in extracted])
+        text_len = len(all_text)
+        num_numbers = len(re.findall(r'\d+', all_text))
+        
+        items_total = sum(item.get('total', 0) for item in parsed.get('items', []))
+        
+        total = parsed.get('total')
+        if total is None or np.isnan(total) or total <= 0:
+            continue
         
         features.append([
-            num_items,
-            has_tax,
-            has_discount,
-            avg_confidence,
-            min_confidence
+            num_items, has_tax, has_discount, has_service_charge,
+            avg_conf, min_conf, std_conf, text_len, num_numbers, items_total
         ])
         targets.append(total)
     
-    return np.array(features), np.array(targets)
+    if not features:
+        return np.array([]), np.array([])
+    X = np.array(features, dtype=np.float64)
+    y = np.array(targets, dtype=np.float64)
+    X = np.nan_to_num(X, nan=0.0, posinf=0.0, neginf=0.0)
+    mask = ~(np.isnan(y) | np.isinf(y))
+    return X[mask], y[mask]
 
+# TRAINING 
 def train_model():
-    """Train a simple regression model"""
-    print("\n" + "=" * 50)
-    print("TRAINING MODEL")
-    print("=" * 50)
+    print("TRAINING RECEIPT REGRESSION MODEL ")
     
-    # Load data
-    train_data, val_data = load_training_data()
-    
-    if not train_data:
-        print("⚠️ Tidak ada data training. Jalankan prepare.py terlebih dahulu.")
+    if not ANNOTATIONS_DIR.exists():
+        print(f" Folder anotasi tidak ditemukan: {ANNOTATIONS_DIR}")
         return None
     
-    print(f"\n Data Training: {len(train_data)} samples")
-    print(f" Data Validation: {len(val_data)} samples")
+    ann_files = list(ANNOTATIONS_DIR.glob('*.json'))
+    print(f"\n Jumlah file anotasi: {len(ann_files)}")
+    if len(ann_files) == 0:
+        print(" Tidak ada file JSON anotasi. Pastikan preprocess.py sudah dijalankan dengan benar.")
+        return None
+    else:
+        print(f"   Contoh: {ann_files[0].name}")
     
-    # Extract features
-    X_train, y_train = extract_features(train_data)
-    X_val, y_val = extract_features(val_data)
+    train_data = load_annotations_from_split('train')
+    val_data = load_annotations_from_split('validation')
+    test_data = load_annotations_from_split('test')
     
-    # Simple linear regression using numpy
-    from sklearn.linear_model import LinearRegression
-    from sklearn.preprocessing import StandardScaler
+    if len(train_data) == 0:
+        print("\n Tidak ada data training. Split tidak valid.")
+        return None
     
-    # Scale features
+    # Ekstrak fitur
+    X_train, y_train = extract_features_and_target(train_data)
+    X_val, y_val = extract_features_and_target(val_data) if val_data else (np.array([]), np.array([]))
+    X_test, y_test = extract_features_and_target(test_data) if test_data else (np.array([]), np.array([]))
+    
+    print(f"\n Jumlah sampel valid (total > 0):")
+    print(f"   Training : {X_train.shape[0]}")
+    if X_val.shape[0] > 0:
+        print(f"   Validation: {X_val.shape[0]}")
+    else:
+        print("   Validation: (tidak ada, gunakan cross-validation saja)")
+    if X_test.shape[0] > 0:
+        print(f"   Test     : {X_test.shape[0]}")
+    
+    if X_train.shape[0] == 0:
+        print(" Tidak ada sampel training yang valid. Periksa apakah kolom 'total' di anotasi ada dan >0.")
+        return None
+    
+    # Scaling
     scaler = StandardScaler()
     X_train_scaled = scaler.fit_transform(X_train)
-    X_val_scaled = scaler.transform(X_val)
+    X_val_scaled = scaler.transform(X_val) if X_val.shape[0] > 0 else None
+    X_test_scaled = scaler.transform(X_test) if X_test.shape[0] > 0 else None
     
-    # Train model
-    model = LinearRegression()
-    model.fit(X_train_scaled, y_train)
+    # Hyperparameter tuning
+    param_grid = {
+        'n_estimators': [100, 200],
+        'max_depth': [10, 20],
+        'min_samples_split': [2, 5],
+        'min_samples_leaf': [1, 2]
+    }
+    rf = RandomForestRegressor(random_state=42, n_jobs=-1)
     
-    # Predictions
-    y_train_pred = model.predict(X_train_scaled)
-    y_val_pred = model.predict(X_val_scaled)
     
-    # Calculate metrics
-    train_mae = mean_absolute_error(y_train, y_train_pred)
-    train_rmse = np.sqrt(mean_squared_error(y_train, y_train_pred))
-    train_r2 = r2_score(y_train, y_train_pred)
+    grid_search = GridSearchCV(rf, param_grid, cv=3, scoring='neg_mean_absolute_error', n_jobs=-1, verbose=1)
+    grid_search.fit(X_train_scaled, y_train)
+    best_model = grid_search.best_estimator_
+    best_params = grid_search.best_params_
+    print(f" Best parameters: {best_params}")
+    print(f"   Best CV MAE  : Rp {-grid_search.best_score_:,.0f}")
     
-    val_mae = mean_absolute_error(y_val, y_val_pred)
-    val_rmse = np.sqrt(mean_squared_error(y_val, y_val_pred))
-    val_r2 = r2_score(y_val, y_val_pred)
+    # Evaluasi
+    val_metrics = {}
+    test_metrics = {}
+    if X_val.shape[0] > 0:
+        y_val_pred = best_model.predict(X_val_scaled)
+        val_metrics = {
+            'mae': mean_absolute_error(y_val, y_val_pred),
+            'rmse': np.sqrt(mean_squared_error(y_val, y_val_pred)),
+            'r2': r2_score(y_val, y_val_pred)
+        }
+        print(f"\n Validation set performance:")
+        print(f"   MAE : Rp {val_metrics['mae']:,.0f}")
+        print(f"   RMSE: Rp {val_metrics['rmse']:,.0f}")
+        print(f"   R²  : {val_metrics['r2']:.4f}")
     
-    print(f"\n Training Metrics:")
-    print(f"   - MAE: Rp {train_mae:,.0f}")
-    print(f"   - RMSE: Rp {train_rmse:,.0f}")
-    print(f"   - R² Score: {train_r2:.4f}")
+    if X_test.shape[0] > 0:
+        y_test_pred = best_model.predict(X_test_scaled)
+        test_metrics = {
+            'mae': mean_absolute_error(y_test, y_test_pred),
+            'rmse': np.sqrt(mean_squared_error(y_test, y_test_pred)),
+            'r2': r2_score(y_test, y_test_pred)
+        }
+        print(f"\n Test set performance:")
+        print(f"   MAE : Rp {test_metrics['mae']:,.0f}")
+        print(f"   RMSE: Rp {test_metrics['rmse']:,.0f}")
+        print(f"   R²  : {test_metrics['r2']:.4f}")
     
-    print(f"\n Validation Metrics:")
-    print(f"   - MAE: Rp {val_mae:,.0f}")
-    print(f"   - RMSE: Rp {val_rmse:,.0f}")
-    print(f"   - R² Score: {val_r2:.4f}")
+    # MLflow logging
+    try:
+        with mlflow.start_run(run_name="RandomForest_Tuned") as run:
+            mlflow.log_params(best_params)
+            mlflow.log_param("model_type", "RandomForestRegressor")
+            mlflow.log_param("scaler", "StandardScaler")
+            mlflow.log_metric("best_cv_mae", -grid_search.best_score_)
+            if val_metrics:
+                for k, v in val_metrics.items():
+                    mlflow.log_metric(f"val_{k}", v)
+            if test_metrics:
+                for k, v in test_metrics.items():
+                    mlflow.log_metric(f"test_{k}", v)
+            
+            mlflow.sklearn.log_model(best_model, "random_forest_model")
+            
+            # Log scaler
+            with tempfile.NamedTemporaryFile(suffix=".pkl", delete=False) as f:
+                joblib.dump(scaler, f.name)
+                mlflow.log_artifact(f.name, artifact_path="preprocessor")
+            os.unlink(f.name)
+            
+            # Feature importance
+            feature_names = ["num_items", "has_tax", "has_discount", "has_service_charge",
+                             "avg_confidence", "min_confidence", "std_confidence",
+                             "text_length", "num_numbers", "items_total"]
+            importances = best_model.feature_importances_
+            imp_df = pd.DataFrame({'feature': feature_names, 'importance': importances})
+            imp_df = imp_df.sort_values('importance', ascending=False)
+            imp_csv = "feature_importance.csv"
+            imp_df.to_csv(imp_csv, index=False)
+            mlflow.log_artifact(imp_csv)
+            os.remove(imp_csv)
+            
+            print(f"\n MLflow run successful! Run ID: {run.info.run_id}")
+            print(f" Artifact URI: {run.info.artifact_uri}")
+    except Exception as e:
+        print(f" Gagal logging ke MLflow: {e}")
+        traceback.print_exc()
     
-    # Save model
-    import joblib
+    # Simpan lokal
     model_info = {
-        'model': model,
+        'model': best_model,
         'scaler': scaler,
-        'features': ['num_items', 'has_tax', 'has_discount', 'avg_confidence', 'min_confidence'],
-        'metrics': {
-            'train': {'mae': train_mae, 'rmse': train_rmse, 'r2': train_r2},
-            'validation': {'mae': val_mae, 'rmse': val_rmse, 'r2': val_r2}
-        },
+        'features': feature_names,
+        'best_params': best_params,
         'timestamp': datetime.now().isoformat()
     }
+    local_path = MODELS_DIR / 'receipt_model_advanced.pkl'
+    joblib.dump(model_info, local_path)
+    print(f"\n Model lokal disimpan ke: {local_path}")
     
-    joblib.dump(model_info, MODELS_DIR / 'receipt_model.pkl')
-    print(f"\nModel saved to: {MODELS_DIR / 'receipt_model.pkl'}")
+    print(f"   mlflow ui --backend-store-uri {MLFLOW_DB_URI}")
     
-    return model_info
+    return best_model, scaler
 
 if __name__ == "__main__":
     train_model()

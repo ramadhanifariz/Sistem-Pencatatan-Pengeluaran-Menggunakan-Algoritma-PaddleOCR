@@ -1,0 +1,11 @@
+feature,importance
+items_total,0.8390492089952362
+std_confidence,0.05196005649907233
+avg_confidence,0.049375115132309
+text_length,0.03160073459166986
+num_numbers,0.026895031254818944
+min_confidence,0.0007350788200203703
+num_items,0.0003844275138431784
+has_tax,3.471930302593153e-07
+has_discount,0.0
+has_service_charge,0.0

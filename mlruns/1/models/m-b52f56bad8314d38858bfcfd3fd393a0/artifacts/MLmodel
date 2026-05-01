@@ -1,0 +1,24 @@
+artifact_path: file:D:/KULIAH/SEMESTER 6/PROYEK DATA MINING/UTS/PROJECT PENCATATAN
+  PENGELUARAN/mlruns/1/models/m-b52f56bad8314d38858bfcfd3fd393a0/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.12.9
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.8.0
+    skops_trusted_types: null
+mlflow_version: 3.11.1
+model_id: m-b52f56bad8314d38858bfcfd3fd393a0
+model_size_bytes: 562
+model_uuid: m-b52f56bad8314d38858bfcfd3fd393a0
+prompts: null
+run_id: 46f155866fe74ab8a2e73d618e0136dc
+utc_time_created: '2026-04-27 08:18:06.306821'

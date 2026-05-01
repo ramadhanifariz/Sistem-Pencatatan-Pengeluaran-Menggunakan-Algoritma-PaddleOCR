@@ -5,24 +5,24 @@
   "original_path": "data\\raw\\train\\image\\receipt_00255.png",
   "extracted_data": [
     {
-      "text": "UNA",
-      "confidence": 0.9585390090942383,
+      "text": "A",
+      "confidence": 0.7569735050201416,
       "bbox": [
         [
-          164.0,
-          61.0
+          341.0,
+          70.0
         ],
         [
-          385.0,
-          54.0
+          442.0,
+          81.0
         ],
         [
-          387.0,
-          116.0
+          437.0,
+          128.0
         ],
         [
-          166.0,
-          123.0
+          336.0,
+          117.0
         ]
       ]
     }
@@ -37,5 +37,5 @@
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-24T22:04:02.261775"
+  "timestamp": "2026-04-30T13:50:45.028193"
 }
