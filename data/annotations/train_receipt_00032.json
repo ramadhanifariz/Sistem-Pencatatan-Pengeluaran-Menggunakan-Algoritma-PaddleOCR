@@ -1,9 +1,20 @@
 {
   "filename": "receipt_00032.png",
   "folder": "train",
-  "processed_path": "data\\processed\\processed_train_receipt_00032.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00032.jpg",
   "original_path": "data\\raw\\train\\image\\receipt_00032.png",
-  "extracted_data": [],
+  "extracted_data": [
+    {
+      "text": "Ketoprak SURTOTAL CASH TOTAL",
+      "confidence": 0.980027936398983,
+      "bbox": []
+    },
+    {
+      "text": "1",
+      "confidence": 0.7808834314346313,
+      "bbox": []
+    }
+  ],
   "parsed_data": {
     "items": [],
     "total": null,
@@ -14,5 +25,5 @@
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T13:18:34.195375"
+  "timestamp": "2026-05-26T01:21:58.534650"
 }

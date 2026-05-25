@@ -1,35 +1,43 @@
 {
   "filename": "receipt_00252.png",
   "folder": "train",
-  "processed_path": "data\\processed\\processed_train_receipt_00252.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00252.jpg",
   "original_path": "data\\raw\\train\\image\\receipt_00252.png",
   "extracted_data": [
     {
-      "text": "1opal.",
-      "confidence": 0.5310524702072144,
-      "bbox": [
-        [
-          63.0,
-          770.0
-        ],
-        [
-          141.0,
-          775.0
-        ],
-        [
-          139.0,
-          812.0
-        ],
-        [
-          61.0,
-          808.0
-        ]
-      ]
+      "text": "Debet Card Total. Total Itea: 2001-Hokk1100 Ni1k Tr X:1 001-P1ast1C F (c",
+      "confidence": 0.812422726303339,
+      "bbox": []
+    },
+    {
+      "text": ":",
+      "confidence": 0.3669869601726532,
+      "bbox": []
+    },
+    {
+      "text": "22.000",
+      "confidence": 0.9859525561332703,
+      "bbox": []
+    },
+    {
+      "text": "22.000",
+      "confidence": 0.9311835169792175,
+      "bbox": []
+    },
+    {
+      "text": "22.000",
+      "confidence": 0.999176025390625,
+      "bbox": []
+    },
+    {
+      "text": "22.000",
+      "confidence": 0.9994184970855713,
+      "bbox": []
     }
   ],
   "parsed_data": {
     "items": [],
-    "total": null,
+    "total": 22000.0,
     "tax": null,
     "discount": null,
     "cash": null,
@@ -37,5 +45,5 @@
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T13:50:30.038173"
+  "timestamp": "2026-05-26T01:29:59.355899"
 }

@@ -1,114 +1,39 @@
 {
   "filename": "receipt_00338.png",
   "folder": "train",
-  "processed_path": "data\\processed\\processed_train_receipt_00338.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00338.jpg",
   "original_path": "data\\raw\\train\\image\\receipt_00338.png",
   "extracted_data": [
     {
-      "text": "THAI TEA",
-      "confidence": 0.9981843829154968,
-      "bbox": [
-        [
-          72.0,
-          632.0
-        ],
-        [
-          262.0,
-          632.0
-        ],
-        [
-          262.0,
-          677.0
-        ],
-        [
-          72.0,
-          677.0
-        ]
-      ]
+      "text": "CASH THAI",
+      "confidence": 0.9966945648193359,
+      "bbox": []
     },
     {
-      "text": "-22,000",
-      "confidence": 0.867556095123291,
-      "bbox": [
-        [
-          464.0,
-          628.0
-        ],
-        [
-          631.0,
-          630.0
-        ],
-        [
-          630.0,
-          676.0
-        ],
-        [
-          463.0,
-          674.0
-        ]
-      ]
+      "text": "TEA",
+      "confidence": 0.9937837719917297,
+      "bbox": []
     },
     {
-      "text": "CASH",
-      "confidence": 0.9986876845359802,
-      "bbox": [
-        [
-          71.0,
-          674.0
-        ],
-        [
-          173.0,
-          674.0
-        ],
-        [
-          173.0,
-          718.0
-        ],
-        [
-          71.0,
-          718.0
-        ]
-      ]
+      "text": "22.000",
+      "confidence": 0.9295220375061035,
+      "bbox": []
     },
     {
-      "text": ".22,000",
-      "confidence": 0.9042110443115234,
-      "bbox": [
-        [
-          353.0,
-          668.0
-        ],
-        [
-          625.0,
-          676.0
-        ],
-        [
-          624.0,
-          718.0
-        ],
-        [
-          351.0,
-          710.0
-        ]
-      ]
+      "text": "-22.000",
+      "confidence": 0.8750296831130981,
+      "bbox": []
     }
   ],
   "parsed_data": {
-    "items": [
-      {
-        "name": "CASH",
-        "quantity": 0,
-        "price": 22.0,
-        "total": 0.0
-      }
-    ],
-    "total": null,
+    "items": [],
+    "total": 22000.0,
     "tax": null,
-    "discount": null,
-    "cash": 22.0,
+    "discount": 22000.0,
+    "cash": null,
     "change": null,
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T14:02:13.864115"
+  "timestamp": "2026-05-26T01:33:05.977521"
 }

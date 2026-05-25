@@ -1,152 +1,36 @@
 {
   "filename": "receipt_00035.png",
   "folder": "train",
-  "processed_path": "data\\processed\\processed_train_receipt_00035.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00035.jpg",
   "original_path": "data\\raw\\train\\image\\receipt_00035.png",
   "extracted_data": [
     {
-      "text": "Cu Apel Marmg1",
-      "confidence": 0.7609750032424927,
-      "bbox": [
-        [
-          37.0,
-          348.0
-        ],
-        [
-          277.0,
-          357.0
-        ],
-        [
-          276.0,
-          388.0
-        ],
-        [
-          36.0,
-          379.0
-        ]
-      ]
+      "text": "Kembalian Tunai Sub Tofal Cuka Apel Moringa 289000",
+      "confidence": 0.9830283895134926,
+      "bbox": []
     },
     {
-      "text": "100000",
-      "confidence": 0.8830866813659668,
-      "bbox": [
-        [
-          38.0,
-          377.0
-        ],
-        [
-          132.0,
-          381.0
-        ],
-        [
-          130.0,
-          411.0
-        ],
-        [
-          37.0,
-          407.0
-        ]
-      ]
-    },
-    {
-      "text": "780000",
-      "confidence": 0.7727352976799011,
-      "bbox": [
-        [
-          308.0,
-          369.0
-        ],
-        [
-          393.0,
-          369.0
-        ],
-        [
-          393.0,
-          398.0
-        ],
-        [
-          308.0,
-          398.0
-        ]
-      ]
-    },
-    {
-      "text": "funa",
-      "confidence": 0.8551932573318481,
-      "bbox": [
-        [
-          34.0,
-          547.0
-        ],
-        [
-          106.0,
-          547.0
-        ],
-        [
-          106.0,
-          581.0
-        ],
-        [
-          34.0,
-          581.0
-        ]
-      ]
-    },
-    {
-      "text": "100000",
-      "confidence": 0.8821184039115906,
-      "bbox": [
-        [
-          309.0,
-          558.0
-        ],
-        [
-          393.0,
-          558.0
-        ],
-        [
-          393.0,
-          592.0
-        ],
-        [
-          309.0,
-          592.0
-        ]
-      ]
-    },
-    {
-      "text": "11000",
-      "confidence": 0.9268266558647156,
-      "bbox": [
-        [
-          321.0,
-          650.0
-        ],
-        [
-          398.0,
-          652.0
-        ],
-        [
-          397.0,
-          686.0
-        ],
-        [
-          320.0,
-          683.0
-        ]
-      ]
+      "text": "289000 289000 300000 11000",
+      "confidence": 0.985188364982605,
+      "bbox": []
     }
   ],
   "parsed_data": {
     "items": [
       {
-        "name": "funa",
-        "quantity": 780000,
-        "price": 100000.0,
-        "total": 78000000000.0
+        "name": "289000 300000",
+        "quantity": 289000,
+        "price": 11000.0,
+        "total": 3179000000.0
+      },
+      {
+        "name": "Kembalian Tunai Sub Tofal Cuka Apel Moringa 289000",
+        "quantity": 1,
+        "price": 11000.0,
+        "total": 11000.0
       }
     ],
-    "total": 78000000000.0,
+    "total": 11000.0,
     "tax": null,
     "discount": null,
     "cash": null,
@@ -154,5 +38,5 @@
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T13:18:47.428209"
+  "timestamp": "2026-05-26T01:22:02.582294"
 }

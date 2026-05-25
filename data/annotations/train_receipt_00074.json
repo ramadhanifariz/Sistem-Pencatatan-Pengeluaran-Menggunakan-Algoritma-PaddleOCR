@@ -1,120 +1,34 @@
 {
   "filename": "receipt_00074.png",
   "folder": "train",
-  "processed_path": "data\\processed\\processed_train_receipt_00074.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00074.jpg",
   "original_path": "data\\raw\\train\\image\\receipt_00074.png",
   "extracted_data": [
     {
-      "text": "TOTAL",
-      "confidence": 0.9975414276123047,
-      "bbox": [
-        [
-          199.0,
-          453.0
-        ],
-        [
-          303.0,
-          460.0
-        ],
-        [
-          300.0,
-          508.0
-        ],
-        [
-          195.0,
-          501.0
-        ]
-      ]
+      "text": "2 APPLE CREAMHEESE PASTRY CHANGE HSYO TOTAL",
+      "confidence": 0.929994523525238,
+      "bbox": []
     },
     {
-      "text": "26.000",
-      "confidence": 0.9188756942749023,
-      "bbox": [
-        [
-          404.0,
-          464.0
-        ],
-        [
-          531.0,
-          469.0
-        ],
-        [
-          529.0,
-          519.0
-        ],
-        [
-          402.0,
-          514.0
-        ]
-      ]
+      "text": "26,000 74,000",
+      "confidence": 0.9930562376976013,
+      "bbox": []
     },
     {
-      "text": "CHANGE",
-      "confidence": 0.9978036284446716,
-      "bbox": [
-        [
-          193.0,
-          518.0
-        ],
-        [
-          319.0,
-          521.0
-        ],
-        [
-          318.0,
-          567.0
-        ],
-        [
-          192.0,
-          564.0
-        ]
-      ]
-    },
-    {
-      "text": "74.000",
-      "confidence": 0.9890864491462708,
-      "bbox": [
-        [
-          402.0,
-          524.0
-        ],
-        [
-          529.0,
-          531.0
-        ],
-        [
-          527.0,
-          581.0
-        ],
-        [
-          400.0,
-          574.0
-        ]
-      ]
+      "text": "100.000 26,000",
+      "confidence": 0.9838274419307709,
+      "bbox": []
     }
   ],
   "parsed_data": {
-    "items": [
-      {
-        "name": "26.000",
-        "quantity": 1,
-        "price": 26000.0,
-        "total": 26000.0
-      },
-      {
-        "name": "74.000",
-        "quantity": 1,
-        "price": 74000.0,
-        "total": 74000.0
-      }
-    ],
+    "items": [],
     "total": 26000.0,
     "tax": null,
     "discount": null,
     "cash": null,
-    "change": 74000.0,
+    "change": null,
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T13:23:52.944307"
+  "timestamp": "2026-05-26T01:23:21.122677"
 }

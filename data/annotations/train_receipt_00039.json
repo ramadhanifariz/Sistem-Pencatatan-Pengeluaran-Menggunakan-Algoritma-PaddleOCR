@@ -1,158 +1,44 @@
 {
   "filename": "receipt_00039.png",
   "folder": "train",
-  "processed_path": "data\\processed\\processed_train_receipt_00039.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00039.jpg",
   "original_path": "data\\raw\\train\\image\\receipt_00039.png",
   "extracted_data": [
     {
-      "text": "H COUPl t St A",
-      "confidence": 0.935440182685852,
-      "bbox": [
-        [
-          157.0,
-          876.0
-        ],
-        [
-          533.0,
-          871.0
-        ],
-        [
-          534.0,
-          919.0
-        ],
-        [
-          158.0,
-          924.0
-        ]
-      ]
+      "text": "w  COUPLE",
+      "confidence": 0.5827381983399391,
+      "bbox": []
     },
     {
-      "text": "/0,000",
-      "confidence": 0.9186529517173767,
-      "bbox": [
-        [
-          709.0,
-          870.0
-        ],
-        [
-          895.0,
-          866.0
-        ],
-        [
-          896.0,
-          914.0
-        ],
-        [
-          710.0,
-          918.0
-        ]
-      ]
+      "text": "TL CASH",
+      "confidence": 0.9825508296489716,
+      "bbox": []
     },
     {
-      "text": "TL",
-      "confidence": 0.9953737258911133,
-      "bbox": [
-        [
-          253.0,
-          925.0
-        ],
-        [
-          319.0,
-          925.0
-        ],
-        [
-          319.0,
-          976.0
-        ],
-        [
-          253.0,
-          976.0
-        ]
-      ]
+      "text": " SEA",
+      "confidence": 0.9047062993049622,
+      "bbox": []
     },
     {
-      "text": "/0. 000",
-      "confidence": 0.6697824597358704,
-      "bbox": [
-        [
-          538.0,
-          927.0
-        ],
-        [
-          889.0,
-          922.0
-        ],
-        [
-          889.0,
-          965.0
-        ],
-        [
-          539.0,
-          970.0
-        ]
-      ]
+      "text": "70 OO0",
+      "confidence": 0.5738971829414368,
+      "bbox": []
     },
     {
-      "text": "CASH",
-      "confidence": 0.9997439980506897,
-      "bbox": [
-        [
-          249.0,
-          978.0
-        ],
-        [
-          387.0,
-          972.0
-        ],
-        [
-          390.0,
-          1026.0
-        ],
-        [
-          252.0,
-          1032.0
-        ]
-      ]
-    },
-    {
-      "text": "70,000",
-      "confidence": 0.991158664226532,
-      "bbox": [
-        [
-          708.0,
-          973.0
-        ],
-        [
-          895.0,
-          970.0
-        ],
-        [
-          896.0,
-          1019.0
-        ],
-        [
-          709.0,
-          1023.0
-        ]
-      ]
+      "text": "70,000 70,000",
+      "confidence": 0.9655497074127197,
+      "bbox": []
     }
   ],
   "parsed_data": {
-    "items": [
-      {
-        "name": "CASH",
-        "quantity": 0,
-        "price": 70.0,
-        "total": 0.0
-      }
-    ],
-    "total": null,
+    "items": [],
+    "total": 70000.0,
     "tax": null,
     "discount": null,
-    "cash": 70.0,
+    "cash": null,
     "change": null,
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T13:19:07.862394"
+  "timestamp": "2026-05-26T01:22:08.342609"
 }

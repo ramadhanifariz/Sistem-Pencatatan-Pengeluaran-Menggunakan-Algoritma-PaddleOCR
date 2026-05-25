@@ -1,9 +1,25 @@
 {
   "filename": "receipt_00219.png",
   "folder": "train",
-  "processed_path": "data\\processed\\processed_train_receipt_00219.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00219.jpg",
   "original_path": "data\\raw\\train\\image\\receipt_00219.png",
-  "extracted_data": [],
+  "extracted_data": [
+    {
+      "text": "0.282X 101.900 ERIY NIPIS 0.09X 64 900 CF PUNCIS ORG CABE KERITING CURA HV89 1VH df sh1t lw not250 1X 20;600 0.024X 44:900 EDAMAME 0.512X 22500 1X 15 9O0",
+      "confidence": 0.7633006165851839,
+      "bbox": []
+    },
+    {
+      "text": "198X 16.500 1 EAKA DOtVL1 wrt u1 : W1",
+      "confidence": 0.4692617654800415,
+      "bbox": []
+    },
+    {
+      "text": "20,0 11,520 15.% 83.716 28.736 93.71 3,20.7 3.323 5,841 5.4?1-",
+      "confidence": 0.8556552369846031,
+      "bbox": []
+    }
+  ],
   "parsed_data": {
     "items": [],
     "total": null,
@@ -14,5 +30,5 @@
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T13:45:29.815380"
+  "timestamp": "2026-05-26T01:28:42.115154"
 }

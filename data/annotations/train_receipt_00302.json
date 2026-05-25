@@ -1,174 +1,48 @@
 {
   "filename": "receipt_00302.png",
   "folder": "train",
-  "processed_path": "data\\processed\\processed_train_receipt_00302.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00302.jpg",
   "original_path": "data\\raw\\train\\image\\receipt_00302.png",
   "extracted_data": [
     {
-      "text": "lon Cha uireos",
-      "confidence": 0.7394475340843201,
-      "bbox": [
-        [
-          259.0,
-          355.0
-        ],
-        [
-          373.0,
-          359.0
-        ],
-        [
-          372.0,
-          381.0
-        ],
-        [
-          258.0,
-          378.0
-        ]
-      ]
+      "text": "F J Cote5 du Doa Cha Vire Sis 0iscount 20.00%",
+      "confidence": 0.8885663449764252,
+      "bbox": []
     },
     {
-      "text": "i Cotelu",
-      "confidence": 0.7183541655540466,
-      "bbox": [
-        [
-          259.0,
-          373.0
-        ],
-        [
-          345.0,
-          376.0
-        ],
-        [
-          344.0,
-          399.0
-        ],
-        [
-          258.0,
-          395.0
-        ]
-      ]
+      "text": "Subtotal Service",
+      "confidence": 0.9817223846912384,
+      "bbox": []
     },
     {
-      "text": "ubtatar",
-      "confidence": 0.7898088693618774,
-      "bbox": [
-        [
-          317.0,
-          395.0
-        ],
-        [
-          369.0,
-          398.0
-        ],
-        [
-          368.0,
-          418.0
-        ],
-        [
-          316.0,
-          415.0
-        ]
-      ]
+      "text": "tax Total",
+      "confidence": 0.8779321610927582,
+      "bbox": []
     },
     {
-      "text": "E",
-      "confidence": 0.8509967923164368,
-      "bbox": [
-        [
-          328.0,
-          418.0
-        ],
-        [
-          368.0,
-          418.0
-        ],
-        [
-          368.0,
-          434.0
-        ],
-        [
-          328.0,
-          434.0
-        ]
-      ]
+      "text": "1x 2x",
+      "confidence": 0.8112083673477173,
+      "bbox": []
     },
     {
-      "text": "Tota",
-      "confidence": 0.9671403169631958,
-      "bbox": [
-        [
-          352.0,
-          468.0
-        ],
-        [
-          389.0,
-          473.0
-        ],
-        [
-          385.0,
-          498.0
-        ],
-        [
-          349.0,
-          493.0
-        ]
-      ]
+      "text": "000500 155.000",
+      "confidence": 0.7142205536365509,
+      "bbox": []
     },
     {
       "text": "353.320",
-      "confidence": 0.8869915008544922,
-      "bbox": [
-        [
-          441.0,
-          469.0
-        ],
-        [
-          543.0,
-          474.0
-        ],
-        [
-          541.0,
-          500.0
-        ],
-        [
-          440.0,
-          495.0
-        ]
-      ]
+      "confidence": 0.9447405934333801,
+      "bbox": []
     },
     {
-      "text": "ML",
-      "confidence": 0.5458628535270691,
-      "bbox": [
-        [
-          247.0,
-          555.0
-        ],
-        [
-          430.0,
-          558.0
-        ],
-        [
-          429.0,
-          662.0
-        ],
-        [
-          245.0,
-          659.0
-        ]
-      ]
+      "text": "365: 00 210,000 155.002 T3 6b 2%,200 32.170",
+      "confidence": 0.789509879425168,
+      "bbox": []
     }
   ],
   "parsed_data": {
-    "items": [
-      {
-        "name": "Tota",
-        "quantity": 1,
-        "price": 353320.0,
-        "total": 353320.0
-      }
-    ],
-    "total": 353320.0,
+    "items": [],
+    "total": 32170.0,
     "tax": null,
     "discount": null,
     "cash": null,
@@ -176,5 +50,5 @@
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T13:56:08.909997"
+  "timestamp": "2026-05-26T01:31:34.606787"
 }

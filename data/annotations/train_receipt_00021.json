@@ -1,63 +1,49 @@
 {
   "filename": "receipt_00021.png",
   "folder": "train",
-  "processed_path": "data\\processed\\processed_train_receipt_00021.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00021.jpg",
   "original_path": "data\\raw\\train\\image\\receipt_00021.png",
   "extracted_data": [
     {
-      "text": "Total.",
-      "confidence": 0.9928913116455078,
-      "bbox": [
-        [
-          361.0,
-          857.0
-        ],
-        [
-          420.0,
-          806.0
-        ],
-        [
-          443.0,
-          833.0
-        ],
-        [
-          385.0,
-          885.0
-        ]
-      ]
+      "text": "Change : Cash Tendered: Total. Total Item: 60t2-Plastic Bag Mediun 001-Hokkaido Milk Toast i001-Choco Bum",
+      "confidence": 0.8966162092983723,
+      "bbox": []
     },
     {
-      "text": "Cash",
-      "confidence": 0.9006327390670776,
-      "bbox": [
-        [
-          387.0,
-          884.0
-        ],
-        [
-          428.0,
-          847.0
-        ],
-        [
-          449.0,
-          871.0
-        ],
-        [
-          408.0,
-          907.0
-        ]
-      ]
+      "text": "22.000 22.000",
+      "confidence": 0.997454047203064,
+      "bbox": []
+    },
+    {
+      "text": "-",
+      "confidence": 0.20754297077655792,
+      "bbox": []
+    },
+    {
+      "text": "x1 x1 X r-7",
+      "confidence": 0.7141078561544418,
+      "bbox": []
+    },
+    {
+      "text": "44.000 22.000 22.000",
+      "confidence": 0.9960019588470459,
+      "bbox": []
+    },
+    {
+      "text": "50.000 6.000 -",
+      "confidence": 0.7309465855360031,
+      "bbox": []
     }
   ],
   "parsed_data": {
     "items": [],
     "total": null,
     "tax": null,
-    "discount": null,
+    "discount": 7.0,
     "cash": null,
     "change": null,
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T13:17:42.686458"
+  "timestamp": "2026-05-26T01:21:44.168096"
 }

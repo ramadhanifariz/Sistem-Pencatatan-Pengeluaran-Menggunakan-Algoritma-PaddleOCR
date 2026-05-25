@@ -1,0 +1,138 @@
+{
+  "total_annotations": 500,
+  "total_text_blocks": 6373,
+  "top_20_texts": [
+    [
+      "TOTAL",
+      122
+    ],
+    [
+      "CASH",
+      118
+    ],
+    [
+      "CHANGE",
+      70
+    ],
+    [
+      "22.000",
+      52
+    ],
+    [
+      "20.000",
+      48
+    ],
+    [
+      "Total",
+      43
+    ],
+    [
+      "Subtotal",
+      37
+    ],
+    [
+      "25.000",
+      35
+    ],
+    [
+      "20,000",
+      32
+    ],
+    [
+      "SUBTOTAL",
+      32
+    ],
+    [
+      "50,000",
+      31
+    ],
+    [
+      "17.000",
+      31
+    ],
+    [
+      "30.000",
+      29
+    ],
+    [
+      "40.000",
+      27
+    ],
+    [
+      "Total.",
+      26
+    ],
+    [
+      "Cash",
+      26
+    ],
+    [
+      "50.000",
+      26
+    ],
+    [
+      "GRAND TOTAL",
+      23
+    ],
+    [
+      "Sub Total",
+      22
+    ],
+    [
+      "SUB TOTAL",
+      22
+    ]
+  ],
+  "pattern_distribution": {
+    "qty_first": 16,
+    "qty_last": 6,
+    "no_qty": 29,
+    "with_at": 16,
+    "with_x": 47,
+    "unknown": 2794
+  },
+  "example_patterns": {
+    "qty_first": [
+      "68 a000",
+      "1001 Choco Bun",
+      "503 r 000",
+      "500 day@ cf summwr",
+      "16 s363"
+    ],
+    "qty_last": [
+      "POCAI 3 11,000 222.0Q0",
+      "RTD Kumyif 1 15000",
+      "Alaa 1 15000",
+      "UE CHICYEN XAT8U C 1 00 580007 5S000",
+      "0.09X 84 900"
+    ],
+    "with_at": [
+      "@12.000",
+      "@20.000",
+      "@8000",
+      "@22.000",
+      "1X S-0valt1ne Macchiat @22.000"
+    ],
+    "with_x": [
+      "- EDC CIMB NIAA No: xx773O",
+      "x 17,000",
+      "D18c -100X(ITM08)",
+      "1X S-8u6b.1e +7k Tea 20,000",
+      "2x 6000"
+    ],
+    "no_qty": [
+      "T 35.000",
+      "Rp 39.600",
+      "Rp 59.300",
+      "VISA 894E",
+      "Qash 50.000"
+    ],
+    "unknown": [
+      "901016",
+      "60,000",
+      "20,000",
+      "-60,000",
+      "60.000"
+    ]
+  }
+}

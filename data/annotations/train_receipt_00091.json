@@ -1,202 +1,34 @@
 {
   "filename": "receipt_00091.png",
   "folder": "train",
-  "processed_path": "data\\processed\\processed_train_receipt_00091.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00091.jpg",
   "original_path": "data\\raw\\train\\image\\receipt_00091.png",
   "extracted_data": [
     {
-      "text": "1 CHOCO CUSTARO PASTRY",
-      "confidence": 0.8958784341812134,
-      "bbox": [
-        [
-          128.0,
-          366.0
-        ],
-        [
-          423.0,
-          382.0
-        ],
-        [
-          421.0,
-          417.0
-        ],
-        [
-          126.0,
-          401.0
-        ]
-      ]
+      "text": "1 CHOCO CUSTARD PASTRY 1 CARAMEL PASTRY TOTAL",
+      "confidence": 0.9916523694992065,
+      "bbox": []
     },
     {
-      "text": "12.",
-      "confidence": 0.817790687084198,
-      "bbox": [
-        [
-          530.0,
-          390.0
-        ],
-        [
-          568.0,
-          390.0
-        ],
-        [
-          568.0,
-          419.0
-        ],
-        [
-          530.0,
-          419.0
-        ]
-      ]
+      "text": "lr1",
+      "confidence": 0.41699719429016113,
+      "bbox": []
     },
     {
-      "text": "1 CARAMEL PASTRY",
-      "confidence": 0.9001361131668091,
-      "bbox": [
-        [
-          128.0,
-          400.0
-        ],
-        [
-          342.0,
-          412.0
-        ],
-        [
-          340.0,
-          444.0
-        ],
-        [
-          126.0,
-          433.0
-        ]
-      ]
-    },
-    {
-      "text": "2.",
-      "confidence": 0.8730649352073669,
-      "bbox": [
-        [
-          530.0,
-          419.0
-        ],
-        [
-          604.0,
-          423.0
-        ],
-        [
-          602.0,
-          454.0
-        ],
-        [
-          528.0,
-          449.0
-        ]
-      ]
-    },
-    {
-      "text": "TOTAL",
-      "confidence": 0.9994579553604126,
-      "bbox": [
-        [
-          141.0,
-          460.0
-        ],
-        [
-          281.0,
-          465.0
-        ],
-        [
-          279.0,
-          517.0
-        ],
-        [
-          139.0,
-          512.0
-        ]
-      ]
-    },
-    {
-      "text": "24,000",
-      "confidence": 0.951860249042511,
-      "bbox": [
-        [
-          441.0,
-          472.0
-        ],
-        [
-          623.0,
-          483.0
-        ],
-        [
-          619.0,
-          540.0
-        ],
-        [
-          438.0,
-          528.0
-        ]
-      ]
-    },
-    {
-      "text": "CHANGE",
-      "confidence": 0.9892317652702332,
-      "bbox": [
-        [
-          122.0,
-          521.0
-        ],
-        [
-          304.0,
-          524.0
-        ],
-        [
-          303.0,
-          567.0
-        ],
-        [
-          121.0,
-          563.0
-        ]
-      ]
-    },
-    {
-      "text": "6.000",
-      "confidence": 0.9951894879341125,
-      "bbox": [
-        [
-          476.0,
-          541.0
-        ],
-        [
-          635.0,
-          566.0
-        ],
-        [
-          628.0,
-          616.0
-        ],
-        [
-          468.0,
-          591.0
-        ]
-      ]
+      "text": "12,000 12,000 on",
+      "confidence": 0.7366462647914886,
+      "bbox": []
     }
   ],
   "parsed_data": {
-    "items": [
-      {
-        "name": "6.000",
-        "quantity": 1,
-        "price": 6000.0,
-        "total": 6000.0
-      }
-    ],
-    "total": 6000.0,
+    "items": [],
+    "total": null,
     "tax": null,
     "discount": null,
     "cash": null,
-    "change": 6000.0,
+    "change": null,
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T13:25:41.344345"
+  "timestamp": "2026-05-26T01:23:51.211306"
 }

@@ -1,96 +1,13 @@
 {
   "filename": "receipt_00058.png",
   "folder": "test",
-  "processed_path": "data\\processed\\processed_test_receipt_00058.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00058.jpg",
   "original_path": "data\\raw\\test\\image\\receipt_00058.png",
   "extracted_data": [
     {
-      "text": "PHO1OTA",
-      "confidence": 0.7867013812065125,
-      "bbox": [
-        [
-          462.0,
-          1550.0
-        ],
-        [
-          746.0,
-          1550.0
-        ],
-        [
-          746.0,
-          1615.0
-        ],
-        [
-          462.0,
-          1615.0
-        ]
-      ]
-    },
-    {
-      "text": "CAON",
-      "confidence": 0.7099781036376953,
-      "bbox": [
-        [
-          466.0,
-          1622.0
-        ],
-        [
-          587.0,
-          1622.0
-        ],
-        [
-          587.0,
-          1690.0
-        ],
-        [
-          466.0,
-          1690.0
-        ]
-      ]
-    },
-    {
-      "text": "Totolo",
-      "confidence": 0.8449967503547668,
-      "bbox": [
-        [
-          554.0,
-          1765.0
-        ],
-        [
-          719.0,
-          1765.0
-        ],
-        [
-          719.0,
-          1829.0
-        ],
-        [
-          554.0,
-          1829.0
-        ]
-      ]
-    },
-    {
-      "text": "00",
-      "confidence": 0.9592345356941223,
-      "bbox": [
-        [
-          1168.0,
-          1962.0
-        ],
-        [
-          1228.0,
-          1962.0
-        ],
-        [
-          1228.0,
-          2023.0
-        ],
-        [
-          1168.0,
-          2023.0
-        ]
-      ]
+      "text": "Sub Pt1 pay1 Tota Cha",
+      "confidence": 0.9038471877574921,
+      "bbox": []
     }
   ],
   "parsed_data": {
@@ -103,5 +20,5 @@
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T14:18:58.751647"
+  "timestamp": "2026-05-26T01:52:05.420854"
 }

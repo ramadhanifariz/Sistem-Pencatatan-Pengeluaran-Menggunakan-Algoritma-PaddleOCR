@@ -1,48 +1,39 @@
 {
   "filename": "receipt_00103.png",
   "folder": "train",
-  "processed_path": "data\\processed\\processed_train_receipt_00103.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00103.jpg",
   "original_path": "data\\raw\\train\\image\\receipt_00103.png",
   "extracted_data": [
     {
-      "text": "0U 1,096,040",
-      "confidence": 0.9269471168518066,
-      "bbox": [
-        [
-          254.0,
-          1150.0
-        ],
-        [
-          580.0,
-          1139.0
-        ],
-        [
-          582.0,
-          1193.0
-        ],
-        [
-          256.0,
-          1203.0
-        ]
-      ]
+      "text": "6 1 1 3 1 2 1 TAM 1 1",
+      "confidence": 0.9170103634241968,
+      "bbox": []
+    },
+    {
+      "text": "ABSIO TH PD JMR IKAN GURAME MED LuMpiaune yRem MASI FUT1H1000 0,000 DNFSEI HO 1WD OTHERS POCAI BWG_FUTTH AQUA 1SED TEA 2:00D ICED FEA CUMI GR 3ONJHM FOOD BEYERAGES SERVICE CHARGE HOT TEA SUBTOTAL DU 1096,O40 Tax 10% SOP 1KAN WMEDIUEE MEDIUM** XMEDIUME MEDTUMA: AMEDIUPE",
+      "confidence": 0.6808403606076681,
+      "bbox": []
+    },
+    {
+      "text": "12,000",
+      "confidence": 0.8076925277709961,
+      "bbox": []
+    },
+    {
+      "text": "158.000. 129,00 +29000 147.000 1#4.000 797.000 90Q*grS 3.000 24,000 11.000 12.000 $3.:000 $000 4 94 640",
+      "confidence": 0.6891755641227064,
+      "bbox": []
     }
   ],
   "parsed_data": {
-    "items": [
-      {
-        "name": "0U 1,096,040",
-        "quantity": 0.0,
-        "price": 1096.04,
-        "total": 0.0
-      }
-    ],
+    "items": [],
     "total": null,
-    "tax": null,
+    "tax": 10.0,
     "discount": null,
     "cash": null,
     "change": null,
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T13:27:05.763420"
+  "timestamp": "2026-05-26T01:24:12.959988"
 }

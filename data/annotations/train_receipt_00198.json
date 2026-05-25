@@ -1,18 +1,29 @@
 {
   "filename": "receipt_00198.png",
   "folder": "train",
-  "processed_path": "data\\processed\\processed_train_receipt_00198.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00198.jpg",
   "original_path": "data\\raw\\train\\image\\receipt_00198.png",
-  "extracted_data": [],
+  "extracted_data": [
+    {
+      "text": "PAJFK 10z Kewba1i Total. Tender &c TARO Subtotal",
+      "confidence": 0.9118001516908407,
+      "bbox": []
+    },
+    {
+      "text": "-30,000 20,000 50.000 18.182 18,182 1.818",
+      "confidence": 0.9611253291368484,
+      "bbox": []
+    }
+  ],
   "parsed_data": {
     "items": [],
-    "total": null,
+    "total": 1818.0,
     "tax": null,
-    "discount": null,
+    "discount": 30000.0,
     "cash": null,
     "change": null,
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T13:43:09.183346"
+  "timestamp": "2026-05-26T01:28:02.904106"
 }

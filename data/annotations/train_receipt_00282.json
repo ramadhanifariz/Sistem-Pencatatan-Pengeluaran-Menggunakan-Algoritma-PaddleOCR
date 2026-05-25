@@ -1,9 +1,30 @@
 {
   "filename": "receipt_00282.png",
   "folder": "train",
-  "processed_path": "data\\processed\\processed_train_receipt_00282.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00282.jpg",
   "original_path": "data\\raw\\train\\image\\receipt_00282.png",
-  "extracted_data": [],
+  "extracted_data": [
+    {
+      "text": "2 SINGLE Cone",
+      "confidence": 0.8723315000534058,
+      "bbox": []
+    },
+    {
+      "text": "Rua Raisil Strawberry Qheese",
+      "confidence": 0.8752215504646301,
+      "bbox": []
+    },
+    {
+      "text": "SUBTOTAL Svc",
+      "confidence": 0.6406089961528778,
+      "bbox": []
+    },
+    {
+      "text": "CHG",
+      "confidence": 0.7989749908447266,
+      "bbox": []
+    }
+  ],
   "parsed_data": {
     "items": [],
     "total": null,
@@ -14,5 +35,5 @@
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T13:53:42.936505"
+  "timestamp": "2026-05-26T01:30:54.852159"
 }

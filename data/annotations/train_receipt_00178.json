@@ -1,9 +1,25 @@
 {
   "filename": "receipt_00178.png",
   "folder": "train",
-  "processed_path": "data\\processed\\processed_train_receipt_00178.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00178.jpg",
   "original_path": "data\\raw\\train\\image\\receipt_00178.png",
-  "extracted_data": [],
+  "extracted_data": [
+    {
+      "text": "LA12592NVS FQFISH or",
+      "confidence": 0.8304581940174103,
+      "bbox": []
+    },
+    {
+      "text": "259.000",
+      "confidence": 0.9780037999153137,
+      "bbox": []
+    },
+    {
+      "text": "-",
+      "confidence": 0.32679519057273865,
+      "bbox": []
+    }
+  ],
   "parsed_data": {
     "items": [],
     "total": null,
@@ -14,5 +30,5 @@
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T13:38:41.173703"
+  "timestamp": "2026-05-26T01:27:02.484261"
 }

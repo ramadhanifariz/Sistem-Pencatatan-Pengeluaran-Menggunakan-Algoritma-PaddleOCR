@@ -1,224 +1,44 @@
 {
   "filename": "receipt_00393.png",
   "folder": "train",
-  "processed_path": "data\\processed\\processed_train_receipt_00393.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00393.jpg",
   "original_path": "data\\raw\\train\\image\\receipt_00393.png",
   "extracted_data": [
     {
-      "text": "4005",
-      "confidence": 0.903844952583313,
-      "bbox": [
-        [
-          86.0,
-          713.0
-        ],
-        [
-          356.0,
-          709.0
-        ],
-        [
-          357.0,
-          746.0
-        ],
-        [
-          87.0,
-          751.0
-        ]
-      ]
+      "text": "Cash Total. Total Item: Tendered: Change: 6001-Plastic Bag Small 4005-Maple qlazed",
+      "confidence": 0.9216494644060731,
+      "bbox": []
     },
     {
       "text": "25.000",
-      "confidence": 0.871533215045929,
-      "bbox": [
-        [
-          202.0,
-          757.0
-        ],
-        [
-          357.0,
-          750.0
-        ],
-        [
-          358.0,
-          788.0
-        ],
-        [
-          204.0,
-          794.0
-        ]
-      ]
+      "confidence": 0.9932584762573242,
+      "bbox": []
     },
     {
-      "text": "6001-P",
-      "confidence": 0.7423825860023499,
-      "bbox": [
-        [
-          86.0,
-          807.0
-        ],
-        [
-          297.0,
-          797.0
-        ],
-        [
-          299.0,
-          835.0
-        ],
-        [
-          87.0,
-          844.0
-        ]
-      ]
+      "text": "x1 x1",
+      "confidence": 0.9850337505340576,
+      "bbox": []
     },
     {
-      "text": "'otal",
-      "confidence": 0.8035281896591187,
-      "bbox": [
-        [
-          87.0,
-          947.0
-        ],
-        [
-          176.0,
-          943.0
-        ],
-        [
-          177.0,
-          977.0
-        ],
-        [
-          89.0,
-          981.0
-        ]
-      ]
+      "text": "25.000",
+      "confidence": 0.9965448975563049,
+      "bbox": []
     },
     {
-      "text": "25.0",
-      "confidence": 0.8115008473396301,
-      "bbox": [
-        [
-          583.0,
-          1010.0
-        ],
-        [
-          675.0,
-          1010.0
-        ],
-        [
-          675.0,
-          1045.0
-        ],
-        [
-          583.0,
-          1045.0
-        ]
-      ]
-    },
-    {
-      "text": "Total.",
-      "confidence": 0.9980626702308655,
-      "bbox": [
-        [
-          76.0,
-          1033.0
-        ],
-        [
-          189.0,
-          1024.0
-        ],
-        [
-          193.0,
-          1071.0
-        ],
-        [
-          79.0,
-          1080.0
-        ]
-      ]
-    },
-    {
-      "text": "Cash",
-      "confidence": 0.9959324598312378,
-      "bbox": [
-        [
-          77.0,
-          1080.0
-        ],
-        [
-          163.0,
-          1075.0
-        ],
-        [
-          166.0,
-          1121.0
-        ],
-        [
-          80.0,
-          1127.0
-        ]
-      ]
-    },
-    {
-      "text": "Tondored",
-      "confidence": 0.8049827218055725,
-      "bbox": [
-        [
-          84.0,
-          1131.0
-        ],
-        [
-          224.0,
-          1118.0
-        ],
-        [
-          228.0,
-          1157.0
-        ],
-        [
-          88.0,
-          1170.0
-        ]
-      ]
-    },
-    {
-      "text": "\"hanoe",
-      "confidence": 0.7374281883239746,
-      "bbox": [
-        [
-          89.0,
-          1180.0
-        ],
-        [
-          202.0,
-          1177.0
-        ],
-        [
-          203.0,
-          1207.0
-        ],
-        [
-          90.0,
-          1210.0
-        ]
-      ]
+      "text": "00",
+      "confidence": 0.22334864735603333,
+      "bbox": []
     }
   ],
   "parsed_data": {
-    "items": [
-      {
-        "name": "25.000",
-        "quantity": 1,
-        "price": 25000.0,
-        "total": 25000.0
-      }
-    ],
-    "total": 25000.0,
+    "items": [],
+    "total": null,
     "tax": null,
     "discount": null,
     "cash": null,
-    "change": null,
+    "change": 6001.0,
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T14:10:27.101793"
+  "timestamp": "2026-05-26T01:35:18.317064"
 }

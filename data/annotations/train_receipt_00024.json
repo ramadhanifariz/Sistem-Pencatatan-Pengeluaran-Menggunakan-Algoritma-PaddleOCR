@@ -1,130 +1,43 @@
 {
   "filename": "receipt_00024.png",
   "folder": "train",
-  "processed_path": "data\\processed\\processed_train_receipt_00024.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00024.jpg",
   "original_path": "data\\raw\\train\\image\\receipt_00024.png",
   "extracted_data": [
     {
-      "text": "20.000",
-      "confidence": 0.6394423842430115,
-      "bbox": [
-        [
-          217.0,
-          573.0
-        ],
-        [
-          282.0,
-          573.0
-        ],
-        [
-          282.0,
-          596.0
-        ],
-        [
-          217.0,
-          596.0
-        ]
-      ]
+      "text": "Total Ites: Total, Debet Card 6002-Plastic Bag Hedium 1032-Doub1e Cheddat 1001-Choco Pun",
+      "confidence": 0.9554262105375528,
+      "bbox": []
     },
     {
-      "text": "02-010",
-      "confidence": 0.7053390145301819,
-      "bbox": [
-        [
-          122.0,
-          596.0
-        ],
-        [
-          286.0,
-          604.0
-        ],
-        [
-          284.0,
-          633.0
-        ],
-        [
-          120.0,
-          626.0
-        ]
-      ]
+      "text": "26.000 22.000",
+      "confidence": 0.9713049530982971,
+      "bbox": []
     },
     {
-      "text": "00",
-      "confidence": 0.6135094165802002,
-      "bbox": [
-        [
-          111.0,
-          698.0
-        ],
-        [
-          159.0,
-          698.0
-        ],
-        [
-          159.0,
-          719.0
-        ],
-        [
-          111.0,
-          719.0
-        ]
-      ]
+      "text": "X1 x1",
+      "confidence": 0.8135559856891632,
+      "bbox": []
     },
     {
-      "text": "Total.",
-      "confidence": 0.9765631556510925,
-      "bbox": [
-        [
-          106.0,
-          751.0
-        ],
-        [
-          175.0,
-          759.0
-        ],
-        [
-          172.0,
-          786.0
-        ],
-        [
-          103.0,
-          778.0
-        ]
-      ]
+      "text": "3.000 26.000 22.000",
+      "confidence": 0.9930694103240967,
+      "bbox": []
     },
     {
-      "text": "Debe+Card",
-      "confidence": 0.900536298751831,
-      "bbox": [
-        [
-          108.0,
-          813.0
-        ],
-        [
-          223.0,
-          822.0
-        ],
-        [
-          221.0,
-          851.0
-        ],
-        [
-          105.0,
-          842.0
-        ]
-      ]
+      "text": "48.000",
+      "confidence": 0.9975619316101074,
+      "bbox": []
+    },
+    {
+      "text": "1",
+      "confidence": 0.9966062307357788,
+      "bbox": []
     }
   ],
   "parsed_data": {
-    "items": [
-      {
-        "name": "20.000",
-        "quantity": 1,
-        "price": 20000.0,
-        "total": 20000.0
-      }
-    ],
-    "total": 20000.0,
+    "items": [],
+    "total": null,
     "tax": null,
     "discount": null,
     "cash": null,
@@ -132,5 +45,5 @@
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T13:17:56.592223"
+  "timestamp": "2026-05-26T01:21:48.017847"
 }

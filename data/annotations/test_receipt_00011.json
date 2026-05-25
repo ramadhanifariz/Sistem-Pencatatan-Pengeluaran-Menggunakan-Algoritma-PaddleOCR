@@ -1,108 +1,18 @@
 {
   "filename": "receipt_00011.png",
   "folder": "test",
-  "processed_path": "data\\processed\\processed_test_receipt_00011.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00011.jpg",
   "original_path": "data\\raw\\test\\image\\receipt_00011.png",
   "extracted_data": [
     {
-      "text": "TOTAL",
-      "confidence": 0.9988552331924438,
-      "bbox": [
-        [
-          151.0,
-          488.0
-        ],
-        [
-          249.0,
-          488.0
-        ],
-        [
-          249.0,
-          531.0
-        ],
-        [
-          151.0,
-          531.0
-        ]
-      ]
-    },
-    {
-      "text": "230.000",
-      "confidence": 0.9871217608451843,
-      "bbox": [
-        [
-          330.0,
-          481.0
-        ],
-        [
-          465.0,
-          472.0
-        ],
-        [
-          468.0,
-          512.0
-        ],
-        [
-          333.0,
-          521.0
-        ]
-      ]
-    },
-    {
-      "text": "0",
-      "confidence": 0.880448043346405,
-      "bbox": [
-        [
-          451.0,
-          529.0
-        ],
-        [
-          473.0,
-          529.0
-        ],
-        [
-          473.0,
-          557.0
-        ],
-        [
-          451.0,
-          557.0
-        ]
-      ]
-    },
-    {
-      "text": "CHANGE",
-      "confidence": 0.9993250966072083,
-      "bbox": [
-        [
-          145.0,
-          544.0
-        ],
-        [
-          267.0,
-          536.0
-        ],
-        [
-          269.0,
-          575.0
-        ],
-        [
-          147.0,
-          583.0
-        ]
-      ]
+      "text": "230,000 000 $0,000",
+      "confidence": 0.9812615662813187,
+      "bbox": []
     }
   ],
   "parsed_data": {
-    "items": [
-      {
-        "name": "230.000",
-        "quantity": 1,
-        "price": 230000.0,
-        "total": 230000.0
-      }
-    ],
-    "total": 230000.0,
+    "items": [],
+    "total": null,
     "tax": null,
     "discount": null,
     "cash": null,
@@ -110,5 +20,5 @@
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T14:12:22.734262"
+  "timestamp": "2026-05-26T01:50:38.862346"
 }

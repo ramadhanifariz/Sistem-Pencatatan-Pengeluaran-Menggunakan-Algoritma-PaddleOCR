@@ -1,57 +1,28 @@
 {
   "filename": "receipt_00020.png",
   "folder": "test",
-  "processed_path": "data\\processed\\processed_test_receipt_00020.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00020.jpg",
   "original_path": "data\\raw\\test\\image\\receipt_00020.png",
   "extracted_data": [
     {
-      "text": "1OTAL",
-      "confidence": 0.7077208757400513,
-      "bbox": [
-        [
-          194.0,
-          922.0
-        ],
-        [
-          336.0,
-          922.0
-        ],
-        [
-          336.0,
-          956.0
-        ],
-        [
-          194.0,
-          956.0
-        ]
-      ]
+      "text": "3 Ann pe cwahes nuts chhm garLac nencr beaY haetwa steameo rice SURTOTAL Eervice chry 10% FH1 TTL",
+      "confidence": 0.5539472937816754,
+      "bbox": []
     },
     {
-      "text": "377,6$9",
-      "confidence": 0.7372522354125977,
-      "bbox": [
-        [
-          546.0,
-          922.0
-        ],
-        [
-          762.0,
-          929.0
-        ],
-        [
-          761.0,
-          967.0
-        ],
-        [
-          545.0,
-          959.0
-        ]
-      ]
+      "text": "A 4:",
+      "confidence": 0.37163880467414856,
+      "bbox": []
+    },
+    {
+      "text": "1 64500 500  600 74.500 64800 ET 17.900 4.351",
+      "confidence": 0.6754042793763801,
+      "bbox": []
     }
   ],
   "parsed_data": {
     "items": [],
-    "total": null,
+    "total": 4351.0,
     "tax": null,
     "discount": null,
     "cash": null,
@@ -59,5 +30,5 @@
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T14:13:22.003799"
+  "timestamp": "2026-05-26T01:50:58.454541"
 }

@@ -1,74 +1,18 @@
 {
   "filename": "receipt_00049.png",
   "folder": "test",
-  "processed_path": "data\\processed\\processed_test_receipt_00049.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00049.jpg",
   "original_path": "data\\raw\\test\\image\\receipt_00049.png",
   "extracted_data": [
     {
-      "text": "CHANGE",
-      "confidence": 0.9206950664520264,
-      "bbox": [
-        [
-          181.0,
-          741.0
-        ],
-        [
-          279.0,
-          741.0
-        ],
-        [
-          279.0,
-          800.0
-        ],
-        [
-          181.0,
-          800.0
-        ]
-      ]
+      "text": " ChoKO Meli 1 Ptgs Fqgtar t DUE CLRTDTAL",
+      "confidence": 0.8017277047038078,
+      "bbox": []
     },
     {
-      "text": "TOTAL OTY",
-      "confidence": 0.946623682975769,
-      "bbox": [
-        [
-          100.0,
-          870.0
-        ],
-        [
-          230.0,
-          870.0
-        ],
-        [
-          230.0,
-          899.0
-        ],
-        [
-          100.0,
-          899.0
-        ]
-      ]
-    },
-    {
-      "text": "?11EM",
-      "confidence": 0.5257023572921753,
-      "bbox": [
-        [
-          280.0,
-          868.0
-        ],
-        [
-          374.0,
-          868.0
-        ],
-        [
-          374.0,
-          900.0
-        ],
-        [
-          280.0,
-          900.0
-        ]
-      ]
+      "text": "12;000 11 z800 27,000 60,000 23,000 23,00",
+      "confidence": 0.7914501167833805,
+      "bbox": []
     }
   ],
   "parsed_data": {
@@ -81,5 +25,5 @@
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T14:17:56.750407"
+  "timestamp": "2026-05-26T01:51:47.053421"
 }

@@ -1,11 +1,29 @@
 {
   "filename": "receipt_00040.png",
   "folder": "train",
-  "processed_path": "data\\processed\\processed_train_receipt_00040.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00040.jpg",
   "original_path": "data\\raw\\train\\image\\receipt_00040.png",
-  "extracted_data": [],
+  "extracted_data": [
+    {
+      "text": "2534",
+      "confidence": 0.5358800888061523,
+      "bbox": []
+    },
+    {
+      "text": "108,300 5,000 4DC t J 781 704 17",
+      "confidence": 0.6240707323886454,
+      "bbox": []
+    }
+  ],
   "parsed_data": {
-    "items": [],
+    "items": [
+      {
+        "name": "DC t J 781 704",
+        "quantity": 0,
+        "price": 17.0,
+        "total": 0.0
+      }
+    ],
     "total": null,
     "tax": null,
     "discount": null,
@@ -14,5 +32,5 @@
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T13:19:12.167010"
+  "timestamp": "2026-05-26T01:22:09.803536"
 }

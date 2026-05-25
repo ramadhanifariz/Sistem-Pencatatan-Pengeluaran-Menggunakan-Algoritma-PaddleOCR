@@ -1,9 +1,30 @@
 {
   "filename": "receipt_00007.png",
   "folder": "test",
-  "processed_path": "data\\processed\\processed_test_receipt_00007.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00007.jpg",
   "original_path": "data\\raw\\test\\image\\receipt_00007.png",
-  "extracted_data": [],
+  "extracted_data": [
+    {
+      "text": "Caah Totsl PB1 (107) Subtotal RupOn 15 XO8 N3N3IH3 00",
+      "confidence": 0.6808094754815102,
+      "bbox": []
+    },
+    {
+      "text": "R14 008",
+      "confidence": 0.6690974235534668,
+      "bbox": []
+    },
+    {
+      "text": "111,000 000 0 100,987 10,091",
+      "confidence": 0.8736846297979355,
+      "bbox": []
+    },
+    {
+      "text": "909",
+      "confidence": 0.8859288692474365,
+      "bbox": []
+    }
+  ],
   "parsed_data": {
     "items": [],
     "total": null,
@@ -14,5 +35,5 @@
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T14:12:03.495591"
+  "timestamp": "2026-05-26T01:50:32.987074"
 }

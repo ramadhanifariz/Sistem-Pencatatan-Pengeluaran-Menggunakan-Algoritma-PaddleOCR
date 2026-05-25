@@ -1,30 +1,28 @@
 {
   "filename": "receipt_00160.png",
   "folder": "train",
-  "processed_path": "data\\processed\\processed_train_receipt_00160.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00160.jpg",
   "original_path": "data\\raw\\train\\image\\receipt_00160.png",
   "extracted_data": [
     {
+      "text": "25y000",
+      "confidence": 0.7905412316322327,
+      "bbox": []
+    },
+    {
+      "text": "000",
+      "confidence": 0.9312388300895691,
+      "bbox": []
+    },
+    {
+      "text": "43,890 50,000 29:000 38,000 9.000 1;700 3:990",
+      "confidence": 0.8403527913615108,
+      "bbox": []
+    },
+    {
       "text": "111",
-      "confidence": 0.5457585453987122,
-      "bbox": [
-        [
-          154.0,
-          698.0
-        ],
-        [
-          301.0,
-          696.0
-        ],
-        [
-          304.0,
-          925.0
-        ],
-        [
-          158.0,
-          927.0
-        ]
-      ]
+      "confidence": 0.5546680092811584,
+      "bbox": []
     }
   ],
   "parsed_data": {
@@ -37,5 +35,5 @@
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T13:35:28.647690"
+  "timestamp": "2026-05-26T01:26:14.613694"
 }

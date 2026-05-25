@@ -1,9 +1,20 @@
 {
   "filename": "receipt_00256.png",
   "folder": "train",
-  "processed_path": "data\\processed\\processed_train_receipt_00256.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00256.jpg",
   "original_path": "data\\raw\\train\\image\\receipt_00256.png",
-  "extracted_data": [],
+  "extracted_data": [
+    {
+      "text": "A8USH D8L CHS 8URG HE9808 SH5 n5IfN",
+      "confidence": 0.7459066212177277,
+      "bbox": []
+    },
+    {
+      "text": "181,500.0 44,000.00",
+      "confidence": 0.9546276032924652,
+      "bbox": []
+    }
+  ],
   "parsed_data": {
     "items": [],
     "total": null,
@@ -14,5 +25,5 @@
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T13:50:49.503126"
+  "timestamp": "2026-05-26T01:30:05.332203"
 }

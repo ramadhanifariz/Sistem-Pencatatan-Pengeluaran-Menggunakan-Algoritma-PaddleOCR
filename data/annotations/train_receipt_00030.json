@@ -1,202 +1,39 @@
 {
   "filename": "receipt_00030.png",
   "folder": "train",
-  "processed_path": "data\\processed\\processed_train_receipt_00030.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00030.jpg",
   "original_path": "data\\raw\\train\\image\\receipt_00030.png",
   "extracted_data": [
     {
-      "text": "8.100",
-      "confidence": 0.7798616290092468,
-      "bbox": [
-        [
-          536.0,
-          435.0
-        ],
-        [
-          637.0,
-          435.0
-        ],
-        [
-          637.0,
-          487.0
-        ],
-        [
-          536.0,
-          487.0
-        ]
-      ]
+      "text": "CASH CEHPROLEN AROUNT RFR+mEEEAEAO M CHANGE PB1 10 TOTAL",
+      "confidence": 0.8148616217076778,
+      "bbox": []
     },
     {
-      "text": "SHDRORAL",
-      "confidence": 0.565062940120697,
-      "bbox": [
-        [
-          129.0,
-          530.0
-        ],
-        [
-          289.0,
-          534.0
-        ],
-        [
-          288.0,
-          589.0
-        ],
-        [
-          128.0,
-          586.0
-        ]
-      ]
+      "text": "tty",
+      "confidence": 0.18875867128372192,
+      "bbox": []
     },
     {
-      "text": "0182",
-      "confidence": 0.8005977869033813,
-      "bbox": [
-        [
-          531.0,
-          539.0
-        ],
-        [
-          639.0,
-          539.0
-        ],
-        [
-          639.0,
-          593.0
-        ],
-        [
-          531.0,
-          593.0
-        ]
-      ]
+      "text": "2.@@ITERS",
+      "confidence": 0.7818695306777954,
+      "bbox": []
     },
     {
-      "text": "OROHM",
-      "confidence": 0.6091949939727783,
-      "bbox": [
-        [
-          123.0,
-          634.0
-        ],
-        [
-          243.0,
-          634.0
-        ],
-        [
-          243.0,
-          687.0
-        ],
-        [
-          123.0,
-          687.0
-        ]
-      ]
-    },
-    {
-      "text": "08",
-      "confidence": 0.8120361566543579,
-      "bbox": [
-        [
-          571.0,
-          641.0
-        ],
-        [
-          637.0,
-          641.0
-        ],
-        [
-          637.0,
-          695.0
-        ],
-        [
-          571.0,
-          695.0
-        ]
-      ]
-    },
-    {
-      "text": "000",
-      "confidence": 0.5621458888053894,
-      "bbox": [
-        [
-          533.0,
-          795.0
-        ],
-        [
-          647.0,
-          795.0
-        ],
-        [
-          647.0,
-          852.0
-        ],
-        [
-          533.0,
-          852.0
-        ]
-      ]
-    },
-    {
-      "text": "00000",
-      "confidence": 0.7325912714004517,
-      "bbox": [
-        [
-          503.0,
-          847.0
-        ],
-        [
-          640.0,
-          851.0
-        ],
-        [
-          639.0,
-          906.0
-        ],
-        [
-          502.0,
-          903.0
-        ]
-      ]
-    },
-    {
-      "text": "CMARCE",
-      "confidence": 0.5152319073677063,
-      "bbox": [
-        [
-          132.0,
-          898.0
-        ],
-        [
-          243.0,
-          898.0
-        ],
-        [
-          243.0,
-          946.0
-        ],
-        [
-          132.0,
-          946.0
-        ]
-      ]
+      "text": "100.860 AtA! 91900 000.5 818 t",
+      "confidence": 0.540301158092916,
+      "bbox": []
     }
   ],
   "parsed_data": {
-    "items": [
-      {
-        "name": "8.100",
-        "quantity": 1,
-        "price": 8100.0,
-        "total": 8100.0
-      }
-    ],
-    "total": 8100.0,
-    "tax": null,
+    "items": [],
+    "total": null,
+    "tax": 10.0,
     "discount": null,
     "cash": null,
     "change": null,
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T13:18:25.595609"
+  "timestamp": "2026-05-26T01:21:56.360240"
 }

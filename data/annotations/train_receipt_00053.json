@@ -1,188 +1,49 @@
 {
   "filename": "receipt_00053.png",
   "folder": "train",
-  "processed_path": "data\\processed\\processed_train_receipt_00053.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00053.jpg",
   "original_path": "data\\raw\\train\\image\\receipt_00053.png",
   "extracted_data": [
     {
-      "text": "1=000",
-      "confidence": 0.691057562828064,
-      "bbox": [
-        [
-          410.0,
-          641.0
-        ],
-        [
-          483.0,
-          641.0
-        ],
-        [
-          483.0,
-          672.0
-        ],
-        [
-          410.0,
-          672.0
-        ]
-      ]
+      "text": "4SUBTOTAL CHOPPINGBACROTIOSOIN ST iTEE",
+      "confidence": 0.5981806218624115,
+      "bbox": []
     },
     {
-      "text": "000",
-      "confidence": 0.9342932105064392,
-      "bbox": [
-        [
-          659.0,
-          640.0
-        ],
-        [
-          735.0,
-          640.0
-        ],
-        [
-          735.0,
-          675.0
-        ],
-        [
-          659.0,
-          675.0
-        ]
-      ]
+      "text": "FISCOUNT ROUNDED CHAACE",
+      "confidence": 0.7579415664076805,
+      "bbox": []
     },
     {
-      "text": "OPN=TO7O",
-      "confidence": 0.5498964786529541,
-      "bbox": [
-        [
-          210.0,
-          683.0
-        ],
-        [
-          546.0,
-          685.0
-        ],
-        [
-          545.0,
-          715.0
-        ],
-        [
-          210.0,
-          712.0
-        ]
-      ]
+      "text": "CFBIT PAIO 12.000",
+      "confidence": 0.859521746635437,
+      "bbox": []
     },
     {
-      "text": "3.8",
-      "confidence": 0.5858996510505676,
-      "bbox": [
-        [
-          228.0,
-          789.0
-        ],
-        [
-          280.0,
-          785.0
-        ],
-        [
-          282.0,
-          810.0
-        ],
-        [
-          230.0,
-          814.0
-        ]
-      ]
+      "text": "E RE RP RF RF .",
+      "confidence": 0.6098001776263118,
+      "bbox": []
     },
     {
-      "text": "IELS",
-      "confidence": 0.5752850770950317,
-      "bbox": [
-        [
-          667.0,
-          788.0
-        ],
-        [
-          742.0,
-          788.0
-        ],
-        [
-          742.0,
-          817.0
-        ],
-        [
-          667.0,
-          817.0
-        ]
-      ]
+      "text": "E.0 36.000 0.010 EaF",
+      "confidence": 0.36474303901195526,
+      "bbox": []
     },
     {
-      "text": "RE",
-      "confidence": 0.5717381238937378,
-      "bbox": [
-        [
-          477.0,
-          832.0
-        ],
-        [
-          517.0,
-          832.0
-        ],
-        [
-          517.0,
-          860.0
-        ],
-        [
-          477.0,
-          860.0
-        ]
-      ]
-    },
-    {
-      "text": "DGCOUNT",
-      "confidence": 0.8880029320716858,
-      "bbox": [
-        [
-          338.0,
-          880.0
-        ],
-        [
-          462.0,
-          880.0
-        ],
-        [
-          462.0,
-          909.0
-        ],
-        [
-          338.0,
-          909.0
-        ]
-      ]
-    },
-    {
-      "text": "ROUNDED",
-      "confidence": 0.9102376699447632,
-      "bbox": [
-        [
-          340.0,
-          925.0
-        ],
-        [
-          467.0,
-          928.0
-        ],
-        [
-          466.0,
-          962.0
-        ],
-        [
-          339.0,
-          958.0
-        ]
-      ]
+      "text": "EE 0 1",
+      "confidence": 0.3620714992284775,
+      "bbox": []
     }
   ],
   "parsed_data": {
-    "items": [],
+    "items": [
+      {
+        "name": "EaF EE 0",
+        "quantity": 10,
+        "price": 1.0,
+        "total": 10.0
+      }
+    ],
     "total": null,
     "tax": null,
     "discount": null,
@@ -191,5 +52,5 @@
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T13:20:41.413108"
+  "timestamp": "2026-05-26T01:22:33.656821"
 }

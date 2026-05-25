@@ -1,18 +1,34 @@
 {
   "filename": "receipt_00235.png",
   "folder": "train",
-  "processed_path": "data\\processed\\processed_train_receipt_00235.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00235.jpg",
   "original_path": "data\\raw\\train\\image\\receipt_00235.png",
-  "extracted_data": [],
+  "extracted_data": [
+    {
+      "text": "2x 1s200 FIXALL HK 26521 2X 19900 E MINI STICK Ftr Discount 3% 2.100 MEGA DisCOUNt 1X 8s000 Discournt ERRY SY CHEESE110 vECA D1scOUnt DECOLGEN TARLET 4S MEGA DisccUnt",
+      "confidence": 0.818696531423484,
+      "bbox": []
+    },
+    {
+      "text": "SUBTOTAL : TOTAL : MEGA OFFLINE EFT",
+      "confidence": 0.9834980964660645,
+      "bbox": []
+    },
+    {
+      "text": "3%:800 43.110 2603 43.110 8:030 43.110 6300 800 3120 E00- 630",
+      "confidence": 0.713228304637596,
+      "bbox": []
+    }
+  ],
   "parsed_data": {
     "items": [],
     "total": null,
     "tax": null,
-    "discount": null,
+    "discount": 3.0,
     "cash": null,
     "change": null,
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T13:47:43.992604"
+  "timestamp": "2026-05-26T01:29:19.794863"
 }

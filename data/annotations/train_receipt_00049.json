@@ -1,18 +1,34 @@
 {
   "filename": "receipt_00049.png",
   "folder": "train",
-  "processed_path": "data\\processed\\processed_train_receipt_00049.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00049.jpg",
   "original_path": "data\\raw\\train\\image\\receipt_00049.png",
-  "extracted_data": [],
+  "extracted_data": [
+    {
+      "text": "Fay Cash 20.O 1t3 -i",
+      "confidence": 0.5662022903561592,
+      "bbox": []
+    },
+    {
+      "text": "DwEE Pur",
+      "confidence": 0.6088937520980835,
+      "bbox": []
+    },
+    {
+      "text": "1ane",
+      "confidence": 0.3474794626235962,
+      "bbox": []
+    }
+  ],
   "parsed_data": {
     "items": [],
     "total": null,
     "tax": null,
     "discount": null,
-    "cash": null,
+    "cash": 20.0,
     "change": null,
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T13:20:20.393627"
+  "timestamp": "2026-05-26T01:22:26.521778"
 }

@@ -1,9 +1,25 @@
 {
   "filename": "receipt_00300.png",
   "folder": "train",
-  "processed_path": "data\\processed\\processed_train_receipt_00300.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00300.jpg",
   "original_path": "data\\raw\\train\\image\\receipt_00300.png",
-  "extracted_data": [],
+  "extracted_data": [
+    {
+      "text": "PAKET SUFER MAMIAF 2A RAACHA RICE",
+      "confidence": 0.7589881420135498,
+      "bbox": []
+    },
+    {
+      "text": "Sut: Tot.s. F1 10% 54.071 6.364",
+      "confidence": 0.808117002248764,
+      "bbox": []
+    },
+    {
+      "text": "57.071 65.455 6.364 6.548 12.00 ill",
+      "confidence": 0.6297718994319439,
+      "bbox": []
+    }
+  ],
   "parsed_data": {
     "items": [],
     "total": null,
@@ -14,5 +30,5 @@
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T13:55:59.708251"
+  "timestamp": "2026-05-26T01:31:31.866516"
 }

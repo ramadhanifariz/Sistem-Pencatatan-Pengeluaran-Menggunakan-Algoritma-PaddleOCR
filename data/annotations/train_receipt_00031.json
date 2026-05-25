@@ -1,70 +1,44 @@
 {
   "filename": "receipt_00031.png",
   "folder": "train",
-  "processed_path": "data\\processed\\processed_train_receipt_00031.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00031.jpg",
   "original_path": "data\\raw\\train\\image\\receipt_00031.png",
   "extracted_data": [
     {
-      "text": "lule",
-      "confidence": 0.8154533505439758,
-      "bbox": [
-        [
-          184.0,
-          624.0
-        ],
-        [
-          222.0,
-          656.0
-        ],
-        [
-          204.0,
-          677.0
-        ],
-        [
-          166.0,
-          645.0
-        ]
-      ]
+      "text": "ChiCken HCC. IPc",
+      "confidence": 0.7982407212257385,
+      "bbox": []
     },
     {
-      "text": "31.500",
-      "confidence": 0.9744687676429749,
-      "bbox": [
-        [
-          258.0,
-          736.0
-        ],
-        [
-          313.0,
-          695.0
-        ],
-        [
-          374.0,
-          780.0
-        ],
-        [
-          318.0,
-          820.0
-        ]
-      ]
+      "text": "P.Rest 10 t",
+      "confidence": 0.86899334192276,
+      "bbox": []
+    },
+    {
+      "text": "KeabalI",
+      "confidence": 0.7849796414375305,
+      "bbox": []
+    },
+    {
+      "text": "Total Cash",
+      "confidence": 0.9651762843132019,
+      "bbox": []
+    },
+    {
+      "text": "31,500 40,000 2,864 8,500",
+      "confidence": 0.953197792172432,
+      "bbox": []
     }
   ],
   "parsed_data": {
-    "items": [
-      {
-        "name": "lule",
-        "quantity": 1,
-        "price": 31500.0,
-        "total": 31500.0
-      }
-    ],
-    "total": 31500.0,
+    "items": [],
+    "total": 8500.0,
     "tax": null,
     "discount": null,
-    "cash": null,
+    "cash": 31500.0,
     "change": null,
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T13:18:30.050504"
+  "timestamp": "2026-05-26T01:21:57.430286"
 }

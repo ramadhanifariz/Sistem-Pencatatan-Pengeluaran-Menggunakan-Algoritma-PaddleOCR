@@ -1,12 +1,38 @@
 {
   "filename": "receipt_00044.png",
   "folder": "train",
-  "processed_path": "data\\processed\\processed_train_receipt_00044.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00044.jpg",
   "original_path": "data\\raw\\train\\image\\receipt_00044.png",
-  "extracted_data": [],
+  "extracted_data": [
+    {
+      "text": "1 LIPTOM PITCHER 1 NEW ORIENTAL CHK RICE 1 CREANY REEF CLS FTE 1 CHOCD FUFF SCAE SUPER",
+      "confidence": 0.8214874789118767,
+      "bbox": []
+    },
+    {
+      "text": "BLACK PEPP",
+      "confidence": 0.9948025941848755,
+      "bbox": []
+    },
+    {
+      "text": "SUETOTAL",
+      "confidence": 0.9642267227172852,
+      "bbox": []
+    },
+    {
+      "text": "29,091 42.727 2563 54.545 34.545 48.18 25",
+      "confidence": 0.8103995341807604,
+      "bbox": []
+    },
+    {
+      "text": "2",
+      "confidence": 0.5130654573440552,
+      "bbox": []
+    }
+  ],
   "parsed_data": {
     "items": [],
-    "total": null,
+    "total": 29091.0,
     "tax": null,
     "discount": null,
     "cash": null,
@@ -14,5 +40,5 @@
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T13:19:30.961644"
+  "timestamp": "2026-05-26T01:22:14.568086"
 }

@@ -1,9 +1,20 @@
 {
   "filename": "receipt_00115.png",
   "folder": "train",
-  "processed_path": "data\\processed\\processed_train_receipt_00115.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00115.jpg",
   "original_path": "data\\raw\\train\\image\\receipt_00115.png",
-  "extracted_data": [],
+  "extracted_data": [
+    {
+      "text": "h3nge 1ne In Total punog 3=h F81 {10/} :vbtots1 LAFGE ICED L.EHOM TEA :upcn 1 upor ?",
+      "confidence": 0.6331152254715562,
+      "bbox": []
+    },
+    {
+      "text": "20.1 12 8,1: 41,4 44 Ein} 50 0nM 1 li. 5,Sun",
+      "confidence": 0.7563315643928945,
+      "bbox": []
+    }
+  ],
   "parsed_data": {
     "items": [],
     "total": null,
@@ -14,5 +25,5 @@
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T13:29:01.543382"
+  "timestamp": "2026-05-26T01:24:39.773954"
 }

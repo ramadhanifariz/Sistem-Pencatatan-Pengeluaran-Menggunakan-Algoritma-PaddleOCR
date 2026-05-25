@@ -1,208 +1,38 @@
 {
   "filename": "receipt_00330.png",
   "folder": "train",
-  "processed_path": "data\\processed\\processed_train_receipt_00330.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00330.jpg",
   "original_path": "data\\raw\\train\\image\\receipt_00330.png",
   "extracted_data": [
     {
-      "text": "6PCS",
-      "confidence": 0.7767707705497742,
-      "bbox": [
-        [
-          185.0,
-          899.0
-        ],
-        [
-          393.0,
-          896.0
-        ],
-        [
-          394.0,
-          934.0
-        ],
-        [
-          186.0,
-          938.0
-        ]
-      ]
+      "text": "SUB TOTAL GOPAY TOTAL SALE:",
+      "confidence": 0.9800649881362915,
+      "bbox": []
     },
     {
-      "text": "40.000",
-      "confidence": 0.8455536961555481,
-      "bbox": [
-        [
-          751.0,
-          981.0
-        ],
-        [
-          847.0,
-          981.0
-        ],
-        [
-          847.0,
-          1025.0
-        ],
-        [
-          751.0,
-          1025.0
-        ]
-      ]
+      "text": "ORIGINAl. 6 PCS",
+      "confidence": 0.9646394848823547,
+      "bbox": []
     },
     {
-      "text": "SUBTOT",
-      "confidence": 0.883281409740448,
-      "bbox": [
-        [
-          74.0,
-          993.0
-        ],
-        [
-          207.0,
-          990.0
-        ],
-        [
-          208.0,
-          1033.0
-        ],
-        [
-          75.0,
-          1037.0
-        ]
-      ]
+      "text": ".omet",
+      "confidence": 0.8658121228218079,
+      "bbox": []
     },
     {
-      "text": "45.000",
-      "confidence": 0.9643246531486511,
-      "bbox": [
-        [
-          751.0,
-          1075.0
-        ],
-        [
-          844.0,
-          1075.0
-        ],
-        [
-          844.0,
-          1119.0
-        ],
-        [
-          751.0,
-          1119.0
-        ]
-      ]
+      "text": "45,000 A5 .00",
+      "confidence": 0.7378841191530228,
+      "bbox": []
     },
     {
-      "text": "OTAL",
-      "confidence": 0.8794687390327454,
-      "bbox": [
-        [
-          80.0,
-          1092.0
-        ],
-        [
-          175.0,
-          1092.0
-        ],
-        [
-          175.0,
-          1129.0
-        ],
-        [
-          80.0,
-          1129.0
-        ]
-      ]
-    },
-    {
-      "text": "Sl",
-      "confidence": 0.7697023153305054,
-      "bbox": [
-        [
-          165.0,
-          1095.0
-        ],
-        [
-          216.0,
-          1095.0
-        ],
-        [
-          216.0,
-          1121.0
-        ],
-        [
-          165.0,
-          1121.0
-        ]
-      ]
-    },
-    {
-      "text": "45.000",
-      "confidence": 0.9378426671028137,
-      "bbox": [
-        [
-          752.0,
-          1122.0
-        ],
-        [
-          844.0,
-          1122.0
-        ],
-        [
-          844.0,
-          1162.0
-        ],
-        [
-          752.0,
-          1162.0
-        ]
-      ]
-    },
-    {
-      "text": "GOPAY",
-      "confidence": 0.9964744448661804,
-      "bbox": [
-        [
-          79.0,
-          1136.0
-        ],
-        [
-          159.0,
-          1136.0
-        ],
-        [
-          159.0,
-          1176.0
-        ],
-        [
-          79.0,
-          1176.0
-        ]
-      ]
+      "text": "-",
+      "confidence": 0.502081573009491,
+      "bbox": []
     }
   ],
   "parsed_data": {
-    "items": [
-      {
-        "name": "40.000",
-        "quantity": 1,
-        "price": 40000.0,
-        "total": 40000.0
-      },
-      {
-        "name": "SUBTOT",
-        "quantity": 1,
-        "price": 45000.0,
-        "total": 45000.0
-      },
-      {
-        "name": "Sl",
-        "quantity": 1,
-        "price": 45000.0,
-        "total": 45000.0
-      }
-    ],
-    "total": 130000.0,
+    "items": [],
+    "total": null,
     "tax": null,
     "discount": null,
     "cash": null,
@@ -210,5 +40,5 @@
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T14:00:33.530027"
+  "timestamp": "2026-05-26T01:32:43.647186"
 }

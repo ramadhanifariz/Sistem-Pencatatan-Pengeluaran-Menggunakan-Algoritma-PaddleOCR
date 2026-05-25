@@ -1,177 +1,32 @@
 {
   "filename": "receipt_00222.png",
   "folder": "train",
-  "processed_path": "data\\processed\\processed_train_receipt_00222.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00222.jpg",
   "original_path": "data\\raw\\train\\image\\receipt_00222.png",
   "extracted_data": [
     {
-      "text": "0****************",
-      "confidence": 0.5901840329170227,
-      "bbox": [
-        [
-          152.0,
-          679.0
-        ],
-        [
-          703.0,
-          659.0
-        ],
-        [
-          706.0,
-          721.0
-        ],
-        [
-          154.0,
-          741.0
-        ]
-      ]
+      "text": "FPOCINO MEDIUN nla Murni 100x Subtotal FAJHK 10x Total CASH",
+      "confidence": 0.978438388556242,
+      "bbox": []
     },
     {
-      "text": "l1 nr 10",
-      "confidence": 0.5098846554756165,
-      "bbox": [
-        [
-          0.0,
-          840.0
-        ],
-        [
-          409.0,
-          804.0
-        ],
-        [
-          415.0,
-          872.0
-        ],
-        [
-          0.0,
-          908.0
-        ]
-      ]
+      "text": " entan",
+      "confidence": 0.24342918395996094,
+      "bbox": []
     },
     {
-      "text": "Subtotal",
-      "confidence": 0.7581430077552795,
-      "bbox": [
-        [
-          0.0,
-          967.0
-        ],
-        [
-          232.0,
-          939.0
-        ],
-        [
-          241.0,
-          1019.0
-        ],
-        [
-          2.0,
-          1047.0
-        ]
-      ]
-    },
-    {
-      "text": "1.818",
-      "confidence": 0.7474175095558167,
-      "bbox": [
-        [
-          808.0,
-          1002.0
-        ],
-        [
-          965.0,
-          1002.0
-        ],
-        [
-          965.0,
-          1080.0
-        ],
-        [
-          808.0,
-          1080.0
-        ]
-      ]
-    },
-    {
-      "text": "PAJFK1O",
-      "confidence": 0.6350648999214172,
-      "bbox": [
-        [
-          0.0,
-          1031.0
-        ],
-        [
-          252.0,
-          1004.0
-        ],
-        [
-          260.0,
-          1079.0
-        ],
-        [
-          7.0,
-          1106.0
-        ]
-      ]
-    },
-    {
-      "text": "20.000",
-      "confidence": 0.8951430320739746,
-      "bbox": [
-        [
-          788.0,
-          1060.0
-        ],
-        [
-          958.0,
-          1072.0
-        ],
-        [
-          953.0,
-          1150.0
-        ],
-        [
-          783.0,
-          1138.0
-        ]
-      ]
-    },
-    {
-      "text": "Total",
-      "confidence": 0.939468264579773,
-      "bbox": [
-        [
-          10.0,
-          1094.0
-        ],
-        [
-          166.0,
-          1080.0
-        ],
-        [
-          173.0,
-          1158.0
-        ],
-        [
-          17.0,
-          1172.0
-        ]
-      ]
+      "text": "20.000 20.000 18.182 18.182 1.818",
+      "confidence": 0.9881281778216362,
+      "bbox": []
     }
   ],
   "parsed_data": {
     "items": [
       {
-        "name": "1.818",
-        "quantity": 1,
-        "price": 1818.0,
-        "total": 1818.0
-      },
-      {
-        "name": "20.000",
-        "quantity": 1,
-        "price": 20000.0,
-        "total": 20000.0
+        "name": "Subtotal FAJHK",
+        "quantity": 100,
+        "price": 10.0,
+        "total": 1000.0
       }
     ],
     "total": 1818.0,
@@ -182,5 +37,5 @@
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T13:45:46.129589"
+  "timestamp": "2026-05-26T01:28:47.518244"
 }

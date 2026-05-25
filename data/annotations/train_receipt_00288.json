@@ -1,41 +1,39 @@
 {
   "filename": "receipt_00288.png",
   "folder": "train",
-  "processed_path": "data\\processed\\processed_train_receipt_00288.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00288.jpg",
   "original_path": "data\\raw\\train\\image\\receipt_00288.png",
   "extracted_data": [
     {
-      "text": "SAE",
-      "confidence": 0.5053450465202332,
-      "bbox": [
-        [
-          167.0,
-          313.0
-        ],
-        [
-          504.0,
-          313.0
-        ],
-        [
-          504.0,
-          489.0
-        ],
-        [
-          167.0,
-          489.0
-        ]
-      ]
+      "text": "r. K.",
+      "confidence": 0.47496290504932404,
+      "bbox": []
+    },
+    {
+      "text": "For Here Tatal Gofay PB1-TAX TaK Gyro Platter - large Subtotal",
+      "confidence": 0.9366101026535034,
+      "bbox": []
+    },
+    {
+      "text": "72.727 L 80,000 80,000 7.273",
+      "confidence": 0.8415281362831593,
+      "bbox": []
+    },
+    {
+      "text": "' r",
+      "confidence": 0.4979622960090637,
+      "bbox": []
     }
   ],
   "parsed_data": {
     "items": [],
-    "total": null,
+    "total": 72727.0,
     "tax": null,
     "discount": null,
     "cash": null,
     "change": null,
-    "subtotal": null,
+    "subtotal": 72727.0,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T13:54:54.921130"
+  "timestamp": "2026-05-26T01:31:09.732304"
 }

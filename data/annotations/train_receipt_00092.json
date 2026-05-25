@@ -1,208 +1,39 @@
 {
   "filename": "receipt_00092.png",
   "folder": "train",
-  "processed_path": "data\\processed\\processed_train_receipt_00092.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00092.jpg",
   "original_path": "data\\raw\\train\\image\\receipt_00092.png",
   "extracted_data": [
     {
-      "text": "CRICINAL",
-      "confidence": 0.9475942850112915,
-      "bbox": [
-        [
-          43.0,
-          625.0
-        ],
-        [
-          285.0,
-          625.0
-        ],
-        [
-          285.0,
-          667.0
-        ],
-        [
-          43.0,
-          667.0
-        ]
-      ]
+      "text": "APPLE CINN ORIGINAL",
+      "confidence": 0.8895928263664246,
+      "bbox": []
     },
     {
-      "text": "12 000",
-      "confidence": 0.9477815628051758,
-      "bbox": [
-        [
-          603.0,
-          620.0
-        ],
-        [
-          801.0,
-          620.0
-        ],
-        [
-          801.0,
-          670.0
-        ],
-        [
-          603.0,
-          670.0
-        ]
-      ]
+      "text": "CASH TL",
+      "confidence": 0.9771391451358795,
+      "bbox": []
     },
     {
-      "text": "APPLE CINN",
-      "confidence": 0.9906808733940125,
-      "bbox": [
-        [
-          46.0,
-          676.0
-        ],
-        [
-          356.0,
-          676.0
-        ],
-        [
-          356.0,
-          722.0
-        ],
-        [
-          46.0,
-          722.0
-        ]
-      ]
+      "text": "2tOO",
+      "confidence": 0.2965879440307617,
+      "bbox": []
     },
     {
-      "text": ":13.000",
-      "confidence": 0.956901490688324,
-      "bbox": [
-        [
-          573.0,
-          676.0
-        ],
-        [
-          798.0,
-          679.0
-        ],
-        [
-          797.0,
-          727.0
-        ],
-        [
-          572.0,
-          723.0
-        ]
-      ]
-    },
-    {
-      "text": "IL",
-      "confidence": 0.7225764989852905,
-      "bbox": [
-        [
-          138.0,
-          728.0
-        ],
-        [
-          198.0,
-          728.0
-        ],
-        [
-          198.0,
-          776.0
-        ],
-        [
-          138.0,
-          776.0
-        ]
-      ]
-    },
-    {
-      "text": ". ()0",
-      "confidence": 0.5120886564254761,
-      "bbox": [
-        [
-          373.0,
-          731.0
-        ],
-        [
-          793.0,
-          737.0
-        ],
-        [
-          792.0,
-          782.0
-        ],
-        [
-          372.0,
-          776.0
-        ]
-      ]
-    },
-    {
-      "text": "CASH",
-      "confidence": 0.9985978603363037,
-      "bbox": [
-        [
-          134.0,
-          776.0
-        ],
-        [
-          267.0,
-          781.0
-        ],
-        [
-          265.0,
-          834.0
-        ],
-        [
-          132.0,
-          828.0
-        ]
-      ]
-    },
-    {
-      "text": ":25.000",
-      "confidence": 0.9550346732139587,
-      "bbox": [
-        [
-          574.0,
-          792.0
-        ],
-        [
-          801.0,
-          792.0
-        ],
-        [
-          801.0,
-          838.0
-        ],
-        [
-          574.0,
-          838.0
-        ]
-      ]
+      "text": ".13,000 25,000 12.000",
+      "confidence": 0.9553618431091309,
+      "bbox": []
     }
   ],
   "parsed_data": {
-    "items": [
-      {
-        "name": "APPLE CINN",
-        "quantity": 1,
-        "price": 13000.0,
-        "total": 13000.0
-      },
-      {
-        "name": ":25.000",
-        "quantity": 1,
-        "price": 25000.0,
-        "total": 25000.0
-      }
-    ],
-    "total": 38000.0,
+    "items": [],
+    "total": 12000.0,
     "tax": null,
     "discount": null,
-    "cash": 25000.0,
+    "cash": null,
     "change": null,
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T13:25:46.151945"
+  "timestamp": "2026-05-26T01:23:52.707941"
 }

@@ -1,41 +1,41 @@
 {
   "filename": "receipt_00347.png",
   "folder": "train",
-  "processed_path": "data\\processed\\processed_train_receipt_00347.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00347.jpg",
   "original_path": "data\\raw\\train\\image\\receipt_00347.png",
   "extracted_data": [
     {
-      "text": "IOTA",
-      "confidence": 0.8118786811828613,
-      "bbox": [
-        [
-          373.0,
-          1017.0
-        ],
-        [
-          493.0,
-          1017.0
-        ],
-        [
-          493.0,
-          1053.0
-        ],
-        [
-          373.0,
-          1053.0
-        ]
-      ]
+      "text": "i SM UHang & Aym,(4} 1 Rrokoli Bwg Putih 1 Mie Sup WT{U & A} 1 Lumpix Kt Tahu (3 1 XLB Kctg&Avm(4 1 The Foselle CIMB UISA Service Charge 7,5x TOTAL SUATOTAL PB1 10%",
+      "confidence": 0.9113974595675245,
+      "bbox": []
+    },
+    {
+      "text": "347655",
+      "confidence": 0.9827749133110046,
+      "bbox": []
+    },
+    {
+      "text": "294,0C0 347.655 56,000 31,605 53.000 32.:00 22,050 43,0 E0,000 60,000",
+      "confidence": 0.8688155800336972,
+      "bbox": []
     }
   ],
   "parsed_data": {
-    "items": [],
-    "total": null,
-    "tax": null,
+    "items": [
+      {
+        "name": "TOTAL SUATOTAL PB",
+        "quantity": 5,
+        "price": 1.0,
+        "total": 5.0
+      }
+    ],
+    "total": 60000.0,
+    "tax": 10.0,
     "discount": null,
     "cash": null,
     "change": null,
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T14:03:56.645705"
+  "timestamp": "2026-05-26T01:33:29.833713"
 }

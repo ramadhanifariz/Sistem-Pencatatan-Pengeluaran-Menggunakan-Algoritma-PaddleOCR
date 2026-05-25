@@ -1,52 +1,53 @@
 {
   "filename": "receipt_00071.png",
   "folder": "train",
-  "processed_path": "data\\processed\\processed_train_receipt_00071.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00071.jpg",
   "original_path": "data\\raw\\train\\image\\receipt_00071.png",
   "extracted_data": [
     {
-      "text": " HI STEPS TO YOUR DOOD JOURNEY",
-      "confidence": 0.9167710542678833,
-      "bbox": [
-        [
-          185.0,
-          468.0
-        ],
-        [
-          223.0,
-          469.0
-        ],
-        [
-          210.0,
-          980.0
-        ],
-        [
-          172.0,
-          979.0
-        ]
-      ]
+      "text": "Fajak Resto .umlah Sub Tatal sr3d Tota1",
+      "confidence": 0.7825462743639946,
+      "bbox": []
     },
     {
-      "text": "FOODPRINT",
-      "confidence": 0.9527980089187622,
-      "bbox": [
-        [
-          233.0,
-          460.0
-        ],
-        [
-          342.0,
-          461.0
-        ],
-        [
-          336.0,
-          975.0
-        ],
-        [
-          226.0,
-          974.0
-        ]
-      ]
+      "text": "0 OOPRINT MaSt",
+      "confidence": 0.5061920881271362,
+      "bbox": []
+    },
+    {
+      "text": "FOOD",
+      "confidence": 0.9877607822418213,
+      "bbox": []
+    },
+    {
+      "text": "% o",
+      "confidence": 0.3200741782784462,
+      "bbox": []
+    },
+    {
+      "text": "w 18.363",
+      "confidence": 0.2807411216199398,
+      "bbox": []
+    },
+    {
+      "text": "*.Y",
+      "confidence": 0.5445223450660706,
+      "bbox": []
+    },
+    {
+      "text": "EEEE22*",
+      "confidence": 0.16735032200813293,
+      "bbox": []
+    },
+    {
+      "text": "13.36 16,363 1538",
+      "confidence": 0.7358608096837997,
+      "bbox": []
+    },
+    {
+      "text": "2C",
+      "confidence": 0.25074779987335205,
+      "bbox": []
     }
   ],
   "parsed_data": {
@@ -59,5 +60,5 @@
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T13:23:39.157961"
+  "timestamp": "2026-05-26T01:23:17.754138"
 }

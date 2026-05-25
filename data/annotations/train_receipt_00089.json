@@ -1,258 +1,38 @@
 {
   "filename": "receipt_00089.png",
   "folder": "train",
-  "processed_path": "data\\processed\\processed_train_receipt_00089.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00089.jpg",
   "original_path": "data\\raw\\train\\image\\receipt_00089.png",
   "extracted_data": [
     {
-      "text": "VEINK",
-      "confidence": 0.5720103979110718,
-      "bbox": [
-        [
-          367.0,
-          344.0
-        ],
-        [
-          442.0,
-          341.0
-        ],
-        [
-          443.0,
-          363.0
-        ],
-        [
-          368.0,
-          366.0
-        ]
-      ]
+      "text": "HSVO Kembal ian Suntotal Tatal 1 Mineral Water",
+      "confidence": 0.9281791001558304,
+      "bbox": []
     },
     {
-      "text": "1 Mineral Water",
-      "confidence": 0.9983441829681396,
-      "bbox": [
-        [
-          82.0,
-          747.0
-        ],
-        [
-          305.0,
-          744.0
-        ],
-        [
-          305.0,
-          782.0
-        ],
-        [
-          83.0,
-          785.0
-        ]
-      ]
+      "text": "Tt",
+      "confidence": 0.21851305663585663,
+      "bbox": []
     },
     {
-      "text": "5.000",
-      "confidence": 0.9998509287834167,
-      "bbox": [
-        [
-          668.0,
-          745.0
-        ],
-        [
-          757.0,
-          745.0
-        ],
-        [
-          757.0,
-          788.0
-        ],
-        [
-          668.0,
-          788.0
-        ]
-      ]
+      "text": "!kn ys  coait",
+      "confidence": 0.4304905980825424,
+      "bbox": []
     },
     {
-      "text": "Suototal",
-      "confidence": 0.9833332896232605,
-      "bbox": [
-        [
-          80.0,
-          824.0
-        ],
-        [
-          207.0,
-          824.0
-        ],
-        [
-          207.0,
-          861.0
-        ],
-        [
-          80.0,
-          861.0
-        ]
-      ]
+      "text": "Rp 5.000 Rp 5.000 Rp 5.00e",
+      "confidence": 0.9245860874652863,
+      "bbox": []
     },
     {
-      "text": "Rp 5.000",
-      "confidence": 0.9845120906829834,
-      "bbox": [
-        [
-          626.0,
-          824.0
-        ],
-        [
-          756.0,
-          824.0
-        ],
-        [
-          756.0,
-          865.0
-        ],
-        [
-          626.0,
-          865.0
-        ]
-      ]
-    },
-    {
-      "text": "Ictal",
-      "confidence": 0.9508649110794067,
-      "bbox": [
-        [
-          80.0,
-          861.0
-        ],
-        [
-          162.0,
-          861.0
-        ],
-        [
-          162.0,
-          900.0
-        ],
-        [
-          80.0,
-          900.0
-        ]
-      ]
-    },
-    {
-      "text": "Rp 5.000",
-      "confidence": 0.9987750053405762,
-      "bbox": [
-        [
-          628.0,
-          863.0
-        ],
-        [
-          756.0,
-          863.0
-        ],
-        [
-          756.0,
-          904.0
-        ],
-        [
-          628.0,
-          904.0
-        ]
-      ]
-    },
-    {
-      "text": "CASH",
-      "confidence": 0.9948261976242065,
-      "bbox": [
-        [
-          74.0,
-          936.0
-        ],
-        [
-          155.0,
-          936.0
-        ],
-        [
-          155.0,
-          1007.0
-        ],
-        [
-          74.0,
-          1007.0
-        ]
-      ]
-    },
-    {
-      "text": "Rp 5.000",
-      "confidence": 0.9299789667129517,
-      "bbox": [
-        [
-          620.0,
-          939.0
-        ],
-        [
-          755.0,
-          932.0
-        ],
-        [
-          759.0,
-          1003.0
-        ],
-        [
-          624.0,
-          1011.0
-        ]
-      ]
-    },
-    {
-      "text": "Kembal ian",
-      "confidence": 0.8647977113723755,
-      "bbox": [
-        [
-          75.0,
-          998.0
-        ],
-        [
-          225.0,
-          993.0
-        ],
-        [
-          228.0,
-          1058.0
-        ],
-        [
-          77.0,
-          1063.0
-        ]
-      ]
+      "text": "5.000 Ro",
+      "confidence": 0.8005433678627014,
+      "bbox": []
     }
   ],
   "parsed_data": {
-    "items": [
-      {
-        "name": "5.000",
-        "quantity": 1,
-        "price": 5000.0,
-        "total": 5000.0
-      },
-      {
-        "name": "Rp 5.000",
-        "quantity": 1,
-        "price": 5000.0,
-        "total": 5000.0
-      },
-      {
-        "name": "Ictal",
-        "quantity": 1,
-        "price": 5000.0,
-        "total": 5000.0
-      },
-      {
-        "name": "Rp 5.000",
-        "quantity": 1,
-        "price": 5000.0,
-        "total": 5000.0
-      }
-    ],
-    "total": 20000.0,
+    "items": [],
+    "total": null,
     "tax": null,
     "discount": null,
     "cash": null,
@@ -260,5 +40,5 @@
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T13:25:31.886600"
+  "timestamp": "2026-05-26T01:23:48.139193"
 }

@@ -1,35 +1,28 @@
 {
   "filename": "receipt_00034.png",
   "folder": "test",
-  "processed_path": "data\\processed\\processed_test_receipt_00034.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00034.jpg",
   "original_path": "data\\raw\\test\\image\\receipt_00034.png",
   "extracted_data": [
     {
-      "text": "18",
-      "confidence": 0.7026657462120056,
-      "bbox": [
-        [
-          396.0,
-          733.0
-        ],
-        [
-          458.0,
-          733.0
-        ],
-        [
-          458.0,
-          799.0
-        ],
-        [
-          396.0,
-          799.0
-        ]
-      ]
+      "text": ":rbtotal 31ak (103) otal nat sh Cn1ck Sa ba1 Katah .ur Gorer",
+      "confidence": 0.9061113279312849,
+      "bbox": []
+    },
+    {
+      "text": "CaSColum! $cannxt whl.",
+      "confidence": 0.5492681115865707,
+      "bbox": []
+    },
+    {
+      "text": "75.000 10.000 85.000 100.000 93.300 8.500 6.500",
+      "confidence": 0.993955378420651,
+      "bbox": []
     }
   ],
   "parsed_data": {
     "items": [],
-    "total": null,
+    "total": 6500.0,
     "tax": null,
     "discount": null,
     "cash": null,
@@ -37,5 +30,5 @@
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T14:15:13.789328"
+  "timestamp": "2026-05-26T01:51:20.608657"
 }

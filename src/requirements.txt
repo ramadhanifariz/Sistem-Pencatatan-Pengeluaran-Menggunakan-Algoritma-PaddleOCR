@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+mlflow
+dagshub
+pandas
+scikit-learn
+python-dotenv
+python-multipart
+numpy
+opencv-python
+paddleocr
+paddlepaddle
+pillow

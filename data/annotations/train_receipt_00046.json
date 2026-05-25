@@ -1,41 +1,39 @@
 {
   "filename": "receipt_00046.png",
   "folder": "train",
-  "processed_path": "data\\processed\\processed_train_receipt_00046.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00046.jpg",
   "original_path": "data\\raw\\train\\image\\receipt_00046.png",
   "extracted_data": [
     {
-      "text": "A FUNG @A FUNG @A FUNG A FUNG CA FU",
-      "confidence": 0.822925865650177,
-      "bbox": [
-        [
-          641.0,
-          86.0
-        ],
-        [
-          719.0,
-          85.0
-        ],
-        [
-          732.0,
-          1272.0
-        ],
-        [
-          654.0,
-          1273.0
-        ]
-      ]
+      "text": "HACO TAHU EIHN GAD TOTAL TOTAL TAX 10.00 7 WM+T 1HA1",
+      "confidence": 0.6648376062512398,
+      "bbox": []
+    },
+    {
+      "text": "1 43636",
+      "confidence": 0.8964264988899231,
+      "bbox": []
+    },
+    {
+      "text": "19.0 52.00 43.636 48.(X) 43.63 4.3",
+      "confidence": 0.9470473062247038,
+      "bbox": []
+    },
+    {
+      "text": "A FUNG A FUNG WEA FUNG DA FUNG CA FI",
+      "confidence": 0.8639501929283142,
+      "bbox": []
     }
   ],
   "parsed_data": {
     "items": [],
     "total": null,
-    "tax": null,
+    "tax": 10.0,
     "discount": null,
     "cash": null,
     "change": null,
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T13:20:06.071447"
+  "timestamp": "2026-05-26T01:22:22.075109"
 }

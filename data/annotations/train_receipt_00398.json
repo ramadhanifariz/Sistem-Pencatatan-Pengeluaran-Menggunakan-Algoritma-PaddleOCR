@@ -1,30 +1,23 @@
 {
   "filename": "receipt_00398.png",
   "folder": "train",
-  "processed_path": "data\\processed\\processed_train_receipt_00398.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00398.jpg",
   "original_path": "data\\raw\\train\\image\\receipt_00398.png",
   "extracted_data": [
     {
-      "text": "-",
-      "confidence": 0.6609324216842651,
-      "bbox": [
-        [
-          154.0,
-          1197.0
-        ],
-        [
-          208.0,
-          1197.0
-        ],
-        [
-          208.0,
-          1228.0
-        ],
-        [
-          154.0,
-          1228.0
-        ]
-      ]
+      "text": "CHANGE TO CHICKEN COX r'i rh0F JA 1En",
+      "confidence": 0.6970926746726036,
+      "bbox": []
+    },
+    {
+      "text": "1210 . ",
+      "confidence": 0.5983548164367676,
+      "bbox": []
+    },
+    {
+      "text": "25,00",
+      "confidence": 0.9523071050643921,
+      "bbox": []
     }
   ],
   "parsed_data": {
@@ -37,5 +30,5 @@
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T14:10:53.893603"
+  "timestamp": "2026-05-26T01:35:28.570237"
 }

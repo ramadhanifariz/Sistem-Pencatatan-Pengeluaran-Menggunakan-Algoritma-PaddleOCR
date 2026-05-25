@@ -1,202 +1,36 @@
 {
   "filename": "receipt_00071.png",
   "folder": "test",
-  "processed_path": "data\\processed\\processed_test_receipt_00071.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00071.jpg",
   "original_path": "data\\raw\\test\\image\\receipt_00071.png",
   "extracted_data": [
     {
-      "text": "Apeliot1",
-      "confidence": 0.6799736618995667,
-      "bbox": [
-        [
-          32.0,
-          397.0
-        ],
-        [
-          234.0,
-          399.0
-        ],
-        [
-          234.0,
-          428.0
-        ],
-        [
-          32.0,
-          426.0
-        ]
-      ]
+      "text": "Tunai Kembalian Sub Total Cuka Apel Tefes 1 198000",
+      "confidence": 0.9792633689939976,
+      "bbox": []
     },
     {
-      "text": "10000",
-      "confidence": 0.9025318026542664,
-      "bbox": [
-        [
-          299.0,
-          411.0
-        ],
-        [
-          386.0,
-          411.0
-        ],
-        [
-          386.0,
-          441.0
-        ],
-        [
-          299.0,
-          441.0
-        ]
-      ]
-    },
-    {
-      "text": "108000",
-      "confidence": 0.9237834811210632,
-      "bbox": [
-        [
-          17.0,
-          428.0
-        ],
-        [
-          113.0,
-          428.0
-        ],
-        [
-          113.0,
-          457.0
-        ],
-        [
-          17.0,
-          457.0
-        ]
-      ]
-    },
-    {
-      "text": "ubfola",
-      "confidence": 0.6342698931694031,
-      "bbox": [
-        [
-          21.0,
-          506.0
-        ],
-        [
-          134.0,
-          505.0
-        ],
-        [
-          134.0,
-          538.0
-        ],
-        [
-          21.0,
-          540.0
-        ]
-      ]
-    },
-    {
-      "text": "lune",
-      "confidence": 0.6702905893325806,
-      "bbox": [
-        [
-          12.0,
-          606.0
-        ],
-        [
-          87.0,
-          606.0
-        ],
-        [
-          87.0,
-          640.0
-        ],
-        [
-          12.0,
-          640.0
-        ]
-      ]
-    },
-    {
-      "text": "700/00",
-      "confidence": 0.7651882767677307,
-      "bbox": [
-        [
-          301.0,
-          617.0
-        ],
-        [
-          391.0,
-          617.0
-        ],
-        [
-          391.0,
-          646.0
-        ],
-        [
-          301.0,
-          646.0
-        ]
-      ]
-    },
-    {
-      "text": "Kormbalian",
-      "confidence": 0.8218933939933777,
-      "bbox": [
-        [
-          9.0,
-          704.0
-        ],
-        [
-          148.0,
-          697.0
-        ],
-        [
-          149.0,
-          733.0
-        ],
-        [
-          10.0,
-          739.0
-        ]
-      ]
-    },
-    {
-      "text": "1700n",
-      "confidence": 0.633759617805481,
-      "bbox": [
-        [
-          314.0,
-          711.0
-        ],
-        [
-          394.0,
-          711.0
-        ],
-        [
-          394.0,
-          742.0
-        ],
-        [
-          314.0,
-          742.0
-        ]
-      ]
+      "text": "200200 188000 198000 22000",
+      "confidence": 0.9848981946706772,
+      "bbox": []
     }
   ],
   "parsed_data": {
     "items": [
       {
-        "name": "ubfola lune",
-        "quantity": 108000,
-        "price": 700.0,
-        "total": 75600000.0
+        "name": "200200 188000 198000",
+        "quantity": 1,
+        "price": 22000.0,
+        "total": 22000.0
       },
       {
-        "name": "Kormbalian",
-        "quantity": 0,
-        "price": 1700.0,
-        "total": 0.0
+        "name": "Tunai Kembalian Sub Total Cuka Apel Tefes 1 198000",
+        "quantity": 1,
+        "price": 22000.0,
+        "total": 22000.0
       }
     ],
-    "total": 75600000.0,
+    "total": 22000.0,
     "tax": null,
     "discount": null,
     "cash": null,
@@ -204,5 +38,5 @@
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T14:21:09.471170"
+  "timestamp": "2026-05-26T01:52:39.416702"
 }

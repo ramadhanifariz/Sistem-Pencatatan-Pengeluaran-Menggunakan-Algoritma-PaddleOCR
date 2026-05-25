@@ -1,148 +1,33 @@
 {
   "filename": "receipt_00217.png",
   "folder": "train",
-  "processed_path": "data\\processed\\processed_train_receipt_00217.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00217.jpg",
   "original_path": "data\\raw\\train\\image\\receipt_00217.png",
   "extracted_data": [
     {
-      "text": "2.000",
-      "confidence": 0.9838640093803406,
-      "bbox": [
-        [
-          490.0,
-          522.0
-        ],
-        [
-          589.0,
-          529.0
-        ],
-        [
-          586.0,
-          565.0
-        ],
-        [
-          487.0,
-          559.0
-        ]
-      ]
+      "text": "*",
+      "confidence": 0.13373492658138275,
+      "bbox": []
     },
     {
-      "text": "0",
-      "confidence": 0.9159685969352722,
-      "bbox": [
-        [
-          567.0,
-          612.0
-        ],
-        [
-          586.0,
-          612.0
-        ],
-        [
-          586.0,
-          639.0
-        ],
-        [
-          567.0,
-          639.0
-        ]
-      ]
+      "text": "Soall",
+      "confidence": 0.7358822226524353,
+      "bbox": []
+    },
+    {
+      "text": "x1 x1",
+      "confidence": 0.9443219900131226,
+      "bbox": []
     },
     {
       "text": "22.000",
-      "confidence": 0.99298095703125,
-      "bbox": [
-        [
-          463.0,
-          746.0
-        ],
-        [
-          560.0,
-          756.0
-        ],
-        [
-          555.0,
-          793.0
-        ],
-        [
-          459.0,
-          782.0
-        ]
-      ]
-    },
-    {
-      "text": "50.000",
-      "confidence": 0.986036479473114,
-      "bbox": [
-        [
-          525.0,
-          827.0
-        ],
-        [
-          618.0,
-          844.0
-        ],
-        [
-          612.0,
-          875.0
-        ],
-        [
-          520.0,
-          858.0
-        ]
-      ]
-    },
-    {
-      "text": "20.000",
-      "confidence": 0.7277786731719971,
-      "bbox": [
-        [
-          521.0,
-          865.0
-        ],
-        [
-          611.0,
-          874.0
-        ],
-        [
-          608.0,
-          907.0
-        ],
-        [
-          518.0,
-          898.0
-        ]
-      ]
+      "confidence": 0.9998658299446106,
+      "bbox": []
     }
   ],
   "parsed_data": {
-    "items": [
-      {
-        "name": "2.000",
-        "quantity": 1,
-        "price": 2000.0,
-        "total": 2000.0
-      },
-      {
-        "name": "22.000",
-        "quantity": 1,
-        "price": 22000.0,
-        "total": 22000.0
-      },
-      {
-        "name": "50.000",
-        "quantity": 1,
-        "price": 50000.0,
-        "total": 50000.0
-      },
-      {
-        "name": "20.000",
-        "quantity": 1,
-        "price": 20000.0,
-        "total": 20000.0
-      }
-    ],
-    "total": 94000.0,
+    "items": [],
+    "total": 22000.0,
     "tax": null,
     "discount": null,
     "cash": null,
@@ -150,5 +35,5 @@
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T13:45:20.726286"
+  "timestamp": "2026-05-26T01:28:39.310645"
 }

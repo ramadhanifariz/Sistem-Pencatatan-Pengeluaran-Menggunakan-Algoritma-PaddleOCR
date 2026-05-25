@@ -1,30 +1,43 @@
 {
   "filename": "receipt_00212.png",
   "folder": "train",
-  "processed_path": "data\\processed\\processed_train_receipt_00212.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00212.jpg",
   "original_path": "data\\raw\\train\\image\\receipt_00212.png",
   "extracted_data": [
     {
-      "text": "900.0",
-      "confidence": 0.6147719621658325,
-      "bbox": [
-        [
-          408.0,
-          687.0
-        ],
-        [
-          481.0,
-          683.0
-        ],
-        [
-          482.0,
-          713.0
-        ],
-        [
-          410.0,
-          717.0
-        ]
-      ]
+      "text": "Cash Totalr Caange: Temerod1 F. CE CHEESE IOHN",
+      "confidence": 0.5842253025621176,
+      "bbox": []
+    },
+    {
+      "text": "ITty",
+      "confidence": 0.20997531712055206,
+      "bbox": []
+    },
+    {
+      "text": "0**",
+      "confidence": 0.5069526433944702,
+      "bbox": []
+    },
+    {
+      "text": ":1",
+      "confidence": 0.6337324380874634,
+      "bbox": []
+    },
+    {
+      "text": "9.500,00",
+      "confidence": 0.9870377779006958,
+      "bbox": []
+    },
+    {
+      "text": ".00,00 0,0Q0,00",
+      "confidence": 0.8010429739952087,
+      "bbox": []
+    },
+    {
+      "text": "5DDxQN",
+      "confidence": 0.551649808883667,
+      "bbox": []
     }
   ],
   "parsed_data": {
@@ -37,5 +50,5 @@
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T13:44:55.721257"
+  "timestamp": "2026-05-26T01:28:31.987321"
 }

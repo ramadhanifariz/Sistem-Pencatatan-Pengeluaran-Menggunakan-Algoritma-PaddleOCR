@@ -1,202 +1,54 @@
 {
   "filename": "receipt_00186.png",
   "folder": "train",
-  "processed_path": "data\\processed\\processed_train_receipt_00186.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00186.jpg",
   "original_path": "data\\raw\\train\\image\\receipt_00186.png",
   "extracted_data": [
     {
-      "text": "13,500",
-      "confidence": 0.9975065588951111,
-      "bbox": [
-        [
-          1724.0,
-          1749.0
-        ],
-        [
-          1991.0,
-          1749.0
-        ],
-        [
-          1991.0,
-          1860.0
-        ],
-        [
-          1724.0,
-          1860.0
-        ]
-      ]
+      "text": "Y",
+      "confidence": 0.1164768785238266,
+      "bbox": []
     },
     {
-      "text": "1 ALMOND CROSSIANT",
-      "confidence": 0.9951139092445374,
-      "bbox": [
-        [
-          542.0,
-          1763.0
-        ],
-        [
-          1299.0,
-          1753.0
-        ],
-        [
-          1301.0,
-          1860.0
-        ],
-        [
-          543.0,
-          1869.0
-        ]
-      ]
+      "text": " ALMOND",
+      "confidence": 0.9798683524131775,
+      "bbox": []
     },
     {
-      "text": "TOTAL",
-      "confidence": 0.9984027147293091,
-      "bbox": [
-        [
-          618.0,
-          1931.0
-        ],
-        [
-          1039.0,
-          1943.0
-        ],
-        [
-          1034.0,
-          2139.0
-        ],
-        [
-          612.0,
-          2127.0
-        ]
-      ]
+      "text": "CASH CHANGE TOTAL",
+      "confidence": 0.99827079474926,
+      "bbox": []
+    },
+    {
+      "text": "CROSSIANT",
+      "confidence": 0.9993119835853577,
+      "bbox": []
     },
     {
       "text": "13,500",
-      "confidence": 0.9993669390678406,
-      "bbox": [
-        [
-          1482.0,
-          1941.0
-        ],
-        [
-          1991.0,
-          1941.0
-        ],
-        [
-          1991.0,
-          2133.0
-        ],
-        [
-          1482.0,
-          2133.0
-        ]
-      ]
+      "confidence": 0.9987902641296387,
+      "bbox": []
     },
     {
-      "text": "CASH",
-      "confidence": 0.9988914728164673,
-      "bbox": [
-        [
-          623.0,
-          2112.0
-        ],
-        [
-          809.0,
-          2112.0
-        ],
-        [
-          809.0,
-          2210.0
-        ],
-        [
-          623.0,
-          2210.0
-        ]
-      ]
-    },
-    {
-      "text": "13,500",
-      "confidence": 0.9985178112983704,
-      "bbox": [
-        [
-          1724.0,
-          2108.0
-        ],
-        [
-          1986.0,
-          2108.0
-        ],
-        [
-          1986.0,
-          2219.0
-        ],
-        [
-          1724.0,
-          2219.0
-        ]
-      ]
-    },
-    {
-      "text": "CHANGE",
-      "confidence": 0.9985580444335938,
-      "bbox": [
-        [
-          618.0,
-          2206.0
-        ],
-        [
-          1105.0,
-          2206.0
-        ],
-        [
-          1105.0,
-          2381.0
-        ],
-        [
-          618.0,
-          2381.0
-        ]
-      ]
+      "text": "13,500 13,500",
+      "confidence": 0.9988047182559967,
+      "bbox": []
     },
     {
       "text": "0",
-      "confidence": 0.995427131652832,
-      "bbox": [
-        [
-          1868.0,
-          2214.0
-        ],
-        [
-          1991.0,
-          2214.0
-        ],
-        [
-          1991.0,
-          2385.0
-        ],
-        [
-          1868.0,
-          2385.0
-        ]
-      ]
+      "confidence": 0.9998377561569214,
+      "bbox": []
     }
   ],
   "parsed_data": {
-    "items": [
-      {
-        "name": "ALMOND CROSSIANT TOTAL",
-        "quantity": 1,
-        "price": 13.5,
-        "total": 13.5
-      }
-    ],
-    "total": 13.5,
+    "items": [],
+    "total": null,
     "tax": null,
     "discount": null,
-    "cash": 13.5,
-    "change": 0.0,
+    "cash": null,
+    "change": null,
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T13:40:52.310812"
+  "timestamp": "2026-05-26T01:27:29.819786"
 }

@@ -1,202 +1,44 @@
 {
   "filename": "receipt_00047.png",
   "folder": "train",
-  "processed_path": "data\\processed\\processed_train_receipt_00047.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00047.jpg",
   "original_path": "data\\raw\\train\\image\\receipt_00047.png",
   "extracted_data": [
     {
-      "text": "ICEO TT",
-      "confidence": 0.8832871317863464,
-      "bbox": [
-        [
-          112.0,
-          774.0
-        ],
-        [
-          299.0,
-          779.0
-        ],
-        [
-          297.0,
-          831.0
-        ],
-        [
-          110.0,
-          826.0
-        ]
-      ]
+      "text": "CHANGE CHSH TOTAL ICEO",
+      "confidence": 0.966820515692234,
+      "bbox": []
     },
     {
-      "text": ".20.000",
-      "confidence": 0.9636470675468445,
-      "bbox": [
-        [
-          561.0,
-          789.0
-        ],
-        [
-          756.0,
-          800.0
-        ],
-        [
-          753.0,
-          851.0
-        ],
-        [
-          558.0,
-          840.0
-        ]
-      ]
+      "text": "J f",
+      "confidence": 0.4317568838596344,
+      "bbox": []
     },
     {
-      "text": "TOTHL",
-      "confidence": 0.8274257779121399,
-      "bbox": [
-        [
-          112.0,
-          822.0
-        ],
-        [
-          244.0,
-          827.0
-        ],
-        [
-          242.0,
-          874.0
-        ],
-        [
-          110.0,
-          869.0
-        ]
-      ]
+      "text": "M D QD c",
+      "confidence": 0.635600209236145,
+      "bbox": []
     },
     {
-      "text": "0.000",
-      "confidence": 0.9009332656860352,
-      "bbox": [
-        [
-          497.0,
-          830.0
-        ],
-        [
-          746.0,
-          850.0
-        ],
-        [
-          743.0,
-          896.0
-        ],
-        [
-          493.0,
-          876.0
-        ]
-      ]
+      "text": ".50,000 300 20000",
+      "confidence": 0.8717465400695801,
+      "bbox": []
     },
     {
-      "text": "CHSH",
-      "confidence": 0.9959025979042053,
-      "bbox": [
-        [
-          105.0,
-          871.0
-        ],
-        [
-          221.0,
-          871.0
-        ],
-        [
-          221.0,
-          918.0
-        ],
-        [
-          105.0,
-          918.0
-        ]
-      ]
-    },
-    {
-      "text": ".S0 000",
-      "confidence": 0.8579495549201965,
-      "bbox": [
-        [
-          564.0,
-          880.0
-        ],
-        [
-          754.0,
-          899.0
-        ],
-        [
-          749.0,
-          945.0
-        ],
-        [
-          560.0,
-          926.0
-        ]
-      ]
-    },
-    {
-      "text": "CHANGE",
-      "confidence": 0.993022620677948,
-      "bbox": [
-        [
-          101.0,
-          914.0
-        ],
-        [
-          264.0,
-          917.0
-        ],
-        [
-          263.0,
-          968.0
-        ],
-        [
-          100.0,
-          965.0
-        ]
-      ]
-    },
-    {
-      "text": "00000:",
-      "confidence": 0.7061030864715576,
-      "bbox": [
-        [
-          566.0,
-          926.0
-        ],
-        [
-          750.0,
-          947.0
-        ],
-        [
-          745.0,
-          988.0
-        ],
-        [
-          561.0,
-          968.0
-        ]
-      ]
+      "text": ".",
+      "confidence": 0.10572323948144913,
+      "bbox": []
     }
   ],
   "parsed_data": {
-    "items": [
-      {
-        "name": "ICEO TT",
-        "quantity": 1,
-        "price": 20000.0,
-        "total": 20000.0
-      }
-    ],
-    "total": 20000.0,
+    "items": [],
+    "total": null,
     "tax": null,
     "discount": null,
     "cash": null,
-    "change": 0.0,
+    "change": null,
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T13:20:10.601206"
+  "timestamp": "2026-05-26T01:22:23.331987"
 }

@@ -1,9 +1,30 @@
 {
   "filename": "receipt_00309.png",
   "folder": "train",
-  "processed_path": "data\\processed\\processed_train_receipt_00309.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00309.jpg",
   "original_path": "data\\raw\\train\\image\\receipt_00309.png",
-  "extracted_data": [],
+  "extracted_data": [
+    {
+      "text": "Total. Cash endered:",
+      "confidence": 0.8841163218021393,
+      "bbox": []
+    },
+    {
+      "text": "9.500.00",
+      "confidence": 0.9838912487030029,
+      "bbox": []
+    },
+    {
+      "text": ":2.3cC",
+      "confidence": 0.5089878439903259,
+      "bbox": []
+    },
+    {
+      "text": "309",
+      "confidence": 0.640263020992279,
+      "bbox": []
+    }
+  ],
   "parsed_data": {
     "items": [],
     "total": null,
@@ -14,5 +35,5 @@
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T13:57:17.366194"
+  "timestamp": "2026-05-26T01:31:53.044884"
 }

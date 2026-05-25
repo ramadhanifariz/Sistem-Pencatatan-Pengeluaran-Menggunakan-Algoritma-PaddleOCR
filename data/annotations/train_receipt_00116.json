@@ -1,118 +1,28 @@
 {
   "filename": "receipt_00116.png",
   "folder": "train",
-  "processed_path": "data\\processed\\processed_train_receipt_00116.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00116.jpg",
   "original_path": "data\\raw\\train\\image\\receipt_00116.png",
   "extracted_data": [
     {
-      "text": "Direpes",
-      "confidence": 0.9012223482131958,
-      "bbox": [
-        [
-          761.0,
-          360.0
-        ],
-        [
-          833.0,
-          357.0
-        ],
-        [
-          841.0,
-          548.0
-        ],
-        [
-          769.0,
-          551.0
-        ]
-      ]
+      "text": "Nutella Cheese",
+      "confidence": 0.9845930933952332,
+      "bbox": []
     },
     {
-      "text": "Dir",
-      "confidence": 0.5196824669837952,
-      "bbox": [
-        [
-          788.0,
-          656.0
-        ],
-        [
-          838.0,
-          656.0
-        ],
-        [
-          838.0,
-          782.0
-        ],
-        [
-          788.0,
-          782.0
-        ]
-      ]
+      "text": "Total: SubTotal:",
+      "confidence": 0.9275987446308136,
+      "bbox": []
     },
     {
-      "text": ":s",
-      "confidence": 0.834890604019165,
-      "bbox": [
-        [
-          793.0,
-          761.0
-        ],
-        [
-          838.0,
-          756.0
-        ],
-        [
-          847.0,
-          841.0
-        ],
-        [
-          802.0,
-          846.0
-        ]
-      ]
+      "text": "FB1: cash:",
+      "confidence": 0.9562571942806244,
+      "bbox": []
     },
     {
-      "text": "5 fXaeps",
-      "confidence": 0.5431626439094543,
-      "bbox": [
-        [
-          788.0,
-          831.0
-        ],
-        [
-          869.0,
-          823.0
-        ],
-        [
-          898.0,
-          1136.0
-        ],
-        [
-          816.0,
-          1143.0
-        ]
-      ]
-    },
-    {
-      "text": "Potal:",
-      "confidence": 0.6918166279792786,
-      "bbox": [
-        [
-          451.0,
-          1034.0
-        ],
-        [
-          592.0,
-          1034.0
-        ],
-        [
-          592.0,
-          1114.0
-        ],
-        [
-          451.0,
-          1114.0
-        ]
-      ]
+      "text": "28% 27,37 27,272 2,753 666*6Z",
+      "confidence": 0.8241935800760984,
+      "bbox": []
     }
   ],
   "parsed_data": {
@@ -120,10 +30,10 @@
     "total": null,
     "tax": null,
     "discount": null,
-    "cash": null,
+    "cash": 28.0,
     "change": null,
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T13:29:07.328675"
+  "timestamp": "2026-05-26T01:24:41.385635"
 }

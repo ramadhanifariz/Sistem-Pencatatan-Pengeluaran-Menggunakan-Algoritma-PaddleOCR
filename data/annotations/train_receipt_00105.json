@@ -1,18 +1,24 @@
 {
   "filename": "receipt_00105.png",
   "folder": "train",
-  "processed_path": "data\\processed\\processed_train_receipt_00105.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00105.jpg",
   "original_path": "data\\raw\\train\\image\\receipt_00105.png",
-  "extracted_data": [],
+  "extracted_data": [
+    {
+      "text": "1 Gado-Gado CASH Change TOTAL PB1 10Z SUBTOTAL",
+      "confidence": 0.9258234463632107,
+      "bbox": []
+    }
+  ],
   "parsed_data": {
     "items": [],
     "total": null,
-    "tax": null,
+    "tax": 10.0,
     "discount": null,
     "cash": null,
     "change": null,
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T13:27:15.682798"
+  "timestamp": "2026-05-26T01:24:15.472889"
 }

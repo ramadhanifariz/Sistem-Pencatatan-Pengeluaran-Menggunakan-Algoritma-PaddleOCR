@@ -1,12 +1,23 @@
 {
   "filename": "receipt_00121.png",
   "folder": "train",
-  "processed_path": "data\\processed\\processed_train_receipt_00121.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00121.jpg",
   "original_path": "data\\raw\\train\\image\\receipt_00121.png",
-  "extracted_data": [],
+  "extracted_data": [
+    {
+      "text": "1001-Choco Ez 6001-F1sstic cag S a",
+      "confidence": 0.7598322629928589,
+      "bbox": []
+    },
+    {
+      "text": "22.000",
+      "confidence": 0.8869497179985046,
+      "bbox": []
+    }
+  ],
   "parsed_data": {
     "items": [],
-    "total": null,
+    "total": 22000.0,
     "tax": null,
     "discount": null,
     "cash": null,
@@ -14,5 +25,5 @@
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T13:29:31.365220"
+  "timestamp": "2026-05-26T01:24:48.074563"
 }

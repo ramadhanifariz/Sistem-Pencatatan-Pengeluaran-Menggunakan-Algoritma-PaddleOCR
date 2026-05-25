@@ -1,230 +1,49 @@
 {
   "filename": "receipt_00273.png",
   "folder": "train",
-  "processed_path": "data\\processed\\processed_train_receipt_00273.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00273.jpg",
   "original_path": "data\\raw\\train\\image\\receipt_00273.png",
   "extracted_data": [
     {
-      "text": "BBQ Chicken",
-      "confidence": 0.9534502029418945,
-      "bbox": [
-        [
-          95.0,
-          472.0
-        ],
-        [
-          279.0,
-          474.0
-        ],
-        [
-          279.0,
-          506.0
-        ],
-        [
-          95.0,
-          504.0
-        ]
-      ]
+      "text": "Pay Cash 51,000 ITEMS :1 Total.",
+      "confidence": 0.994831308722496,
+      "bbox": []
     },
     {
-      "text": "41,000",
-      "confidence": 0.9985583424568176,
-      "bbox": [
-        [
-          487.0,
-          475.0
-        ],
-        [
-          585.0,
-          475.0
-        ],
-        [
-          585.0,
-          508.0
-        ],
-        [
-          487.0,
-          508.0
-        ]
-      ]
+      "text": "BBQ Chicken - Padas secikit",
+      "confidence": 0.968672513961792,
+      "bbox": []
     },
     {
-      "text": "-Pedas sedikit",
-      "confidence": 0.9639167785644531,
-      "bbox": [
-        [
-          96.0,
-          503.0
-        ],
-        [
-          298.0,
-          503.0
-        ],
-        [
-          298.0,
-          531.0
-        ],
-        [
-          96.0,
-          531.0
-        ]
-      ]
+      "text": "00000",
+      "confidence": 0.4283657968044281,
+      "bbox": []
+    },
+    {
+      "text": "Change :10,000",
+      "confidence": 0.983167290687561,
+      "bbox": []
+    },
+    {
+      "text": "41,000 41,000",
+      "confidence": 0.9829765558242798,
+      "bbox": []
     },
     {
       "text": "0",
-      "confidence": 0.9766186475753784,
-      "bbox": [
-        [
-          567.0,
-          505.0
-        ],
-        [
-          590.0,
-          505.0
-        ],
-        [
-          590.0,
-          534.0
-        ],
-        [
-          567.0,
-          534.0
-        ]
-      ]
-    },
-    {
-      "text": "ITEMS 1",
-      "confidence": 0.9930413365364075,
-      "bbox": [
-        [
-          34.0,
-          554.0
-        ],
-        [
-          163.0,
-          554.0
-        ],
-        [
-          163.0,
-          590.0
-        ],
-        [
-          34.0,
-          590.0
-        ]
-      ]
-    },
-    {
-      "text": "Total",
-      "confidence": 0.9945958256721497,
-      "bbox": [
-        [
-          34.0,
-          584.0
-        ],
-        [
-          109.0,
-          584.0
-        ],
-        [
-          109.0,
-          615.0
-        ],
-        [
-          34.0,
-          615.0
-        ]
-      ]
-    },
-    {
-      "text": "41,000",
-      "confidence": 0.9987967610359192,
-      "bbox": [
-        [
-          485.0,
-          585.0
-        ],
-        [
-          586.0,
-          588.0
-        ],
-        [
-          585.0,
-          623.0
-        ],
-        [
-          484.0,
-          621.0
-        ]
-      ]
-    },
-    {
-      "text": "Pay Cash 51.000",
-      "confidence": 0.9913329482078552,
-      "bbox": [
-        [
-          32.0,
-          611.0
-        ],
-        [
-          260.0,
-          608.0
-        ],
-        [
-          260.0,
-          646.0
-        ],
-        [
-          33.0,
-          648.0
-        ]
-      ]
-    },
-    {
-      "text": "nOnOl eRusy",
-      "confidence": 0.5357305407524109,
-      "bbox": [
-        [
-          369.0,
-          619.0
-        ],
-        [
-          587.0,
-          626.0
-        ],
-        [
-          586.0,
-          662.0
-        ],
-        [
-          368.0,
-          655.0
-        ]
-      ]
+      "confidence": 0.9954120516777039,
+      "bbox": []
     }
   ],
   "parsed_data": {
-    "items": [
-      {
-        "name": "ITEMS",
-        "quantity": 0,
-        "price": 1.0,
-        "total": 0.0
-      },
-      {
-        "name": "Pay Cash",
-        "quantity": 0,
-        "price": 51000.0,
-        "total": 0.0
-      }
-    ],
+    "items": [],
     "total": null,
     "tax": null,
     "discount": null,
     "cash": 51000.0,
-    "change": null,
+    "change": 10000.0,
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T13:52:55.308214"
+  "timestamp": "2026-05-26T01:30:40.957944"
 }

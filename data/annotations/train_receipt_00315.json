@@ -1,208 +1,44 @@
 {
   "filename": "receipt_00315.png",
   "folder": "train",
-  "processed_path": "data\\processed\\processed_train_receipt_00315.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00315.jpg",
   "original_path": "data\\raw\\train\\image\\receipt_00315.png",
   "extracted_data": [
     {
       "text": "1 CUSTARD SOBORO",
-      "confidence": 0.9954410791397095,
-      "bbox": [
-        [
-          539.0,
-          1612.0
-        ],
-        [
-          1157.0,
-          1622.0
-        ],
-        [
-          1155.0,
-          1711.0
-        ],
-        [
-          537.0,
-          1702.0
-        ]
-      ]
+      "confidence": 0.9838413596153259,
+      "bbox": []
+    },
+    {
+      "text": "CASH CHANGE TOTAL",
+      "confidence": 0.9971664547920227,
+      "bbox": []
     },
     {
       "text": "12,000",
-      "confidence": 0.9593941569328308,
-      "bbox": [
-        [
-          1655.0,
-          1607.0
-        ],
-        [
-          1912.0,
-          1619.0
-        ],
-        [
-          1907.0,
-          1725.0
-        ],
-        [
-          1650.0,
-          1714.0
-        ]
-      ]
+      "confidence": 0.9839082360267639,
+      "bbox": []
     },
     {
-      "text": "TOTAL",
-      "confidence": 0.9986364245414734,
-      "bbox": [
-        [
-          601.0,
-          1778.0
-        ],
-        [
-          1005.0,
-          1789.0
-        ],
-        [
-          1000.0,
-          1969.0
-        ],
-        [
-          596.0,
-          1957.0
-        ]
-      ]
-    },
-    {
-      "text": "12,000",
-      "confidence": 0.9982576966285706,
-      "bbox": [
-        [
-          1430.0,
-          1803.0
-        ],
-        [
-          1910.0,
-          1786.0
-        ],
-        [
-          1916.0,
-          1961.0
-        ],
-        [
-          1436.0,
-          1977.0
-        ]
-      ]
-    },
-    {
-      "text": "CASH",
-      "confidence": 0.9988773465156555,
-      "bbox": [
-        [
-          606.0,
-          1941.0
-        ],
-        [
-          788.0,
-          1941.0
-        ],
-        [
-          788.0,
-          2039.0
-        ],
-        [
-          606.0,
-          2039.0
-        ]
-      ]
-    },
-    {
-      "text": "12,000",
-      "confidence": 0.9893264770507812,
-      "bbox": [
-        [
-          1656.0,
-          1941.0
-        ],
-        [
-          1910.0,
-          1941.0
-        ],
-        [
-          1910.0,
-          2052.0
-        ],
-        [
-          1656.0,
-          2052.0
-        ]
-      ]
-    },
-    {
-      "text": "CHANGE",
-      "confidence": 0.9984068274497986,
-      "bbox": [
-        [
-          601.0,
-          2020.0
-        ],
-        [
-          1078.0,
-          2037.0
-        ],
-        [
-          1072.0,
-          2216.0
-        ],
-        [
-          595.0,
-          2200.0
-        ]
-      ]
+      "text": "12,000 12,000",
+      "confidence": 0.9990299344062805,
+      "bbox": []
     },
     {
       "text": "0",
-      "confidence": 0.9949573874473572,
-      "bbox": [
-        [
-          1792.0,
-          2044.0
-        ],
-        [
-          1914.0,
-          2044.0
-        ],
-        [
-          1914.0,
-          2214.0
-        ],
-        [
-          1792.0,
-          2214.0
-        ]
-      ]
+      "confidence": 0.9902580976486206,
+      "bbox": []
     }
   ],
   "parsed_data": {
-    "items": [
-      {
-        "name": "CUSTARD SOBORO",
-        "quantity": 1,
-        "price": 12.0,
-        "total": 12.0
-      },
-      {
-        "name": "CASH",
-        "quantity": 0,
-        "price": 12.0,
-        "total": 0.0
-      }
-    ],
-    "total": 12.0,
+    "items": [],
+    "total": 12000.0,
     "tax": null,
     "discount": null,
-    "cash": 12.0,
-    "change": 0.0,
+    "cash": null,
+    "change": null,
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T13:58:38.420180"
+  "timestamp": "2026-05-26T01:32:10.380815"
 }

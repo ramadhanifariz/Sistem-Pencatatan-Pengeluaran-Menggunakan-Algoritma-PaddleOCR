@@ -1,74 +1,13 @@
 {
   "filename": "receipt_00102.png",
   "folder": "train",
-  "processed_path": "data\\processed\\processed_train_receipt_00102.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00102.jpg",
   "original_path": "data\\raw\\train\\image\\receipt_00102.png",
   "extracted_data": [
     {
-      "text": "2",
-      "confidence": 0.6944190859794617,
-      "bbox": [
-        [
-          660.0,
-          127.0
-        ],
-        [
-          725.0,
-          127.0
-        ],
-        [
-          725.0,
-          302.0
-        ],
-        [
-          660.0,
-          302.0
-        ]
-      ]
-    },
-    {
-      "text": "Dirps",
-      "confidence": 0.7350313067436218,
-      "bbox": [
-        [
-          666.0,
-          370.0
-        ],
-        [
-          730.0,
-          370.0
-        ],
-        [
-          730.0,
-          549.0
-        ],
-        [
-          666.0,
-          549.0
-        ]
-      ]
-    },
-    {
-      "text": "Dhrars",
-      "confidence": 0.7317953705787659,
-      "bbox": [
-        [
-          688.0,
-          900.0
-        ],
-        [
-          757.0,
-          902.0
-        ],
-        [
-          751.0,
-          1094.0
-        ],
-        [
-          683.0,
-          1092.0
-        ]
-      ]
+      "text": "Nry Wges EREA MT YTeyes",
+      "confidence": 0.4814258720725775,
+      "bbox": []
     }
   ],
   "parsed_data": {
@@ -81,5 +20,5 @@
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T13:26:59.959437"
+  "timestamp": "2026-05-26T01:24:10.316303"
 }

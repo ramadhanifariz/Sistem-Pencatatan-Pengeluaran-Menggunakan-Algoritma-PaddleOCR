@@ -1,12 +1,23 @@
 {
   "filename": "receipt_00344.png",
   "folder": "train",
-  "processed_path": "data\\processed\\processed_train_receipt_00344.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00344.jpg",
   "original_path": "data\\raw\\train\\image\\receipt_00344.png",
-  "extracted_data": [],
+  "extracted_data": [
+    {
+      "text": "AXE... CHE BURBER SMOU. 23L CHS 8WRG",
+      "confidence": 0.7641803324222565,
+      "bbox": []
+    },
+    {
+      "text": "121,300",
+      "confidence": 0.9919939041137695,
+      "bbox": []
+    }
+  ],
   "parsed_data": {
     "items": [],
-    "total": null,
+    "total": 121300.0,
     "tax": null,
     "discount": null,
     "cash": null,
@@ -14,5 +25,5 @@
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T14:03:23.932328"
+  "timestamp": "2026-05-26T01:33:22.153775"
 }

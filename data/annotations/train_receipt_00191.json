@@ -1,78 +1,44 @@
 {
   "filename": "receipt_00191.png",
   "folder": "train",
-  "processed_path": "data\\processed\\processed_train_receipt_00191.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00191.jpg",
   "original_path": "data\\raw\\train\\image\\receipt_00191.png",
   "extracted_data": [
     {
-      "text": "LAYSOIEA",
-      "confidence": 0.6633516550064087,
-      "bbox": [
-        [
-          160.0,
-          399.0
-        ],
-        [
-          385.0,
-          389.0
-        ],
-        [
-          386.0,
-          417.0
-        ],
-        [
-          162.0,
-          427.0
-        ]
-      ]
+      "text": "LAY'S NORI SEAMD 556 QTELA KRP/THPE OR155 SOSRO TEH 8OTOL 35O PUCUK/H TEH L/SGA350 AOUA AIR HINERAL 600 PEDUL1 DISABILITAS",
+      "confidence": 0.94278852827847,
+      "bbox": []
     },
     {
-      "text": "M",
-      "confidence": 0.5399646162986755,
-      "bbox": [
-        [
-          533.0,
-          748.0
-        ],
-        [
-          599.0,
-          748.0
-        ],
-        [
-          599.0,
-          779.0
-        ],
-        [
-          533.0,
-          779.0
-        ]
-      ]
+      "text": "PATA (IBINESARI N.. ROUNP1-BN",
+      "confidence": 0.7312543392181396,
+      "bbox": []
     },
     {
-      "text": "CI",
-      "confidence": 0.5848404169082642,
-      "bbox": [
-        [
-          501.0,
-          786.0
-        ],
-        [
-          606.0,
-          782.0
-        ],
-        [
-          607.0,
-          821.0
-        ],
-        [
-          503.0,
-          824.0
-        ]
-      ]
+      "text": "DPPs 30.273 PPM 3.027 DPP* 200",
+      "confidence": 0.8934731185436249,
+      "bbox": []
+    },
+    {
+      "text": "2 XENBAL 1 1Y TOTAL Tua! Jua 0088 6900 3500 3600 3500 200",
+      "confidence": 0.9892178714217152,
+      "bbox": []
+    },
+    {
+      "text": "8.800 6.900 7.000 33.500 3.600 7.000 33.500 50.000 16.500 200",
+      "confidence": 0.9930719714611769,
+      "bbox": []
     }
   ],
   "parsed_data": {
-    "items": [],
+    "items": [
+      {
+        "name": "ENBAL",
+        "quantity": 2,
+        "price": 1.0,
+        "total": 2.0
+      }
+    ],
     "total": null,
     "tax": null,
     "discount": null,
@@ -81,5 +47,5 @@
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T13:42:32.394745"
+  "timestamp": "2026-05-26T01:27:50.509712"
 }

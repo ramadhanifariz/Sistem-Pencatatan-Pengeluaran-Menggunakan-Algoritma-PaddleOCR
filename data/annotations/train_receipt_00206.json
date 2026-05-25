@@ -1,30 +1,28 @@
 {
   "filename": "receipt_00206.png",
   "folder": "train",
-  "processed_path": "data\\processed\\processed_train_receipt_00206.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00206.jpg",
   "original_path": "data\\raw\\train\\image\\receipt_00206.png",
   "extracted_data": [
     {
-      "text": "AFUNG AFUNG",
-      "confidence": 0.9682077765464783,
-      "bbox": [
-        [
-          575.0,
-          156.0
-        ],
-        [
-          635.0,
-          150.0
-        ],
-        [
-          665.0,
-          606.0
-        ],
-        [
-          616.0,
-          612.0
-        ]
-      ]
+      "text": "KEFRALI TuAt XAND TOTAL fAX 10.0X X A.HIYL EDT TOTRL ASI FUTIH EASD KUAH",
+      "confidence": 0.8395122359506786,
+      "bbox": []
+    },
+    {
+      "text": "3.634 6.X0 .00",
+      "confidence": 0.7578601241111755,
+      "bbox": []
+    },
+    {
+      "text": "70.0X0 63HX 5:.6 ttx 5.7 PX   ",
+      "confidence": 0.6093634311109781,
+      "bbox": []
+    },
+    {
+      "text": "A FUNG A FUNG E",
+      "confidence": 0.5714662373065948,
+      "bbox": []
     }
   ],
   "parsed_data": {
@@ -37,5 +35,5 @@
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T13:44:02.335826"
+  "timestamp": "2026-05-26T01:28:18.503345"
 }

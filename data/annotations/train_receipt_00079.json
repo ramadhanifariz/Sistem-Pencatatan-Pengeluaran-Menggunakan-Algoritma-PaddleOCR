@@ -1,56 +1,24 @@
 {
   "filename": "receipt_00079.png",
   "folder": "train",
-  "processed_path": "data\\processed\\processed_train_receipt_00079.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00079.jpg",
   "original_path": "data\\raw\\train\\image\\receipt_00079.png",
   "extracted_data": [
     {
-      "text": "OK",
-      "confidence": 0.5295945405960083,
-      "bbox": [
-        [
-          212.0,
-          81.0
-        ],
-        [
-          240.0,
-          66.0
-        ],
-        [
-          247.0,
-          78.0
-        ],
-        [
-          219.0,
-          94.0
-        ]
-      ]
-    },
-    {
-      "text": "PUTO",
-      "confidence": 0.8894456028938293,
-      "bbox": [
-        [
-          163.0,
-          143.0
-        ],
-        [
-          435.0,
-          121.0
-        ],
-        [
-          443.0,
-          221.0
-        ],
-        [
-          171.0,
-          243.0
-        ]
-      ]
+      "text": "5!1ky Qxer S11xy Kaze1n So 1ctal",
+      "confidence": 0.6726958900690079,
+      "bbox": []
     }
   ],
   "parsed_data": {
-    "items": [],
+    "items": [
+      {
+        "name": "y Kaze",
+        "quantity": 11,
+        "price": 1.0,
+        "total": 11.0
+      }
+    ],
     "total": null,
     "tax": null,
     "discount": null,
@@ -59,5 +27,5 @@
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T13:24:17.698835"
+  "timestamp": "2026-05-26T01:23:28.968826"
 }

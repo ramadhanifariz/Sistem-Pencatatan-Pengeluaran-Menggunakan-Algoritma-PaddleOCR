@@ -1,233 +1,33 @@
 {
   "filename": "receipt_00275.png",
   "folder": "train",
-  "processed_path": "data\\processed\\processed_train_receipt_00275.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00275.jpg",
   "original_path": "data\\raw\\train\\image\\receipt_00275.png",
   "extracted_data": [
     {
-      "text": "1Benedi.trr.",
-      "confidence": 0.6967644691467285,
-      "bbox": [
-        [
-          65.0,
-          433.0
-        ],
-        [
-          295.0,
-          436.0
-        ],
-        [
-          295.0,
-          465.0
-        ],
-        [
-          65.0,
-          463.0
-        ]
-      ]
+      "text": "i strawberry jc Soup Of The Iay Fenedict Burrito Lychee Ice Tea Total item SERVICE TAX SUBTOTAL TDTAL",
+      "confidence": 0.8898595040664077,
+      "bbox": []
     },
     {
-      "text": "I Lchee Ice",
-      "confidence": 0.8048438429832458,
-      "bbox": [
-        [
-          68.0,
-          458.0
-        ],
-        [
-          257.0,
-          464.0
-        ],
-        [
-          256.0,
-          494.0
-        ],
-        [
-          67.0,
-          488.0
-        ]
-      ]
+      "text": "2607150",
+      "confidence": 0.910424530506134,
+      "bbox": []
     },
     {
-      "text": "strsubery",
-      "confidence": 0.82209712266922,
-      "bbox": [
-        [
-          69.0,
-          512.0
-        ],
-        [
-          236.0,
-          515.0
-        ],
-        [
-          235.0,
-          544.0
-        ],
-        [
-          69.0,
-          541.0
-        ]
-      ]
+      "text": "Total Qty",
+      "confidence": 0.888481080532074,
+      "bbox": []
     },
     {
-      "text": "SUATOTAL",
-      "confidence": 0.9187058210372925,
-      "bbox": [
-        [
-          92.0,
-          560.0
-        ],
-        [
-          203.0,
-          563.0
-        ],
-        [
-          202.0,
-          596.0
-        ],
-        [
-          91.0,
-          593.0
-        ]
-      ]
-    },
-    {
-      "text": "SERVICE",
-      "confidence": 0.9191705584526062,
-      "bbox": [
-        [
-          88.0,
-          585.0
-        ],
-        [
-          191.0,
-          590.0
-        ],
-        [
-          190.0,
-          623.0
-        ],
-        [
-          87.0,
-          618.0
-        ]
-      ]
-    },
-    {
-      "text": "TA",
-      "confidence": 0.9100319147109985,
-      "bbox": [
-        [
-          93.0,
-          616.0
-        ],
-        [
-          142.0,
-          616.0
-        ],
-        [
-          142.0,
-          648.0
-        ],
-        [
-          93.0,
-          648.0
-        ]
-      ]
-    },
-    {
-      "text": "TOIAL",
-      "confidence": 0.9247316122055054,
-      "bbox": [
-        [
-          91.0,
-          666.0
-        ],
-        [
-          228.0,
-          671.0
-        ],
-        [
-          227.0,
-          703.0
-        ],
-        [
-          90.0,
-          698.0
-        ]
-      ]
-    },
-    {
-      "text": "260,1",
-      "confidence": 0.828506588935852,
-      "bbox": [
-        [
-          397.0,
-          668.0
-        ],
-        [
-          515.0,
-          672.0
-        ],
-        [
-          514.0,
-          706.0
-        ],
-        [
-          395.0,
-          701.0
-        ]
-      ]
-    },
-    {
-      "text": "Totaltes",
-      "confidence": 0.8405126333236694,
-      "bbox": [
-        [
-          89.0,
-          697.0
-        ],
-        [
-          230.0,
-          697.0
-        ],
-        [
-          230.0,
-          727.0
-        ],
-        [
-          89.0,
-          727.0
-        ]
-      ]
-    },
-    {
-      "text": "ule",
-      "confidence": 0.6566991209983826,
-      "bbox": [
-        [
-          418.0,
-          704.0
-        ],
-        [
-          470.0,
-          704.0
-        ],
-        [
-          470.0,
-          725.0
-        ],
-        [
-          418.0,
-          725.0
-        ]
-      ]
+      "text": "215,000 211500 85,000 45,000 40,000 45,000 23,650",
+      "confidence": 0.9643102204427123,
+      "bbox": []
     }
   ],
   "parsed_data": {
     "items": [],
-    "total": null,
+    "total": 23650.0,
     "tax": null,
     "discount": null,
     "cash": null,
@@ -235,5 +35,5 @@
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T13:53:06.325571"
+  "timestamp": "2026-05-26T01:30:44.225769"
 }

@@ -1,9 +1,25 @@
 {
   "filename": "receipt_00267.png",
   "folder": "train",
-  "processed_path": "data\\processed\\processed_train_receipt_00267.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00267.jpg",
   "original_path": "data\\raw\\train\\image\\receipt_00267.png",
-  "extracted_data": [],
+  "extracted_data": [
+    {
+      "text": "Vaw f nsK AN 1IW1 ! nf! 1 CivIS",
+      "confidence": 0.6668707728385925,
+      "bbox": []
+    },
+    {
+      "text": ".000",
+      "confidence": 0.9969056844711304,
+      "bbox": []
+    },
+    {
+      "text": "1 1",
+      "confidence": 0.5158937573432922,
+      "bbox": []
+    }
+  ],
   "parsed_data": {
     "items": [],
     "total": null,
@@ -14,5 +30,5 @@
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T13:52:01.051980"
+  "timestamp": "2026-05-26T01:30:27.659157"
 }

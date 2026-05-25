@@ -1,86 +1,28 @@
 {
   "filename": "receipt_00218.png",
   "folder": "train",
-  "processed_path": "data\\processed\\processed_train_receipt_00218.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00218.jpg",
   "original_path": "data\\raw\\train\\image\\receipt_00218.png",
   "extracted_data": [
     {
-      "text": "RE",
-      "confidence": 0.8051123023033142,
-      "bbox": [
-        [
-          620.0,
-          576.0
-        ],
-        [
-          730.0,
-          576.0
-        ],
-        [
-          730.0,
-          703.0
-        ],
-        [
-          620.0,
-          703.0
-        ]
-      ]
+      "text": "Grilled Dorry Fish Set Menu Family PE1 10X BCA Card Teppan Seatood Udon IXX X0T 0STn SC 6% SUETOTAL TOTL",
+      "confidence": 0.8565675157587975,
+      "bbox": []
     },
     {
-      "text": "TOIM",
-      "confidence": 0.7969987392425537,
-      "bbox": [
-        [
-          214.0,
-          729.0
-        ],
-        [
-          348.0,
-          726.0
-        ],
-        [
-          349.0,
-          768.0
-        ],
-        [
-          215.0,
-          771.0
-        ]
-      ]
+      "text": "121z61",
+      "confidence": 0.5284163951873779,
+      "bbox": []
     },
     {
-      "text": "421.011",
-      "confidence": 0.7917742729187012,
-      "bbox": [
-        [
-          529.0,
-          725.0
-        ],
-        [
-          724.0,
-          731.0
-        ],
-        [
-          723.0,
-          769.0
-        ],
-        [
-          527.0,
-          762.0
-        ]
-      ]
+      "text": "398.000 318.000 39.8001 421,641 42,Tilu 38,000 21.492 41.949",
+      "confidence": 0.7852923586033285,
+      "bbox": []
     }
   ],
   "parsed_data": {
-    "items": [
-      {
-        "name": "TOIM",
-        "quantity": 1,
-        "price": 421011.0,
-        "total": 421011.0
-      }
-    ],
-    "total": 421011.0,
+    "items": [],
+    "total": 41949.0,
     "tax": null,
     "discount": null,
     "cash": null,
@@ -88,5 +30,5 @@
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T13:45:25.192156"
+  "timestamp": "2026-05-26T01:28:40.581608"
 }

@@ -1,158 +1,28 @@
 {
   "filename": "receipt_00318.png",
   "folder": "train",
-  "processed_path": "data\\processed\\processed_train_receipt_00318.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00318.jpg",
   "original_path": "data\\raw\\train\\image\\receipt_00318.png",
   "extracted_data": [
     {
-      "text": "1 CHOCO TIME",
-      "confidence": 0.997996985912323,
-      "bbox": [
-        [
-          418.0,
-          1374.0
-        ],
-        [
-          795.0,
-          1366.0
-        ],
-        [
-          797.0,
-          1451.0
-        ],
-        [
-          420.0,
-          1459.0
-        ]
-      ]
+      "text": " CHOCO TIME TOTAL CARD",
+      "confidence": 0.996556282043457,
+      "bbox": []
+    },
+    {
+      "text": "50,000 50,000",
+      "confidence": 0.9294182360172272,
+      "bbox": []
     },
     {
       "text": "50,000",
-      "confidence": 0.9983283877372742,
-      "bbox": [
-        [
-          1330.0,
-          1367.0
-        ],
-        [
-          1546.0,
-          1367.0
-        ],
-        [
-          1546.0,
-          1455.0
-        ],
-        [
-          1330.0,
-          1455.0
-        ]
-      ]
-    },
-    {
-      "text": "TOTAL",
-      "confidence": 0.9988344311714172,
-      "bbox": [
-        [
-          472.0,
-          1520.0
-        ],
-        [
-          793.0,
-          1520.0
-        ],
-        [
-          793.0,
-          1663.0
-        ],
-        [
-          472.0,
-          1663.0
-        ]
-      ]
-    },
-    {
-      "text": "50,000",
-      "confidence": 0.9957792162895203,
-      "bbox": [
-        [
-          1134.0,
-          1523.0
-        ],
-        [
-          1536.0,
-          1523.0
-        ],
-        [
-          1536.0,
-          1663.0
-        ],
-        [
-          1134.0,
-          1663.0
-        ]
-      ]
-    },
-    {
-      "text": "CARD",
-      "confidence": 0.99916011095047,
-      "bbox": [
-        [
-          469.0,
-          1649.0
-        ],
-        [
-          739.0,
-          1649.0
-        ],
-        [
-          739.0,
-          1785.0
-        ],
-        [
-          469.0,
-          1785.0
-        ]
-      ]
-    },
-    {
-      "text": "50,000",
-      "confidence": 0.9917888641357422,
-      "bbox": [
-        [
-          1137.0,
-          1649.0
-        ],
-        [
-          1536.0,
-          1649.0
-        ],
-        [
-          1536.0,
-          1788.0
-        ],
-        [
-          1137.0,
-          1788.0
-        ]
-      ]
+      "confidence": 0.999387264251709,
+      "bbox": []
     }
   ],
   "parsed_data": {
-    "items": [
-      {
-        "name": "CHOCO TIME",
-        "quantity": 1,
-        "price": 50.0,
-        "total": 50.0
-      },
-      {
-        "name": "CARD",
-        "quantity": 0,
-        "price": 50.0,
-        "total": 0.0
-      }
-    ],
-    "total": 50.0,
+    "items": [],
+    "total": 50000.0,
     "tax": null,
     "discount": null,
     "cash": null,
@@ -160,5 +30,5 @@
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T13:59:14.909340"
+  "timestamp": "2026-05-26T01:32:18.817777"
 }

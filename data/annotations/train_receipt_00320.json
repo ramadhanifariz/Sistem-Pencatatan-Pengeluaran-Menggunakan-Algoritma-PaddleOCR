@@ -1,208 +1,34 @@
 {
   "filename": "receipt_00320.png",
   "folder": "train",
-  "processed_path": "data\\processed\\processed_train_receipt_00320.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00320.jpg",
   "original_path": "data\\raw\\train\\image\\receipt_00320.png",
   "extracted_data": [
     {
-      "text": "1 BAGUETTE",
-      "confidence": 0.9559723734855652,
-      "bbox": [
-        [
-          96.0,
-          451.0
-        ],
-        [
-          244.0,
-          451.0
-        ],
-        [
-          244.0,
-          483.0
-        ],
-        [
-          96.0,
-          483.0
-        ]
-      ]
+      "text": "BAGUETTE TOTAL CASH CHANGE",
+      "confidence": 0.9982991516590118,
+      "bbox": []
     },
     {
-      "text": "18,500",
-      "confidence": 0.9981204867362976,
-      "bbox": [
-        [
-          522.0,
-          449.0
-        ],
-        [
-          619.0,
-          449.0
-        ],
-        [
-          619.0,
-          485.0
-        ],
-        [
-          522.0,
-          485.0
-        ]
-      ]
+      "text": "31.500 1&,500",
+      "confidence": 0.908613383769989,
+      "bbox": []
     },
     {
-      "text": "TOTAL",
-      "confidence": 0.9989431500434875,
-      "bbox": [
-        [
-          119.0,
-          516.0
-        ],
-        [
-          273.0,
-          516.0
-        ],
-        [
-          273.0,
-          582.0
-        ],
-        [
-          119.0,
-          582.0
-        ]
-      ]
-    },
-    {
-      "text": "1&,500",
-      "confidence": 0.9320510029792786,
-      "bbox": [
-        [
-          437.0,
-          515.0
-        ],
-        [
-          616.0,
-          515.0
-        ],
-        [
-          616.0,
-          581.0
-        ],
-        [
-          437.0,
-          581.0
-        ]
-      ]
-    },
-    {
-      "text": "CASH",
-      "confidence": 0.9979164004325867,
-      "bbox": [
-        [
-          120.0,
-          574.0
-        ],
-        [
-          189.0,
-          574.0
-        ],
-        [
-          189.0,
-          611.0
-        ],
-        [
-          120.0,
-          611.0
-        ]
-      ]
-    },
-    {
-      "text": "50,000",
-      "confidence": 0.9996359944343567,
-      "bbox": [
-        [
-          518.0,
-          574.0
-        ],
-        [
-          610.0,
-          572.0
-        ],
-        [
-          611.0,
-          605.0
-        ],
-        [
-          519.0,
-          608.0
-        ]
-      ]
-    },
-    {
-      "text": "CHANGE",
-      "confidence": 0.998846709728241,
-      "bbox": [
-        [
-          117.0,
-          609.0
-        ],
-        [
-          301.0,
-          606.0
-        ],
-        [
-          302.0,
-          668.0
-        ],
-        [
-          118.0,
-          671.0
-        ]
-      ]
-    },
-    {
-      "text": "31,500",
-      "confidence": 0.9983692765235901,
-      "bbox": [
-        [
-          427.0,
-          603.0
-        ],
-        [
-          611.0,
-          603.0
-        ],
-        [
-          611.0,
-          670.0
-        ],
-        [
-          427.0,
-          670.0
-        ]
-      ]
+      "text": "50.000 18,500",
+      "confidence": 0.9716103971004486,
+      "bbox": []
     }
   ],
   "parsed_data": {
-    "items": [
-      {
-        "name": "BAGUETTE",
-        "quantity": 1,
-        "price": 18.5,
-        "total": 18.5
-      },
-      {
-        "name": "CASH",
-        "quantity": 500,
-        "price": 50.0,
-        "total": 25000.0
-      }
-    ],
-    "total": 25018.5,
+    "items": [],
+    "total": 18500.0,
     "tax": null,
     "discount": null,
-    "cash": 50.0,
-    "change": 31.5,
+    "cash": null,
+    "change": 31500.0,
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T13:59:26.129706"
+  "timestamp": "2026-05-26T01:32:22.319199"
 }

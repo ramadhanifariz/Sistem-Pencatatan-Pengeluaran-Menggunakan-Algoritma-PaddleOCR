@@ -1,108 +1,48 @@
 {
   "filename": "receipt_00072.png",
   "folder": "train",
-  "processed_path": "data\\processed\\processed_train_receipt_00072.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00072.jpg",
   "original_path": "data\\raw\\train\\image\\receipt_00072.png",
   "extracted_data": [
     {
-      "text": "Total.",
-      "confidence": 0.9993115067481995,
-      "bbox": [
-        [
-          77.0,
-          841.0
-        ],
-        [
-          183.0,
-          844.0
-        ],
-        [
-          181.0,
-          887.0
-        ],
-        [
-          75.0,
-          884.0
-        ]
-      ]
+      "text": "Tatal Total Item: 6001-Flastic Han Small 201l-Whole wheat Katamars",
+      "confidence": 0.8685703501105309,
+      "bbox": []
     },
     {
       "text": "28.000",
-      "confidence": 0.9975215792655945,
-      "bbox": [
-        [
-          560.0,
-          850.0
-        ],
-        [
-          665.0,
-          854.0
-        ],
-        [
-          663.0,
-          898.0
-        ],
-        [
-          558.0,
-          895.0
-        ]
-      ]
+      "confidence": 0.9837701320648193,
+      "bbox": []
     },
     {
-      "text": "Cash",
-      "confidence": 0.9952170252799988,
-      "bbox": [
-        [
-          73.0,
-          883.0
-        ],
-        [
-          153.0,
-          888.0
-        ],
-        [
-          151.0,
-          932.0
-        ],
-        [
-          71.0,
-          928.0
-        ]
-      ]
+      "text": "1*",
+      "confidence": 0.31305596232414246,
+      "bbox": []
     },
     {
-      "text": "ndored",
-      "confidence": 0.8838217854499817,
-      "bbox": [
-        [
-          109.0,
-          939.0
-        ],
-        [
-          215.0,
-          943.0
-        ],
-        [
-          214.0,
-          972.0
-        ],
-        [
-          108.0,
-          969.0
-        ]
-      ]
+      "text": "xi x1",
+      "confidence": 0.5683127045631409,
+      "bbox": []
+    },
+    {
+      "text": "28.000 28.000",
+      "confidence": 0.9605032205581665,
+      "bbox": []
+    },
+    {
+      "text": "50.000 22.000",
+      "confidence": 0.9894186556339264,
+      "bbox": []
+    },
+    {
+      "text": "E",
+      "confidence": 0.4317479133605957,
+      "bbox": []
     }
   ],
   "parsed_data": {
-    "items": [
-      {
-        "name": "28.000",
-        "quantity": 1,
-        "price": 28000.0,
-        "total": 28000.0
-      }
-    ],
-    "total": 28000.0,
+    "items": [],
+    "total": null,
     "tax": null,
     "discount": null,
     "cash": null,
@@ -110,5 +50,5 @@
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T13:23:43.924428"
+  "timestamp": "2026-05-26T01:23:18.945785"
 }

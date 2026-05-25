@@ -1,18 +1,54 @@
 {
   "filename": "receipt_00012.png",
   "folder": "test",
-  "processed_path": "data\\processed\\processed_test_receipt_00012.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00012.jpg",
   "original_path": "data\\raw\\test\\image\\receipt_00012.png",
-  "extracted_data": [],
+  "extracted_data": [
+    {
+      "text": "Tota! : CT.Vis.Fr- iTAL (2 ite U571-1854 RLUS WNITA 100-0060 SHFFIN6",
+      "confidence": 0.8563286438584328,
+      "bbox": []
+    },
+    {
+      "text": "1",
+      "confidence": 0.840330958366394,
+      "bbox": []
+    },
+    {
+      "text": "120.000",
+      "confidence": 0.9301901459693909,
+      "bbox": []
+    },
+    {
+      "text": "0880",
+      "confidence": 0.7899837493896484,
+      "bbox": []
+    },
+    {
+      "text": "1A 07",
+      "confidence": 0.7565366625785828,
+      "bbox": []
+    },
+    {
+      "text": "120,000 .0.000 J,C00",
+      "confidence": 0.8487734794616699,
+      "bbox": []
+    },
+    {
+      "text": "22 0",
+      "confidence": 0.8656721711158752,
+      "bbox": []
+    }
+  ],
   "parsed_data": {
     "items": [],
     "total": null,
     "tax": null,
-    "discount": null,
+    "discount": 1854.0,
     "cash": null,
     "change": null,
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T14:12:27.066372"
+  "timestamp": "2026-05-26T01:50:40.364965"
 }

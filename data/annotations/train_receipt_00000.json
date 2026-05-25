@@ -1,18 +1,54 @@
 {
   "filename": "receipt_00000.png",
   "folder": "train",
-  "processed_path": "data\\processed\\processed_train_receipt_00000.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00000.jpg",
   "original_path": "data\\raw\\train\\image\\receipt_00000.png",
-  "extracted_data": [],
+  "extracted_data": [
+    {
+      "text": "th h",
+      "confidence": 0.4962145537137985,
+      "bbox": []
+    },
+    {
+      "text": "2",
+      "confidence": 0.12867827713489532,
+      "bbox": []
+    },
+    {
+      "text": "TYEE-TICHDTTEA QIEYELSHTT BokBOnO.E Nasi Ayam Dewar. Tce Cemon Tan Frce Ice Tes Orgaric Broen Sa Tahu Telor Asin Free Ice Tea Sok Pangca Eam Ayam Senbal ria Hot Tea Bebok Straet Ice Tea Tawar Ice Orance Ayan Suir Bali Ice Tea Nesl Gcrang Fame CERODI Tanu oorena -Doy anu Telar Ast.1",
+      "confidence": 0.514760027793244,
+      "bbox": []
+    },
+    {
+      "text": "Sub-Total Rounding Service",
+      "confidence": 0.9784394204616547,
+      "bbox": []
+    },
+    {
+      "text": "1,591.600 FB1",
+      "confidence": 0.8576066493988037,
+      "bbox": []
+    },
+    {
+      "text": "25.0 346. 366.00 2400 5.000 85,000 37.000 15.00 2,000 36.000 400 7 700OC 36.00 70.0 2.00 4.00 100,950 144.675 32,Q00 40.000 44.000 18.000",
+      "confidence": 0.9175357256423666,
+      "bbox": []
+    },
+    {
+      "text": "c: -4",
+      "confidence": 0.7434974014759064,
+      "bbox": []
+    }
+  ],
   "parsed_data": {
     "items": [],
     "total": null,
     "tax": null,
-    "discount": null,
+    "discount": 4.0,
     "cash": null,
     "change": null,
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T13:14:17.237931"
+  "timestamp": "2026-05-26T01:20:56.629220"
 }

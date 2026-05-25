@@ -1,79 +1,38 @@
 {
   "filename": "receipt_00260.png",
   "folder": "train",
-  "processed_path": "data\\processed\\processed_train_receipt_00260.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00260.jpg",
   "original_path": "data\\raw\\train\\image\\receipt_00260.png",
   "extracted_data": [
     {
-      "text": "Total",
-      "confidence": 0.7366112470626831,
-      "bbox": [
-        [
-          461.0,
-          896.0
-        ],
-        [
-          534.0,
-          896.0
-        ],
-        [
-          534.0,
-          927.0
-        ],
-        [
-          461.0,
-          927.0
-        ]
-      ]
+      "text": "4",
+      "confidence": 0.8953622579574585,
+      "bbox": []
     },
     {
-      "text": "as",
-      "confidence": 0.6354221105575562,
-      "bbox": [
-        [
-          719.0,
-          985.0
-        ],
-        [
-          814.0,
-          985.0
-        ],
-        [
-          814.0,
-          1050.0
-        ],
-        [
-          719.0,
-          1050.0
-        ]
-      ]
+      "text": "DEBIT CARD 1.0 1.0 1.0 1.0 1.0 1.0 Manu 6 Iten(s)",
+      "confidence": 0.9584038672037423,
+      "bbox": []
     },
     {
-      "text": "lotl",
-      "confidence": 0.6304396986961365,
-      "bbox": [
-        [
-          423.0,
-          1007.0
-        ],
-        [
-          486.0,
-          1007.0
-        ],
-        [
-          486.0,
-          1059.0
-        ],
-        [
-          423.0,
-          1059.0
-        ]
-      ]
+      "text": "AMANDEL BROOD BITTERDALLEN MOZZARELA STICK FTUAT ICE CREY SAUCYS BROOD BOKXEPOOTIES",
+      "confidence": 0.9356188662350178,
+      "bbox": []
+    },
+    {
+      "text": "Sub Total Tax Total",
+      "confidence": 0.9678942859172821,
+      "bbox": []
+    },
+    {
+      "text": "235,000 258,500 258,500 33,000 $5,000 20,000 19,000 10,000 90,000 23,500",
+      "confidence": 0.9722208154853433,
+      "bbox": []
     }
   ],
   "parsed_data": {
     "items": [],
-    "total": null,
+    "total": 235000.0,
     "tax": null,
     "discount": null,
     "cash": null,
@@ -81,5 +40,5 @@
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T13:51:09.687691"
+  "timestamp": "2026-05-26T01:30:12.307727"
 }

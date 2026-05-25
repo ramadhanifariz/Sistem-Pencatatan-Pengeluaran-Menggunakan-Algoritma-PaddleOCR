@@ -1,162 +1,23 @@
 {
   "filename": "receipt_00018.png",
   "folder": "test",
-  "processed_path": "data\\processed\\processed_test_receipt_00018.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00018.jpg",
   "original_path": "data\\raw\\test\\image\\receipt_00018.png",
   "extracted_data": [
     {
-      "text": "Propm1",
-      "confidence": 0.9088190197944641,
-      "bbox": [
-        [
-          23.0,
-          370.0
-        ],
-        [
-          192.0,
-          372.0
-        ],
-        [
-          191.0,
-          401.0
-        ],
-        [
-          23.0,
-          399.0
-        ]
-      ]
+      "text": "Kembalian Sub Toiai Propols Cair 1 150000 Tunai",
+      "confidence": 0.970237486064434,
+      "bbox": []
     },
     {
-      "text": "t8eono",
-      "confidence": 0.5951483845710754,
-      "bbox": [
-        [
-          27.0,
-          401.0
-        ],
-        [
-          117.0,
-          401.0
-        ],
-        [
-          117.0,
-          430.0
-        ],
-        [
-          27.0,
-          430.0
-        ]
-      ]
+      "text": "16000 T56000 156000",
+      "confidence": 0.9774821102619171,
+      "bbox": []
     },
     {
-      "text": "ub1ot",
-      "confidence": 0.6467655897140503,
-      "bbox": [
-        [
-          25.0,
-          476.0
-        ],
-        [
-          134.0,
-          476.0
-        ],
-        [
-          134.0,
-          505.0
-        ],
-        [
-          25.0,
-          505.0
-        ]
-      ]
-    },
-    {
-      "text": "lune",
-      "confidence": 0.7945302128791809,
-      "bbox": [
-        [
-          25.0,
-          565.0
-        ],
-        [
-          91.0,
-          568.0
-        ],
-        [
-          90.0,
-          598.0
-        ],
-        [
-          23.0,
-          595.0
-        ]
-      ]
-    },
-    {
-      "text": "10000",
-      "confidence": 0.8823381662368774,
-      "bbox": [
-        [
-          293.0,
-          579.0
-        ],
-        [
-          382.0,
-          579.0
-        ],
-        [
-          382.0,
-          609.0
-        ],
-        [
-          293.0,
-          609.0
-        ]
-      ]
-    },
-    {
-      "text": "Kmbaai",
-      "confidence": 0.756226122379303,
-      "bbox": [
-        [
-          23.0,
-          647.0
-        ],
-        [
-          148.0,
-          647.0
-        ],
-        [
-          148.0,
-          673.0
-        ],
-        [
-          23.0,
-          673.0
-        ]
-      ]
-    },
-    {
-      "text": "R0",
-      "confidence": 0.5311290621757507,
-      "bbox": [
-        [
-          314.0,
-          643.0
-        ],
-        [
-          386.0,
-          643.0
-        ],
-        [
-          386.0,
-          673.0
-        ],
-        [
-          314.0,
-          673.0
-        ]
-      ]
+      "text": "Rp.0",
+      "confidence": 0.980606198310852,
+      "bbox": []
     }
   ],
   "parsed_data": {
@@ -164,10 +25,10 @@
     "total": null,
     "tax": null,
     "discount": null,
-    "cash": null,
+    "cash": 16000.0,
     "change": null,
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T14:13:13.083740"
+  "timestamp": "2026-05-26T01:50:54.564852"
 }

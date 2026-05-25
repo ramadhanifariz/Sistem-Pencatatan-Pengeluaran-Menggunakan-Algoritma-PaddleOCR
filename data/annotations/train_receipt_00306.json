@@ -1,64 +1,38 @@
 {
   "filename": "receipt_00306.png",
   "folder": "train",
-  "processed_path": "data\\processed\\processed_train_receipt_00306.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00306.jpg",
   "original_path": "data\\raw\\train\\image\\receipt_00306.png",
   "extracted_data": [
     {
-      "text": "8.",
-      "confidence": 0.5392428636550903,
-      "bbox": [
-        [
-          437.0,
-          320.0
-        ],
-        [
-          625.0,
-          320.0
-        ],
-        [
-          625.0,
-          352.0
-        ],
-        [
-          437.0,
-          352.0
-        ]
-      ]
+      "text": "ICE SWEET JASMINE GREENTEA PAKET DOSIRAK  PAKET IDSIRAK j",
+      "confidence": 0.9131835848093033,
+      "bbox": []
     },
     {
-      "text": "30.000",
-      "confidence": 0.8818826079368591,
-      "bbox": [
-        [
-          517.0,
-          714.0
-        ],
-        [
-          644.0,
-          714.0
-        ],
-        [
-          644.0,
-          786.0
-        ],
-        [
-          517.0,
-          786.0
-        ]
-      ]
+      "text": "Tax Services TEYORONS Total",
+      "confidence": 0.8297827169299126,
+      "bbox": []
+    },
+    {
+      "text": "3",
+      "confidence": 0.28109440207481384,
+      "bbox": []
+    },
+    {
+      "text": "25.975",
+      "confidence": 0.9708077311515808,
+      "bbox": []
+    },
+    {
+      "text": "30,000 25,975 25,975 1,298 2,727",
+      "confidence": 0.9914895482361317,
+      "bbox": []
     }
   ],
   "parsed_data": {
-    "items": [
-      {
-        "name": "30.000",
-        "quantity": 1,
-        "price": 30000.0,
-        "total": 30000.0
-      }
-    ],
-    "total": 30000.0,
+    "items": [],
+    "total": 2727.0,
     "tax": null,
     "discount": null,
     "cash": null,
@@ -66,5 +40,5 @@
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T13:56:38.691535"
+  "timestamp": "2026-05-26T01:31:44.835937"
 }

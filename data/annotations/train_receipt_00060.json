@@ -1,202 +1,44 @@
 {
   "filename": "receipt_00060.png",
   "folder": "train",
-  "processed_path": "data\\processed\\processed_train_receipt_00060.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00060.jpg",
   "original_path": "data\\raw\\train\\image\\receipt_00060.png",
   "extracted_data": [
     {
-      "text": "C",
-      "confidence": 0.6206753253936768,
-      "bbox": [
-        [
-          464.0,
-          507.0
-        ],
-        [
-          484.0,
-          507.0
-        ],
-        [
-          484.0,
-          530.0
-        ],
-        [
-          464.0,
-          530.0
-        ]
-      ]
+      "text": "CASH 1 1 (EMD 1",
+      "confidence": 0.6957149831578135,
+      "bbox": []
     },
     {
-      "text": "42",
-      "confidence": 0.9965896010398865,
-      "bbox": [
-        [
-          464.0,
-          551.0
-        ],
-        [
-          488.0,
-          551.0
-        ],
-        [
-          488.0,
-          577.0
-        ],
-        [
-          464.0,
-          577.0
-        ]
-      ]
-    },
-    {
-      "text": "61.000",
-      "confidence": 0.6887680888175964,
-      "bbox": [
-        [
-          450.0,
-          594.0
-        ],
-        [
-          535.0,
-          594.0
-        ],
-        [
-          535.0,
-          647.0
-        ],
-        [
-          450.0,
-          647.0
-        ]
-      ]
+      "text": "Nerds Trop Punch Nerds Waternelon Yerus Sirw Grape Pocky Chocg1ate M1nera) Water (S)",
+      "confidence": 0.8776203729212284,
+      "bbox": []
     },
     {
       "text": "TOTAL",
-      "confidence": 0.9191142320632935,
-      "bbox": [
-        [
-          330.0,
-          617.0
-        ],
-        [
-          381.0,
-          617.0
-        ],
-        [
-          381.0,
-          645.0
-        ],
-        [
-          330.0,
-          645.0
-        ]
-      ]
+      "confidence": 0.9971879720687866,
+      "bbox": []
     },
     {
-      "text": "CACH",
-      "confidence": 0.8883025646209717,
-      "bbox": [
-        [
-          139.0,
-          671.0
-        ],
-        [
-          180.0,
-          671.0
-        ],
-        [
-          180.0,
-          692.0
-        ],
-        [
-          139.0,
-          692.0
-        ]
-      ]
+      "text": "161.000 161.000 2 42 42. 42.000 :",
+      "confidence": 0.83215297665447,
+      "bbox": []
     },
     {
-      "text": "6",
-      "confidence": 0.8076146841049194,
-      "bbox": [
-        [
-          459.0,
-          664.0
-        ],
-        [
-          501.0,
-          664.0
-        ],
-        [
-          501.0,
-          684.0
-        ],
-        [
-          459.0,
-          684.0
-        ]
-      ]
-    },
-    {
-      "text": "C",
-      "confidence": 0.5287122130393982,
-      "bbox": [
-        [
-          491.0,
-          667.0
-        ],
-        [
-          519.0,
-          667.0
-        ],
-        [
-          519.0,
-          684.0
-        ],
-        [
-          491.0,
-          684.0
-        ]
-      ]
-    },
-    {
-      "text": "CANCED",
-      "confidence": 0.8968203663825989,
-      "bbox": [
-        [
-          140.0,
-          692.0
-        ],
-        [
-          208.0,
-          692.0
-        ],
-        [
-          208.0,
-          708.0
-        ],
-        [
-          140.0,
-          708.0
-        ]
-      ]
+      "text": "0",
+      "confidence": 0.9973545074462891,
+      "bbox": []
     }
   ],
   "parsed_data": {
-    "items": [
-      {
-        "name": "61.000",
-        "quantity": 1,
-        "price": 61000.0,
-        "total": 61000.0
-      }
-    ],
-    "total": 61000.0,
+    "items": [],
+    "total": 161000.0,
     "tax": null,
     "discount": null,
-    "cash": null,
+    "cash": 1.0,
     "change": null,
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T13:21:53.073597"
+  "timestamp": "2026-05-26T01:22:51.148527"
 }

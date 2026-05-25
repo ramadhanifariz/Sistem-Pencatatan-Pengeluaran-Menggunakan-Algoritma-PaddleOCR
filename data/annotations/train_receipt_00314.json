@@ -1,196 +1,43 @@
 {
   "filename": "receipt_00314.png",
   "folder": "train",
-  "processed_path": "data\\processed\\processed_train_receipt_00314.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00314.jpg",
   "original_path": "data\\raw\\train\\image\\receipt_00314.png",
   "extracted_data": [
     {
-      "text": ":",
-      "confidence": 0.8909028768539429,
-      "bbox": [
-        [
-          999.0,
-          365.0
-        ],
-        [
-          1058.0,
-          365.0
-        ],
-        [
-          1058.0,
-          434.0
-        ],
-        [
-          999.0,
-          434.0
-        ]
-      ]
+      "text": "Nutella Cheese",
+      "confidence": 0.9696400761604309,
+      "bbox": []
     },
     {
-      "text": "54,50",
-      "confidence": 0.572356104850769,
-      "bbox": [
-        [
-          870.0,
-          913.0
-        ],
-        [
-          1023.0,
-          902.0
-        ],
-        [
-          1027.0,
-          967.0
-        ],
-        [
-          874.0,
-          978.0
-        ]
-      ]
+      "text": "Total: Debit Card: SubTotal :",
+      "confidence": 0.9469619244337082,
+      "bbox": []
     },
     {
-      "text": "ytell Cneese",
-      "confidence": 0.5463108420372009,
-      "bbox": [
-        [
-          145.0,
-          942.0
-        ],
-        [
-          507.0,
-          934.0
-        ],
-        [
-          508.0,
-          995.0
-        ],
-        [
-          147.0,
-          1003.0
-        ]
-      ]
+      "text": "FB1:",
+      "confidence": 0.9650900363922119,
+      "bbox": []
     },
     {
-      "text": "S,094",
-      "confidence": 0.5076264142990112,
-      "bbox": [
-        [
-          877.0,
-          1104.0
-        ],
-        [
-          1023.0,
-          1095.0
-        ],
-        [
-          1027.0,
-          1162.0
-        ],
-        [
-          881.0,
-          1171.0
-        ]
-      ]
+      "text": "59,998 54,544 54,544 5,454",
+      "confidence": 0.9929701238870621,
+      "bbox": []
     },
     {
-      "text": "Dirers",
-      "confidence": 0.7243500351905823,
-      "bbox": [
-        [
-          1051.0,
-          1150.0
-        ],
-        [
-          1143.0,
-          1150.0
-        ],
-        [
-          1143.0,
-          1417.0
-        ],
-        [
-          1051.0,
-          1417.0
-        ]
-      ]
+      "text": "59,998",
+      "confidence": 0.9986410737037659,
+      "bbox": []
     },
     {
-      "text": "59.098",
-      "confidence": 0.5845057368278503,
-      "bbox": [
-        [
-          855.0,
-          1222.0
-        ],
-        [
-          1058.0,
-          1222.0
-        ],
-        [
-          1058.0,
-          1337.0
-        ],
-        [
-          855.0,
-          1337.0
-        ]
-      ]
-    },
-    {
-      "text": "Total:",
-      "confidence": 0.8957902789115906,
-      "bbox": [
-        [
-          446.0,
-          1259.0
-        ],
-        [
-          655.0,
-          1245.0
-        ],
-        [
-          663.0,
-          1366.0
-        ],
-        [
-          454.0,
-          1379.0
-        ]
-      ]
-    },
-    {
-      "text": "Debst Card:",
-      "confidence": 0.8323488831520081,
-      "bbox": [
-        [
-          458.0,
-          1392.0
-        ],
-        [
-          743.0,
-          1366.0
-        ],
-        [
-          749.0,
-          1434.0
-        ],
-        [
-          465.0,
-          1460.0
-        ]
-      ]
+      "text": "*",
+      "confidence": 0.20951461791992188,
+      "bbox": []
     }
   ],
   "parsed_data": {
-    "items": [
-      {
-        "name": "Dirers",
-        "quantity": 1,
-        "price": 59098.0,
-        "total": 59098.0
-      }
-    ],
-    "total": 59098.0,
+    "items": [],
+    "total": null,
     "tax": null,
     "discount": null,
     "cash": null,
@@ -198,5 +45,5 @@
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T13:58:07.310787"
+  "timestamp": "2026-05-26T01:32:04.840032"
 }

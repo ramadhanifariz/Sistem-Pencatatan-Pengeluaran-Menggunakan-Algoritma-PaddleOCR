@@ -1,74 +1,43 @@
 {
   "filename": "receipt_00394.png",
   "folder": "train",
-  "processed_path": "data\\processed\\processed_train_receipt_00394.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00394.jpg",
   "original_path": "data\\raw\\train\\image\\receipt_00394.png",
   "extracted_data": [
     {
-      "text": "Total.",
-      "confidence": 0.9169548153877258,
-      "bbox": [
-        [
-          180.0,
-          902.0
-        ],
-        [
-          274.0,
-          908.0
-        ],
-        [
-          271.0,
-          951.0
-        ],
-        [
-          177.0,
-          946.0
-        ]
-      ]
+      "text": "Change: Cash Tendered: Total. Total Item: 6001-Plastic Bag Small 1001-Choco Bun - -",
+      "confidence": 0.47568413778208196,
+      "bbox": []
     },
     {
-      "text": "2.m",
-      "confidence": 0.7435089945793152,
-      "bbox": [
-        [
-          585.0,
-          926.0
-        ],
-        [
-          669.0,
-          934.0
-        ],
-        [
-          666.0,
-          969.0
-        ],
-        [
-          582.0,
-          962.0
-        ]
-      ]
+      "text": "22.000 .",
+      "confidence": 0.8000742197036743,
+      "bbox": []
     },
     {
-      "text": "Coch",
-      "confidence": 0.8339260816574097,
-      "bbox": [
-        [
-          178.0,
-          942.0
-        ],
-        [
-          246.0,
-          949.0
-        ],
-        [
-          242.0,
-          989.0
-        ],
-        [
-          174.0,
-          983.0
-        ]
-      ]
+      "text": "0",
+      "confidence": 0.9746740460395813,
+      "bbox": []
+    },
+    {
+      "text": "x1 x1 2",
+      "confidence": 0.9971768856048584,
+      "bbox": []
+    },
+    {
+      "text": "22.000 22.000",
+      "confidence": 0.9984167516231537,
+      "bbox": []
+    },
+    {
+      "text": "52.000",
+      "confidence": 0.9883502125740051,
+      "bbox": []
+    },
+    {
+      "text": "0",
+      "confidence": 0.9568446278572083,
+      "bbox": []
     }
   ],
   "parsed_data": {
@@ -81,5 +50,5 @@
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T14:10:31.969539"
+  "timestamp": "2026-05-26T01:35:20.454961"
 }

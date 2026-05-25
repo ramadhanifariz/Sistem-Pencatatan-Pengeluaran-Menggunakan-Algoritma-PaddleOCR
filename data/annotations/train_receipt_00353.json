@@ -1,11 +1,29 @@
 {
   "filename": "receipt_00353.png",
   "folder": "train",
-  "processed_path": "data\\processed\\processed_train_receipt_00353.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00353.jpg",
   "original_path": "data\\raw\\train\\image\\receipt_00353.png",
-  "extracted_data": [],
+  "extracted_data": [
+    {
+      "text": "10 IDE",
+      "confidence": 0.4365762770175934,
+      "bbox": []
+    },
+    {
+      "text": "1r1",
+      "confidence": 0.531729519367218,
+      "bbox": []
+    }
+  ],
   "parsed_data": {
-    "items": [],
+    "items": [
+      {
+        "name": "IDE 1r1",
+        "quantity": 1,
+        "price": 10.0,
+        "total": 10.0
+      }
+    ],
     "total": null,
     "tax": null,
     "discount": null,
@@ -14,5 +32,5 @@
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T14:04:30.958194"
+  "timestamp": "2026-05-26T01:33:43.309545"
 }

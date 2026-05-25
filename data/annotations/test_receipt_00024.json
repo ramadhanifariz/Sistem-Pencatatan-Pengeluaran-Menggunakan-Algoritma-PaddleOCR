@@ -1,240 +1,48 @@
 {
   "filename": "receipt_00024.png",
   "folder": "test",
-  "processed_path": "data\\processed\\processed_test_receipt_00024.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00024.jpg",
   "original_path": "data\\raw\\test\\image\\receipt_00024.png",
   "extracted_data": [
     {
-      "text": "5001-crr- Lpcol",
-      "confidence": 0.6997559070587158,
-      "bbox": [
-        [
-          67.0,
-          495.0
-        ],
-        [
-          345.0,
-          493.0
-        ],
-        [
-          346.0,
-          522.0
-        ],
-        [
-          67.0,
-          524.0
-        ]
-      ]
+      "text": "Total. Totsl Item Detet Card 6002-P1astic Pag Medium s003-Chokareto Cookies 5001-Corn F1akes Cookies",
+      "confidence": 0.8531205020844936,
+      "bbox": []
     },
     {
-      "text": ".5: np",
-      "confidence": 0.6713005900382996,
-      "bbox": [
-        [
-          152.0,
-          527.0
-        ],
-        [
-          281.0,
-          524.0
-        ],
-        [
-          282.0,
-          559.0
-        ],
-        [
-          153.0,
-          563.0
-        ]
-      ]
+      "text": "Rp.62.000 Rg.56.000",
+      "confidence": 0.8529410064220428,
+      "bbox": []
     },
     {
-      "text": "MIT",
-      "confidence": 0.5444240570068359,
-      "bbox": [
-        [
-          528.0,
-          540.0
-        ],
-        [
-          546.0,
-          540.0
-        ],
-        [
-          546.0,
-          547.0
-        ],
-        [
-          528.0,
-          547.0
-        ]
-      ]
+      "text": "Rp8",
+      "confidence": 0.6718363761901855,
+      "bbox": []
     },
     {
-      "text": "7+akcetcc",
-      "confidence": 0.5265090465545654,
-      "bbox": [
-        [
-          65.0,
-          559.0
-        ],
-        [
-          300.0,
-          565.0
-        ],
-        [
-          299.0,
-          600.0
-        ],
-        [
-          64.0,
-          595.0
-        ]
-      ]
+      "text": "x1 x1 x1",
+      "confidence": 0.9278554618358612,
+      "bbox": []
     },
     {
-      "text": "JOU7-",
-      "confidence": 0.6706025004386902,
-      "bbox": [
-        [
-          158.0,
-          598.0
-        ],
-        [
-          277.0,
-          600.0
-        ],
-        [
-          276.0,
-          629.0
-        ],
-        [
-          157.0,
-          627.0
-        ]
-      ]
+      "text": "Rp=118 800",
+      "confidence": 0.6368569731712341,
+      "bbox": []
     },
     {
-      "text": "Mg",
-      "confidence": 0.5071001052856445,
-      "bbox": [
-        [
-          289.0,
-          640.0
-        ],
-        [
-          312.0,
-          643.0
-        ],
-        [
-          310.0,
-          658.0
-        ],
-        [
-          287.0,
-          655.0
-        ]
-      ]
+      "text": "Rp.62.000 Rr56.000",
+      "confidence": 0.8711290955543518,
+      "bbox": []
     },
     {
-      "text": "TAF",
-      "confidence": 0.6512475609779358,
-      "bbox": [
-        [
-          223.0,
-          676.0
-        ],
-        [
-          245.0,
-          676.0
-        ],
-        [
-          245.0,
-          690.0
-        ],
-        [
-          223.0,
-          690.0
-        ]
-      ]
-    },
-    {
-      "text": "Total.",
-      "confidence": 0.9719128608703613,
-      "bbox": [
-        [
-          57.0,
-          806.0
-        ],
-        [
-          143.0,
-          809.0
-        ],
-        [
-          142.0,
-          843.0
-        ],
-        [
-          56.0,
-          840.0
-        ]
-      ]
-    },
-    {
-      "text": "Rp.118.000",
-      "confidence": 0.979266345500946,
-      "bbox": [
-        [
-          397.0,
-          810.0
-        ],
-        [
-          538.0,
-          806.0
-        ],
-        [
-          539.0,
-          841.0
-        ],
-        [
-          398.0,
-          845.0
-        ]
-      ]
-    },
-    {
-      "text": "Debet Card",
-      "confidence": 0.9287139177322388,
-      "bbox": [
-        [
-          60.0,
-          876.0
-        ],
-        [
-          198.0,
-          878.0
-        ],
-        [
-          197.0,
-          911.0
-        ],
-        [
-          59.0,
-          908.0
-        ]
-      ]
+      "text": "118.000 Rp.8",
+      "confidence": 0.9058030247688293,
+      "bbox": []
     }
   ],
   "parsed_data": {
-    "items": [
-      {
-        "name": "Rp.118.000",
-        "quantity": 1,
-        "price": 118000.0,
-        "total": 118000.0
-      }
-    ],
-    "total": 118000.0,
+    "items": [],
+    "total": null,
     "tax": null,
     "discount": null,
     "cash": null,
@@ -242,5 +50,5 @@
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T14:13:41.649875"
+  "timestamp": "2026-05-26T01:51:04.654264"
 }

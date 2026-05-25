@@ -1,252 +1,33 @@
 {
   "filename": "receipt_00064.png",
   "folder": "train",
-  "processed_path": "data\\processed\\processed_train_receipt_00064.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00064.jpg",
   "original_path": "data\\raw\\train\\image\\receipt_00064.png",
   "extracted_data": [
     {
-      "text": "BOTOL (MOMOGI BO1OL KACA ASI)",
-      "confidence": 0.959625780582428,
-      "bbox": [
-        [
-          36.0,
-          556.0
-        ],
-        [
-          686.0,
-          559.0
-        ],
-        [
-          685.0,
-          600.0
-        ],
-        [
-          36.0,
-          597.0
-        ]
-      ]
+      "text": "BOTOL(MOMOGI BOTOL KACA A&I) 804700027 SPECTRA DISPOSABLE BREAST PADS (IRIS)  BP.Q0O1 (BREASTPADS) MUSTELA BABY",
+      "confidence": 0.9691816121339798,
+      "bbox": []
     },
     {
-      "text": "804700027",
-      "confidence": 0.9978104829788208,
-      "bbox": [
-        [
-          41.0,
-          613.0
-        ],
-        [
-          235.0,
-          613.0
-        ],
-        [
-          235.0,
-          655.0
-        ],
-        [
-          41.0,
-          655.0
-        ]
-      ]
+      "text": "SP200031",
+      "confidence": 0.9983747005462646,
+      "bbox": []
     },
     {
-      "text": "44.000",
-      "confidence": 0.950208842754364,
-      "bbox": [
-        [
-          738.0,
-          671.0
-        ],
-        [
-          864.0,
-          671.0
-        ],
-        [
-          864.0,
-          713.0
-        ],
-        [
-          738.0,
-          713.0
-        ]
-      ]
+      "text": "44,000",
+      "confidence": 0.9956328868865967,
+      "bbox": []
     },
     {
-      "text": "SPE C`TRA DISPOSABLE BREAST PADS",
-      "confidence": 0.9497120976448059,
-      "bbox": [
-        [
-          55.0,
-          760.0
-        ],
-        [
-          756.0,
-          759.0
-        ],
-        [
-          756.0,
-          795.0
-        ],
-        [
-          56.0,
-          796.0
-        ]
-      ]
-    },
-    {
-      "text": "(IRIS) 1 BP 0001(BREASTPADS) SP200031)",
-      "confidence": 0.9673847556114197,
-      "bbox": [
-        [
-          61.0,
-          813.0
-        ],
-        [
-          815.0,
-          809.0
-        ],
-        [
-          815.0,
-          849.0
-        ],
-        [
-          61.0,
-          853.0
-        ]
-      ]
-    },
-    {
-      "text": "58 000",
-      "confidence": 0.9943527579307556,
-      "bbox": [
-        [
-          741.0,
-          860.0
-        ],
-        [
-          863.0,
-          860.0
-        ],
-        [
-          863.0,
-          901.0
-        ],
-        [
-          741.0,
-          901.0
-        ]
-      ]
-    },
-    {
-      "text": "MUSTE LA BABY OIL 100ML MU240036",
-      "confidence": 0.9314634799957275,
-      "bbox": [
-        [
-          75.0,
-          948.0
-        ],
-        [
-          761.0,
-          941.0
-        ],
-        [
-          761.0,
-          977.0
-        ],
-        [
-          76.0,
-          984.0
-        ]
-      ]
-    },
-    {
-      "text": "160.000",
-      "confidence": 0.9860820770263672,
-      "bbox": [
-        [
-          723.0,
-          991.0
-        ],
-        [
-          864.0,
-          991.0
-        ],
-        [
-          864.0,
-          1036.0
-        ],
-        [
-          723.0,
-          1036.0
-        ]
-      ]
-    },
-    {
-      "text": "Qty: 3 Amount",
-      "confidence": 0.9948421716690063,
-      "bbox": [
-        [
-          378.0,
-          1085.0
-        ],
-        [
-          634.0,
-          1083.0
-        ],
-        [
-          634.0,
-          1124.0
-        ],
-        [
-          378.0,
-          1127.0
-        ]
-      ]
-    },
-    {
-      "text": "262.000",
-      "confidence": 0.9518350958824158,
-      "bbox": [
-        [
-          723.0,
-          1080.0
-        ],
-        [
-          861.0,
-          1080.0
-        ],
-        [
-          861.0,
-          1121.0
-        ],
-        [
-          723.0,
-          1121.0
-        ]
-      ]
+      "text": "F1E14",
+      "confidence": 0.46687236428260803,
+      "bbox": []
     }
   ],
   "parsed_data": {
-    "items": [
-      {
-        "name": "44.000",
-        "quantity": 1,
-        "price": 44000.0,
-        "total": 44000.0
-      },
-      {
-        "name": "160.000",
-        "quantity": 1,
-        "price": 160000.0,
-        "total": 160000.0
-      },
-      {
-        "name": "262.000",
-        "quantity": 1,
-        "price": 262000.0,
-        "total": 262000.0
-      }
-    ],
-    "total": 466000.0,
+    "items": [],
+    "total": null,
     "tax": null,
     "discount": null,
     "cash": null,
@@ -254,5 +35,5 @@
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T13:22:13.983052"
+  "timestamp": "2026-05-26T01:22:58.504767"
 }

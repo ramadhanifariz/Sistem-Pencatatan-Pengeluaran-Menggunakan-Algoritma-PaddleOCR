@@ -1,220 +1,39 @@
 {
   "filename": "receipt_00248.png",
   "folder": "train",
-  "processed_path": "data\\processed\\processed_train_receipt_00248.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00248.jpg",
   "original_path": "data\\raw\\train\\image\\receipt_00248.png",
   "extracted_data": [
     {
-      "text": "THAI GREEN TEA ICE",
-      "confidence": 0.9800164103507996,
-      "bbox": [
-        [
-          197.0,
-          784.0
-        ],
-        [
-          465.0,
-          784.0
-        ],
-        [
-          465.0,
-          826.0
-        ],
-        [
-          197.0,
-          826.0
-        ]
-      ]
+      "text": "Total THAI GREEN TEA ICE Kemba1 i Tunai",
+      "confidence": 0.9740034714341164,
+      "bbox": []
     },
     {
-      "text": "24.000",
-      "confidence": 0.9979817271232605,
-      "bbox": [
-        [
-          764.0,
-          782.0
-        ],
-        [
-          862.0,
-          782.0
-        ],
-        [
-          862.0,
-          826.0
-        ],
-        [
-          764.0,
-          826.0
-        ]
-      ]
+      "text": "**",
+      "confidence": 0.9260750412940979,
+      "bbox": []
     },
     {
-      "text": "Total",
-      "confidence": 0.9959807395935059,
-      "bbox": [
-        [
-          199.0,
-          856.0
-        ],
-        [
-          282.0,
-          856.0
-        ],
-        [
-          282.0,
-          896.0
-        ],
-        [
-          199.0,
-          896.0
-        ]
-      ]
+      "text": "**",
+      "confidence": 0.76121586561203,
+      "bbox": []
     },
     {
-      "text": "24.000",
-      "confidence": 0.9975792765617371,
-      "bbox": [
-        [
-          762.0,
-          848.0
-        ],
-        [
-          854.0,
-          848.0
-        ],
-        [
-          854.0,
-          888.0
-        ],
-        [
-          762.0,
-          888.0
-        ]
-      ]
-    },
-    {
-      "text": "54.000",
-      "confidence": 0.9994423985481262,
-      "bbox": [
-        [
-          760.0,
-          912.0
-        ],
-        [
-          858.0,
-          912.0
-        ],
-        [
-          858.0,
-          956.0
-        ],
-        [
-          760.0,
-          956.0
-        ]
-      ]
-    },
-    {
-      "text": "Tunai",
-      "confidence": 0.9863700866699219,
-      "bbox": [
-        [
-          201.0,
-          926.0
-        ],
-        [
-          284.0,
-          926.0
-        ],
-        [
-          284.0,
-          966.0
-        ],
-        [
-          201.0,
-          966.0
-        ]
-      ]
-    },
-    {
-      "text": "30.000",
-      "confidence": 0.9474661946296692,
-      "bbox": [
-        [
-          761.0,
-          945.0
-        ],
-        [
-          858.0,
-          939.0
-        ],
-        [
-          861.0,
-          985.0
-        ],
-        [
-          764.0,
-          991.0
-        ]
-      ]
-    },
-    {
-      "text": "Kemba11",
-      "confidence": 0.9831728935241699,
-      "bbox": [
-        [
-          198.0,
-          965.0
-        ],
-        [
-          311.0,
-          959.0
-        ],
-        [
-          312.0,
-          997.0
-        ],
-        [
-          200.0,
-          1003.0
-        ]
-      ]
+      "text": "24.000 54.000 30.000 24.000",
+      "confidence": 0.9601376801729202,
+      "bbox": []
     }
   ],
   "parsed_data": {
-    "items": [
-      {
-        "name": "THAI GREEN TEA ICE",
-        "quantity": 1,
-        "price": 24000.0,
-        "total": 24000.0
-      },
-      {
-        "name": "24.000",
-        "quantity": 1,
-        "price": 24000.0,
-        "total": 24000.0
-      },
-      {
-        "name": "54.000",
-        "quantity": 1,
-        "price": 54000.0,
-        "total": 54000.0
-      },
-      {
-        "name": "30.000",
-        "quantity": 1,
-        "price": 30000.0,
-        "total": 30000.0
-      }
-    ],
+    "items": [],
     "total": 24000.0,
     "tax": null,
     "discount": null,
-    "cash": 30000.0,
+    "cash": null,
     "change": null,
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T13:49:47.161245"
+  "timestamp": "2026-05-26T01:29:49.695162"
 }

@@ -1,220 +1,54 @@
 {
   "filename": "receipt_00062.png",
   "folder": "train",
-  "processed_path": "data\\processed\\processed_train_receipt_00062.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00062.jpg",
   "original_path": "data\\raw\\train\\image\\receipt_00062.png",
   "extracted_data": [
     {
-      "text": "RALPH BREAKS THE INTERNET : WR 3.600.000",
-      "confidence": 0.984906017780304,
-      "bbox": [
-        [
-          66.0,
-          680.0
-        ],
-        [
-          780.0,
-          693.0
-        ],
-        [
-          780.0,
-          736.0
-        ],
-        [
-          65.0,
-          723.0
-        ]
-      ]
+      "text": "FM -TIKET Tota1(Qty=60) RALPH BREAKS..THE INTERNET : WR 3.600.000 BCA(EDC) VISA G.**-6468)",
+      "confidence": 0.9453032724559307,
+      "bbox": []
     },
     {
-      "text": "-TIKET",
-      "confidence": 0.9863578677177429,
-      "bbox": [
-        [
-          49.0,
-          724.0
-        ],
-        [
-          177.0,
-          729.0
-        ],
-        [
-          175.0,
-          786.0
-        ],
-        [
-          47.0,
-          781.0
-        ]
-      ]
+      "text": "c.",
+      "confidence": 0.4665939211845398,
+      "bbox": []
+    },
+    {
+      "text": "INEMAS",
+      "confidence": 0.9728386402130127,
+      "bbox": []
     },
     {
       "text": "60.000",
-      "confidence": 0.9998084902763367,
-      "bbox": [
-        [
-          413.0,
-          737.0
-        ],
-        [
-          528.0,
-          737.0
-        ],
-        [
-          528.0,
-          784.0
-        ],
-        [
-          413.0,
-          784.0
-        ]
-      ]
+      "confidence": 0.998295783996582,
+      "bbox": []
     },
     {
       "text": "60",
-      "confidence": 0.9996026754379272,
-      "bbox": [
-        [
-          559.0,
-          741.0
-        ],
-        [
-          605.0,
-          741.0
-        ],
-        [
-          605.0,
-          782.0
-        ],
-        [
-          559.0,
-          782.0
-        ]
-      ]
+      "confidence": 0.9990809559822083,
+      "bbox": []
     },
     {
-      "text": "Total(Qty=60",
-      "confidence": 0.9326624870300293,
-      "bbox": [
-        [
-          56.0,
-          837.0
-        ],
-        [
-          282.0,
-          837.0
-        ],
-        [
-          282.0,
-          881.0
-        ],
-        [
-          56.0,
-          881.0
-        ]
-      ]
+      "text": "3.600.000 3.600.000",
+      "confidence": 0.9964106976985931,
+      "bbox": []
     },
     {
-      "text": "3.600.000",
-      "confidence": 0.9938497543334961,
-      "bbox": [
-        [
-          628.0,
-          835.0
-        ],
-        [
-          784.0,
-          835.0
-        ],
-        [
-          784.0,
-          880.0
-        ],
-        [
-          628.0,
-          880.0
-        ]
-      ]
-    },
-    {
-      "text": "3.600.000",
-      "confidence": 0.9991052150726318,
-      "bbox": [
-        [
-          624.0,
-          976.0
-        ],
-        [
-          784.0,
-          972.0
-        ],
-        [
-          786.0,
-          1021.0
-        ],
-        [
-          626.0,
-          1026.0
-        ]
-      ]
-    },
-    {
-      "text": "BCA(EDC) VISA (..**-6468)",
-      "confidence": 0.9941121935844421,
-      "bbox": [
-        [
-          88.0,
-          990.0
-        ],
-        [
-          537.0,
-          979.0
-        ],
-        [
-          539.0,
-          1027.0
-        ],
-        [
-          89.0,
-          1038.0
-        ]
-      ]
+      "text": "\"",
+      "confidence": 0.24730758368968964,
+      "bbox": []
     }
   ],
   "parsed_data": {
-    "items": [
-      {
-        "name": "RALPH BREAKS THE INTERNET : WR 3.600.000",
-        "quantity": 1,
-        "price": 3600000.0,
-        "total": 3600000.0
-      },
-      {
-        "name": "-TIKET",
-        "quantity": 1,
-        "price": 60000.0,
-        "total": 60000.0
-      },
-      {
-        "name": "3.600.000",
-        "quantity": 1,
-        "price": 3600000.0,
-        "total": 3600000.0
-      },
-      {
-        "name": "3.600.000",
-        "quantity": 1,
-        "price": 3600000.0,
-        "total": 3600000.0
-      }
-    ],
-    "total": 10860000.0,
+    "items": [],
+    "total": null,
     "tax": null,
-    "discount": null,
+    "discount": 6468.0,
     "cash": null,
     "change": null,
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T13:22:03.291756"
+  "timestamp": "2026-05-26T01:22:54.509001"
 }

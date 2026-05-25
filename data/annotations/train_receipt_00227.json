@@ -1,52 +1,43 @@
 {
   "filename": "receipt_00227.png",
   "folder": "train",
-  "processed_path": "data\\processed\\processed_train_receipt_00227.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00227.jpg",
   "original_path": "data\\raw\\train\\image\\receipt_00227.png",
   "extracted_data": [
     {
-      "text": "R",
-      "confidence": 0.5437455177307129,
-      "bbox": [
-        [
-          163.0,
-          213.0
-        ],
-        [
-          378.0,
-          203.0
-        ],
-        [
-          385.0,
-          343.0
-        ],
-        [
-          169.0,
-          353.0
-        ]
-      ]
+      "text": "Cash Totalr Caange: Temerod1 F. NN13EO-",
+      "confidence": 0.45995080284774303,
+      "bbox": []
     },
     {
-      "text": "900.10",
-      "confidence": 0.5931774377822876,
-      "bbox": [
-        [
-          408.0,
-          687.0
-        ],
-        [
-          481.0,
-          683.0
-        ],
-        [
-          482.0,
-          713.0
-        ],
-        [
-          410.0,
-          717.0
-        ]
-      ]
+      "text": "ITY",
+      "confidence": 0.29403290152549744,
+      "bbox": []
+    },
+    {
+      "text": "0*",
+      "confidence": 0.40764063596725464,
+      "bbox": []
+    },
+    {
+      "text": ":1",
+      "confidence": 0.6337324380874634,
+      "bbox": []
+    },
+    {
+      "text": "9.500,00",
+      "confidence": 0.9847404956817627,
+      "bbox": []
+    },
+    {
+      "text": ".00,00 0,0Q0,00",
+      "confidence": 0.8011634945869446,
+      "bbox": []
+    },
+    {
+      "text": "5DDxQQ",
+      "confidence": 0.5574382543563843,
+      "bbox": []
     }
   ],
   "parsed_data": {
@@ -59,5 +50,5 @@
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T13:46:12.882345"
+  "timestamp": "2026-05-26T01:28:55.948602"
 }

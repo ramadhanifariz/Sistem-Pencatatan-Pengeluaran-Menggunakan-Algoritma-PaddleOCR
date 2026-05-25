@@ -1,41 +1,44 @@
 {
   "filename": "receipt_00075.png",
   "folder": "train",
-  "processed_path": "data\\processed\\processed_train_receipt_00075.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00075.jpg",
   "original_path": "data\\raw\\train\\image\\receipt_00075.png",
   "extracted_data": [
     {
-      "text": "131",
-      "confidence": 0.9114173054695129,
-      "bbox": [
-        [
-          158.0,
-          763.0
-        ],
-        [
-          255.0,
-          754.0
-        ],
-        [
-          271.0,
-          928.0
-        ],
-        [
-          173.0,
-          936.0
-        ]
-      ]
+      "text": "#KET CHICKEN 3 QAKET DOSIRAK 3 F*XET RULGOGI 3 -AKET IOSIRAK 3 JAFCHE OREAN COLI TEA OREAN LEMONAIE :CE SWEET JASMINE GREENTEA FANANA MLK+MATCHA PU 2 RN FRIEI CHICKN HNY j",
+      "confidence": 0.9133749211905524,
+      "bbox": []
+    },
+    {
+      "text": "Services Suhtotal Tax Total Tunai Kembali",
+      "confidence": 0.9469302371144295,
+      "bbox": []
+    },
+    {
+      "text": "1 1 1 -",
+      "confidence": 0.3801964074373245,
+      "bbox": []
+    },
+    {
+      "text": "25,975 15,000 45,000 25,000 35,000 25.000 21,000 9,000",
+      "confidence": 0.9725659154355526,
+      "bbox": []
+    },
+    {
+      "text": "337,230  105,000 350,000 12,770 291,975 25,000 25,975 25.000 45,000 30.657 15,000 42,000 14,598 9,000",
+      "confidence": 0.9900247715777368,
+      "bbox": []
     }
   ],
   "parsed_data": {
     "items": [],
-    "total": null,
+    "total": 9000.0,
     "tax": null,
     "discount": null,
     "cash": null,
-    "change": null,
+    "change": 1.0,
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T13:23:57.275670"
+  "timestamp": "2026-05-26T01:23:23.147555"
 }

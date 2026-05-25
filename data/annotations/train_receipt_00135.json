@@ -1,30 +1,33 @@
 {
   "filename": "receipt_00135.png",
   "folder": "train",
-  "processed_path": "data\\processed\\processed_train_receipt_00135.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00135.jpg",
   "original_path": "data\\raw\\train\\image\\receipt_00135.png",
   "extracted_data": [
     {
-      "text": "E",
-      "confidence": 0.8385456204414368,
-      "bbox": [
-        [
-          574.0,
-          830.0
-        ],
-        [
-          744.0,
-          817.0
-        ],
-        [
-          762.0,
-          1062.0
-        ],
-        [
-          592.0,
-          1074.0
-        ]
-      ]
+      "text": "0.308X ?2s500 G.2u4X 9Bs5OO h GUS FRESh TKAN HOHBO KUNENG X 7>5O0 :JBIOTAL  FUS SATAY",
+      "confidence": 0.7992435563355684,
+      "bbox": []
+    },
+    {
+      "text": "tlat",
+      "confidence": 0.296659380197525,
+      "bbox": []
+    },
+    {
+      "text": "1",
+      "confidence": 0.43653953075408936,
+      "bbox": []
+    },
+    {
+      "text": "26:00: 854 23 35,8u 60,0 7:50C 4,2 1.572",
+      "confidence": 0.9079866860993207,
+      "bbox": []
+    },
+    {
+      "text": "*",
+      "confidence": 0.47443369030952454,
+      "bbox": []
     }
   ],
   "parsed_data": {
@@ -37,5 +40,5 @@
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T13:31:33.122514"
+  "timestamp": "2026-05-26T01:25:17.157519"
 }

@@ -1,52 +1,33 @@
 {
   "filename": "receipt_00004.png",
   "folder": "test",
-  "processed_path": "data\\processed\\processed_test_receipt_00004.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00004.jpg",
   "original_path": "data\\raw\\test\\image\\receipt_00004.png",
   "extracted_data": [
     {
-      "text": "do",
-      "confidence": 0.564863920211792,
-      "bbox": [
-        [
-          7.0,
-          285.0
-        ],
-        [
-          55.0,
-          285.0
-        ],
-        [
-          55.0,
-          336.0
-        ],
-        [
-          7.0,
-          336.0
-        ]
-      ]
+      "text": "Calor lu o 6C 7I Bbi Ra g& AA",
+      "confidence": 0.369588918518275,
+      "bbox": []
     },
     {
-      "text": "nb",
-      "confidence": 0.5444381833076477,
-      "bbox": [
-        [
-          9.0,
-          363.0
-        ],
-        [
-          66.0,
-          363.0
-        ],
-        [
-          66.0,
-          417.0
-        ],
-        [
-          9.0,
-          417.0
-        ]
-      ]
+      "text": "10:M41 CHEKE. HASE =F AVOCEHD COY EE ILE RLACKEOFTE",
+      "confidence": 0.6872992813587189,
+      "bbox": []
+    },
+    {
+      "text": "CHPNSE SUS..TA IniAi :4:1 OUN",
+      "confidence": 0.43464449793100357,
+      "bbox": []
+    },
+    {
+      "text": "2-TT E1..0 1.000 *",
+      "confidence": 0.45708565413951874,
+      "bbox": []
+    },
+    {
+      "text": "1",
+      "confidence": 0.6575403213500977,
+      "bbox": []
     }
   ],
   "parsed_data": {
@@ -59,5 +40,5 @@
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T14:11:25.124335"
+  "timestamp": "2026-05-26T01:50:24.411366"
 }

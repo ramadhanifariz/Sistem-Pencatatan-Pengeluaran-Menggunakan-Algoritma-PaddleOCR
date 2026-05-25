@@ -1,86 +1,53 @@
 {
   "filename": "receipt_00094.png",
   "folder": "train",
-  "processed_path": "data\\processed\\processed_train_receipt_00094.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00094.jpg",
   "original_path": "data\\raw\\train\\image\\receipt_00094.png",
   "extracted_data": [
     {
-      "text": "Total.",
-      "confidence": 0.9052743315696716,
-      "bbox": [
-        [
-          86.0,
-          990.0
-        ],
-        [
-          192.0,
-          990.0
-        ],
-        [
-          192.0,
-          1029.0
-        ],
-        [
-          86.0,
-          1029.0
-        ]
-      ]
+      "text": "1s6uE cash Total 6001-Plastic Hag Small -tal teme 02-choco1ate rderede",
+      "confidence": 0.7529326095245779,
+      "bbox": []
     },
     {
-      "text": "30.000",
-      "confidence": 0.9977767467498779,
-      "bbox": [
-        [
-          589.0,
-          987.0
-        ],
-        [
-          701.0,
-          984.0
-        ],
-        [
-          702.0,
-          1027.0
-        ],
-        [
-          591.0,
-          1030.0
-        ]
-      ]
+      "text": "19.000",
+      "confidence": 0.8876681923866272,
+      "bbox": []
     },
     {
-      "text": "Cash",
-      "confidence": 0.9798099398612976,
-      "bbox": [
-        [
-          82.0,
-          1031.0
-        ],
-        [
-          163.0,
-          1031.0
-        ],
-        [
-          163.0,
-          1076.0
-        ],
-        [
-          82.0,
-          1076.0
-        ]
-      ]
+      "text": "DranEE",
+      "confidence": 0.3610304892063141,
+      "bbox": []
+    },
+    {
+      "text": "Xi 7 4",
+      "confidence": 0.3646119646728039,
+      "bbox": []
+    },
+    {
+      "text": "Tiad",
+      "confidence": 0.39699873328208923,
+      "bbox": []
+    },
+    {
+      "text": "38.000",
+      "confidence": 0.9866952896118164,
+      "bbox": []
+    },
+    {
+      "text": "38.000 50.000 12.000",
+      "confidence": 0.9487438797950745,
+      "bbox": []
+    },
+    {
+      "text": "0",
+      "confidence": 0.9829148054122925,
+      "bbox": []
     }
   ],
   "parsed_data": {
-    "items": [
-      {
-        "name": "30.000",
-        "quantity": 1,
-        "price": 30000.0,
-        "total": 30000.0
-      }
-    ],
-    "total": 30000.0,
+    "items": [],
+    "total": 6001.0,
     "tax": null,
     "discount": null,
     "cash": null,
@@ -88,5 +55,5 @@
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T13:25:55.398668"
+  "timestamp": "2026-05-26T01:23:55.318835"
 }

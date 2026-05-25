@@ -1,114 +1,44 @@
 {
   "filename": "receipt_00113.png",
   "folder": "train",
-  "processed_path": "data\\processed\\processed_train_receipt_00113.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00113.jpg",
   "original_path": "data\\raw\\train\\image\\receipt_00113.png",
   "extracted_data": [
     {
-      "text": "ICED CM",
-      "confidence": 0.9666628241539001,
-      "bbox": [
-        [
-          58.0,
-          829.0
-        ],
-        [
-          261.0,
-          829.0
-        ],
-        [
-          261.0,
-          883.0
-        ],
-        [
-          58.0,
-          883.0
-        ]
-      ]
+      "text": "CASH ICEO",
+      "confidence": 0.9355776906013489,
+      "bbox": []
     },
     {
-      "text": "-22,000",
-      "confidence": 0.9158268570899963,
-      "bbox": [
-        [
-          524.0,
-          840.0
-        ],
-        [
-          714.0,
-          851.0
-        ],
-        [
-          711.0,
-          901.0
-        ],
-        [
-          521.0,
-          890.0
-        ]
-      ]
+      "text": "C M",
+      "confidence": 0.9454131126403809,
+      "bbox": []
     },
     {
-      "text": "CASH",
-      "confidence": 0.9979696273803711,
-      "bbox": [
-        [
-          53.0,
-          880.0
-        ],
-        [
-          177.0,
-          880.0
-        ],
-        [
-          177.0,
-          933.0
-        ],
-        [
-          53.0,
-          933.0
-        ]
-      ]
+      "text": "22.000",
+      "confidence": 0.7493969798088074,
+      "bbox": []
     },
     {
-      "text": "22,000",
-      "confidence": 0.9560456275939941,
-      "bbox": [
-        [
-          398.0,
-          877.0
-        ],
-        [
-          705.0,
-          903.0
-        ],
-        [
-          701.0,
-          953.0
-        ],
-        [
-          394.0,
-          927.0
-        ]
-      ]
+      "text": "-22.000",
+      "confidence": 0.9335111975669861,
+      "bbox": []
+    },
+    {
+      "text": ".",
+      "confidence": 0.25409358739852905,
+      "bbox": []
     }
   ],
   "parsed_data": {
-    "items": [
-      {
-        "name": "CASH",
-        "quantity": 0,
-        "price": 22.0,
-        "total": 0.0
-      }
-    ],
+    "items": [],
     "total": null,
     "tax": null,
-    "discount": null,
-    "cash": 22.0,
+    "discount": 22000.0,
+    "cash": null,
     "change": null,
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T13:28:52.194679"
+  "timestamp": "2026-05-26T01:24:37.030072"
 }

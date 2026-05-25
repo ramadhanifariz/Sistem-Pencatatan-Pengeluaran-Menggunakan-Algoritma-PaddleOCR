@@ -1,12 +1,43 @@
 {
   "filename": "receipt_00148.png",
   "folder": "train",
-  "processed_path": "data\\processed\\processed_train_receipt_00148.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00148.jpg",
   "original_path": "data\\raw\\train\\image\\receipt_00148.png",
-  "extracted_data": [],
+  "extracted_data": [
+    {
+      "text": "Total Belanja",
+      "confidence": 0.9535713791847229,
+      "bbox": []
+    },
+    {
+      "text": "OMA NASI KUNING CAKALANG MANI 1",
+      "confidence": 0.9959671497344971,
+      "bbox": []
+    },
+    {
+      "text": "30.000",
+      "confidence": 0.9980201125144958,
+      "bbox": []
+    },
+    {
+      "text": "100.000",
+      "confidence": 0.9971967339515686,
+      "bbox": []
+    },
+    {
+      "text": "30.000",
+      "confidence": 0.9948020577430725,
+      "bbox": []
+    },
+    {
+      "text": "30.000",
+      "confidence": 0.968588650226593,
+      "bbox": []
+    }
+  ],
   "parsed_data": {
     "items": [],
-    "total": null,
+    "total": 30000.0,
     "tax": null,
     "discount": null,
     "cash": null,
@@ -14,5 +45,5 @@
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T13:33:44.038638"
+  "timestamp": "2026-05-26T01:25:48.009940"
 }

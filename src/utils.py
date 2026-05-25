@@ -6,18 +6,25 @@ from paddleocr import PaddleOCR
 
 
 class ReceiptExtractor:
-    
-    def __init__(self, lang='id'):
-        print(f" Initializing PaddleOCR with language: {lang}")
+   
+    def __init__(self, lang='id', use_gpu=False):
+        print(f"🔄 Initializing PaddleOCR with language: {lang}")
+        
         self.ocr = PaddleOCR(
             use_angle_cls=True,
             lang=lang,
             show_log=False,
-            det_db_thresh=0.3,
-            det_db_box_thresh=0.3,
-            det_db_unclip_ratio=2.0
+            # DETECTION - lebih agresif
+            det_db_thresh=0.1,              # LEBIH RENDAH (dari 0.2)
+            det_db_box_thresh=0.1,          # LEBIH RENDAH
+            det_db_unclip_ratio=1.5,        # LEBIH KECIL (dari 2.5)
+            # RECOGNITION
+            rec_batch_num=6,
+            drop_score=0.1,                 # LEBIH RENDAH (dari 0.2)
+            max_text_length=50,
+            use_space_char=True,
         )
-        print(" PaddleOCR initialized successfully")
+        print("✅ PaddleOCR initialized")
     
     def extract_text(self, image_path):
         try:
@@ -25,6 +32,7 @@ class ReceiptExtractor:
             extracted_data = []
             if not result or not result[0]:
                 return []
+            
             for line in result[0]:
                 if line and len(line) >= 2:
                     text_info = line[1]
@@ -34,294 +42,438 @@ class ReceiptExtractor:
                             'confidence': float(text_info[1]) if text_info[1] else 0.0,
                             'bbox': line[0] if len(line) > 0 else []
                         })
+            
+            # TAMBAHKAN: Gabungkan teks yang berdekatan
+            extracted_data = self._merge_nearby_texts(extracted_data, distance_threshold=30)
+            
             return extracted_data
         except Exception as e:
-            print(f" OCR Error: {str(e)[:100]}")
+            print(f"❌ OCR Error: {str(e)[:100]}")
             return []
     
     def parse_receipt(self, extracted_data):
         receipt_data = {
-            'items': [],
-            'total': None,
-            'tax': None,
-            'discount': None,
-            'cash': None,
-            'change': None,
-            'subtotal': None,
-            'service_charge': None
+            'items': [], 'total': None, 'tax': None, 'discount': None,
+            'cash': None, 'change': None, 'subtotal': None, 'service_charge': None
         }
         
         if not extracted_data:
             return receipt_data
         
-        full_text = ' '.join([item['text'] for item in extracted_data])
+        # Method 1: Group lines by position
+        lines = self._group_lines_advanced(extracted_data)
         
-        # Extract total, cash, change, tax 
-        total_patterns = [
-            r'(?:TOTAL|Total|total)[\s:*]*([\d.,]+)',
-            r'(?:GRAND TOTAL|Grand Total)[\s:*]*([\d.,]+)',
-            r'\*\*TOTAL\*\*[\s:]*([\d.,]+)',
-            r'Amount Due[\s:]*([\d.,]+)',
-            r'DUE[\s:]*([\d.,]+)',
-            r'=([\d.,]+)$',
-        ]
-        for pattern in total_patterns:
-            matches = re.findall(pattern, full_text)
-            if matches:
-                for match in reversed(matches):
-                    price = self._extract_price(match)
-                    if price and price > 1000:
-                        receipt_data['total'] = price
-                        break
-                if receipt_data['total']:
-                    break
+        # Method 2: Parse items with improved patterns
+        receipt_data['items'] = self._parse_items_improved(lines)
         
-        cash_patterns = [r'(?:CASH|Cash|cash|TUNAI|Tunai|tunai|Bayar|bayar)[\s:]*([\d.,]+)']
-        for pattern in cash_patterns:
-            match = re.search(pattern, full_text)
-            if match:
-                receipt_data['cash'] = self._extract_price(match.group(1))
-                break
+        # Method 3: If still no items, try raw text approach
+        if len(receipt_data['items']) == 0:
+            raw_text = ' '.join([item['text'] for item in extracted_data])
+            receipt_data['items'] = self._parse_items_from_raw(raw_text)
         
-        change_patterns = [r'(?:CHANGE|Change|change|KEMBALI|Kembali|kembali)[\s:]*([\d.,]+)']
-        for pattern in change_patterns:
-            match = re.search(pattern, full_text)
-            if match:
-                receipt_data['change'] = self._extract_price(match.group(1))
-                break
-        
-        tax_patterns = [r'(?:TAX|Tax|tax|PPN|ppn|PAJAK|pajak|PB1)[\s:]*([\d.,]+)']
-        for pattern in tax_patterns:
-            match = re.search(pattern, full_text)
-            if match:
-                receipt_data['tax'] = self._extract_price(match.group(1))
-                break
-        
-        all_text_lines = [item['text'] for item in extracted_data]
-        receipt_data['items'] = self._extract_items_smart(all_text_lines)
-        
-        if not receipt_data['items']:
-            for line in all_text_lines:
-                item = self._parse_item_line_enhanced(line)
-                if item and item['price'] and item['price'] > 0:
-                    if item['name'] and len(item['name']) > 1:
-                        if not self._is_duplicate_item(receipt_data['items'], item):
-                            receipt_data['items'].append(item)
-        
-        if not receipt_data['items']:
-            lines = full_text.split('\n')
-            for line in lines:
-                matches = re.findall(r'(\d+)\s+([A-Za-z\s]+?)\s+([\d.,]+)', line)
-                for match in matches:
-                    quantity = int(match[0])
-                    name = match[1].strip()
-                    price = self._extract_price(match[2])
-                    if price and price > 0 and name:
-                        receipt_data['items'].append({
-                            'name': name[:50],
-                            'quantity': quantity,
-                            'price': price,
-                            'total': quantity * price
-                        })
-        
-        if not receipt_data['items']:
-            receipt_data['items'] = self._extract_items_from_text(full_text)
-        
-        if not receipt_data['total'] and receipt_data['items']:
-            calculated_total = sum(item['total'] for item in receipt_data['items'])
-            if calculated_total > 0:
-                receipt_data['total'] = calculated_total
+        # Parse totals from full text
+        full_text = ' '.join(lines)
+        receipt_data['total'] = self._extract_total_improved(full_text)
+        receipt_data['subtotal'] = self._extract_subtotal_improved(full_text)
+        receipt_data['tax'] = self._extract_tax_improved(full_text)
+        receipt_data['cash'] = self._extract_cash_improved(full_text)
+        receipt_data['change'] = self._extract_change_improved(full_text)
+        receipt_data['discount'] = self._extract_discount_improved(full_text)
         
         return receipt_data
     
-    def _extract_items_smart(self, all_text_lines):
+    def _group_lines_advanced(self, extracted_data, y_tolerance=25, x_tolerance=30):
         """
-        Ekstrak items dengan menangani:
-        - nama di baris i, dan angka (qty, price, total) di baris i+1
-        - format "nama 2 17000 34000" dalam satu baris
-        - mendeteksi quantity dari angka kecil, harga dari angka besar
+        Mengelompokkan teks per baris dengan tolerance yang lebih besar
+        y_tolerance: toleransi perbedaan Y (tinggi) untuk dianggap satu baris
+        x_tolerance: toleransi perbedaan X (jarak) untuk menggabungkan teks dalam satu baris
         """
+        if not extracted_data:
+            return []
+        
+        # Ekstrak koordinat
         items = []
-        i = 0
-        n = len(all_text_lines)
-
-        def is_likely_price(value):
-            # harga >= 1000
-            return value >= 1000
-
-        def is_likely_quantity(value):
-            return value < 1000 and float(value).is_integer()
-
-        while i < n:
-            line = all_text_lines[i].strip()
-            if not line:
-                i += 1
-                continue
-
-            lower = line.lower()
-            skip_keywords = ['subtotal', 'total', 'tax', 'ppn', 'pb1', 'service', 'charge', 
-                            'cash', 'change', 'due', 'kembali', 'tunai', 'diskon', 'discount',
-                            'qty', 'nama', 'harga', 'item', 'quantity', 'price']
-            if any(kw in lower for kw in skip_keywords):
-                i += 1
-                continue
-
-            numbers = re.findall(r'(\d{1,3}(?:[.,]\d{3})*(?:[.,]\d{2})?|\d+)', line)
-            numeric_vals = [self._extract_price(n) for n in numbers if self._extract_price(n) is not None]
-
-            if numeric_vals:
-                qty_candidates = [v for v in numeric_vals if is_likely_quantity(v)]
-                price_candidates = [v for v in numeric_vals if is_likely_price(v)]
-                
-                if len(price_candidates) >= 2:
-                    price_value = price_candidates[0]
-                    total_value = price_candidates[1]
-                    quantity_value = qty_candidates[0] if qty_candidates else 1
-                    if quantity_value == 1 and total_value and price_value:
-                        quantity_value = int(round(total_value / price_value))
-                    temp_name = line
-                    for v in numeric_vals:
-                        pattern = r'\b' + re.escape(str(int(v)) if v.is_integer() else f"{v:.2f}".replace('.', ',')) + r'\b'
-                        temp_name = re.sub(pattern, '', temp_name)
-                    full_name = temp_name.strip()
-                    if full_name and price_value:
-                        items.append({
-                            'name': full_name[:60],
-                            'quantity': quantity_value,
-                            'price': price_value,
-                            'total': quantity_value * price_value
-                        })
-                    i += 1
-                    continue
-                else:
-                    price_value = price_candidates[0] if price_candidates else None
-                    quantity_value = qty_candidates[0] if qty_candidates else 1
-                    temp_name = line
-                    for v in numeric_vals:
-                        pattern = r'\b' + re.escape(str(int(v)) if v.is_integer() else f"{v:.2f}".replace('.', ',')) + r'\b'
-                        temp_name = re.sub(pattern, '', temp_name)
-                    full_name = temp_name.strip()
-                    if price_value and full_name:
-                        items.append({
-                            'name': full_name[:60],
-                            'quantity': quantity_value,
-                            'price': price_value,
-                            'total': quantity_value * price_value
-                        })
-                    i += 1
-                    continue
-
-            if i + 1 < n:
-                next_line = all_text_lines[i+1].strip()
-                next_numbers = re.findall(r'(\d{1,3}(?:[.,]\d{3})*(?:[.,]\d{2})?|\d+)', next_line)
-                next_vals = [self._extract_price(n) for n in next_numbers if self._extract_price(n) is not None]
-                if next_vals:
-                    qty_candidates = [v for v in next_vals if is_likely_quantity(v)]
-                    price_candidates = [v for v in next_vals if is_likely_price(v)]
-                    price_value = price_candidates[0] if price_candidates else None
-                    quantity_value = qty_candidates[0] if qty_candidates else 1
-                    full_name = line.strip()
-                    if price_value and full_name:
-                        items.append({
-                            'name': full_name[:60],
-                            'quantity': quantity_value,
-                            'price': price_value,
-                            'total': quantity_value * price_value
-                        })
-                    i += 2  
-                    continue
-            i += 1
-
-        return items
-    
-    def _parse_item_line_enhanced(self, line):
-        line = re.sub(r'\s+', ' ', line).strip()
-        if len(line) < 5:
-            return None
-        line_lower = line.lower()
-        skip_keywords = ['total', 'subtotal', 'cash', 'change', 'tax', 'discount', 
-                        'service', 'item', 'qty', 'pcs', 'due', 'grand', 
-                        'kembali', 'tunai', 'bayar', 'diskon', 'pajak']
-        if any(kw in line_lower for kw in skip_keywords):
-            return None
-        quantity = 1
-        name = ""
-        price = None
-        pattern1 = re.match(r'^(\d+)\s+([A-Za-z\s]+?)\s+([\d.,]+)', line)
-        if pattern1:
-            quantity = int(pattern1.group(1))
-            name = pattern1.group(2).strip()
-            price = self._extract_price(pattern1.group(3))
-            if price:
-                return {'name': name, 'quantity': quantity, 'price': price, 'total': quantity*price}
-        pattern2 = re.match(r'^([A-Za-z\s]+?)\s+([\d.,]+)', line)
-        if pattern2:
-            name = pattern2.group(1).strip()
-            price = self._extract_price(pattern2.group(2))
-            if price and len(name) > 2:
-                return {'name': name, 'quantity': 1, 'price': price, 'total': price}
-        pattern3 = re.match(r'^(\d+)[xX]\s+([A-Za-z\s]+?)\s*@?\s*([\d.,]+)', line)
-        if pattern3:
-            quantity = int(pattern3.group(1))
-            name = pattern3.group(2).strip()
-            price = self._extract_price(pattern3.group(3))
-            if price:
-                return {'name': name, 'quantity': quantity, 'price': price, 'total': quantity*price}
-        pattern4 = re.match(r'^([A-Za-z\s]+?)\s*@\s*([\d.,]+)', line)
-        if pattern4:
-            name = pattern4.group(1).strip()
-            price = self._extract_price(pattern4.group(2))
-            if price and len(name) > 2:
-                return {'name': name, 'quantity': 1, 'price': price, 'total': price}
-        return None
-    
-    def _extract_items_from_text(self, text):
-        items = []
-        pattern = r'(\d+)\s+([A-Za-z\s]+?)\s+([\d.,]+(?:\.\d{2})?)'
-        matches = re.findall(pattern, text)
-        for match in matches:
-            quantity = int(match[0])
-            name = match[1].strip()
-            price = self._extract_price(match[2])
-            if price and price > 0 and name and len(name) > 2:
-                name_lower = name.lower()
-                skip_words = ['total', 'subtotal', 'cash', 'change', 'tax', 'discount']
-                if name_lower not in skip_words:
-                    items.append({'name': name[:50], 'quantity': quantity, 'price': price, 'total': quantity*price})
-        return items
-    
-    def _is_duplicate_item(self, items, new_item):
+        for data in extracted_data:
+            bbox = data.get('bbox')
+            if bbox and len(bbox) >= 2:
+                y_center = (bbox[0][1] + bbox[2][1]) / 2
+                x_left = bbox[0][0]
+                x_right = bbox[2][0]
+                items.append({
+                    'text': data['text'],
+                    'y': y_center,
+                    'x_left': x_left,
+                    'x_right': x_right,
+                })
+            else:
+                items.append({
+                    'text': data['text'],
+                    'y': 0,
+                    'x_left': 0,
+                    'x_right': 0,
+                })
+        
+        if not items:
+            return []
+        
+        # Urutkan berdasarkan Y (dari atas ke bawah)
+        items.sort(key=lambda x: x['y'])
+        
+        # ========== KELOMPOKKAN BERDASARKAN Y ==========
+        lines_raw = []
+        current_line = []
+        last_y = None
+        
         for item in items:
-            if item['name'].lower() == new_item['name'].lower() and abs(item['price'] - new_item['price']) < 100:
-                return True
-        return False
+            if last_y is None or abs(item['y'] - last_y) <= y_tolerance:
+                current_line.append(item)
+            else:
+                # Urutkan berdasarkan X sebelum menyimpan
+                current_line.sort(key=lambda x: x['x_left'])
+                lines_raw.append(current_line)
+                current_line = [item]
+            last_y = item['y']
+        
+        if current_line:
+            current_line.sort(key=lambda x: x['x_left'])
+            lines_raw.append(current_line)
+        
+        # ========== GABUNGKAN TEKS DALAM SATU BARIS ==========
+        result = []
+        for line in lines_raw:
+            # Gabungkan teks dalam satu baris
+            combined = []
+            previous_x_right = None
+            
+            for item in line:
+                text = item['text'].strip()
+                if not text:
+                    continue
+                
+                # Jika ada jarak terlalu jauh dengan teks sebelumnya, tambah spasi
+                if previous_x_right is not None:
+                    gap = item['x_left'] - previous_x_right
+                    if gap > x_tolerance:
+                        combined.append(' ')  # Tambah spasi untuk pemisah
+                
+                combined.append(text)
+                previous_x_right = item['x_right']
+            
+            # Gabungkan menjadi satu string
+            line_text = ' '.join(combined)
+            # Bersihkan spasi berlebih
+            line_text = re.sub(r'\s+', ' ', line_text).strip()
+            result.append(line_text)
+        
+        return result
+    def _merge_nearby_texts(self, extracted_data, distance_threshold=50):
+        """
+        Menggabungkan teks yang berdekatan (OCR sering memecah kata)
+        """
+        if not extracted_data:
+            return extracted_data
+        
+        # Urutkan berdasarkan posisi X
+        items = []
+        for data in extracted_data:
+            bbox = data.get('bbox')
+            if bbox and len(bbox) >= 2:
+                x_left = bbox[0][0]
+                items.append({
+                    'text': data['text'],
+                    'x': x_left,
+                    'confidence': data['confidence'],
+                    'data': data
+                })
+        
+        items.sort(key=lambda x: x['x'])
+        
+        # Gabungkan yang berdekatan
+        merged = []
+        i = 0
+        while i < len(items):
+            current = items[i]
+            combined_text = current['text']
+            combined_conf = current['confidence']
+            j = i + 1
+            
+            while j < len(items):
+                gap = items[j]['x'] - items[j-1]['x']
+                if gap <= distance_threshold:
+                    combined_text += " " + items[j]['text']
+                    combined_conf = (combined_conf + items[j]['confidence']) / 2
+                    j += 1
+                else:
+                    break
+            
+            merged.append({
+                'text': combined_text,
+                'confidence': combined_conf,
+                'bbox': []
+            })
+            i = j
+        
+        return merged
+
+    def _parse_items_improved(self, lines):
+        """Improved item parsing dengan lebih banyak pattern"""
+        items = []
+        
+        # Kata-kata yang harus di-skip
+        skip_words = ['total', 'subtotal', 'service', 'pbi', 'tax', 'cash', 'change', 
+                      'discount', 'grand', 'amount', 'due', 'tendered', 'kembali',
+                      'tunai', 'bayar', 'diskon', 'pajak', 'ppn', 'edc', 'bca']
+        
+        # Pattern untuk berbagai format item
+        patterns = [
+            # Pattern 1: "1 x Nama Barang 75,000" atau "1x Nama Barang 75,000"
+            (re.compile(r'(\d+)\s*[xX]\s*([A-Za-z0-9\s]+?)\s*([\d.,]+)', re.IGNORECASE), 'with_x'),
+            
+            # Pattern 2: "1 Nama Barang 75,000" (tanpa x)
+            (re.compile(r'(\d+)\s+([A-Za-z0-9\s]+?)\s+([\d.,]+)$', re.IGNORECASE), 'with_qty'),
+            
+            # Pattern 3: "Nama Barang 75,000" (tanpa quantity)
+            (re.compile(r'^([A-Za-z0-9\s]+?)\s+([\d.,]+)$', re.IGNORECASE), 'no_qty'),
+            
+            # Pattern 4: "75,000 Nama Barang" (harga di depan)
+            (re.compile(r'^([\d.,]+)\s+([A-Za-z0-9\s]+)$', re.IGNORECASE), 'price_first'),
+            
+            # Pattern 5: "Nama Barang @75,000"
+            (re.compile(r'^([A-Za-z0-9\s]+?)\s*@\s*([\d.,]+)$', re.IGNORECASE), 'with_at'),
+        ]
+        
+        for line in lines:
+            line = line.strip()
+            if not line or len(line) < 5:
+                continue
+            
+            # Skip line yang mengandung kata skip (tapi tetap cek angka)
+            line_lower = line.lower()
+            if any(word in line_lower for word in skip_words):
+                if not re.search(r'\d{3,}', line):
+                    continue
+            
+            for pattern, ptype in patterns:
+                matches = pattern.findall(line)
+                for match in matches:
+                    try:
+                        if ptype == 'with_x' and len(match) == 3:
+                            qty = int(match[0])
+                            name = self._clean_name_improved(match[1])
+                            price = self._extract_price_improved(match[2])
+                            if price and price > 0 and name and len(name) > 2:
+                                items.append({
+                                    'name': name[:50],
+                                    'quantity': qty,
+                                    'price': price,
+                                    'total': qty * price
+                                })
+                        
+                        elif ptype == 'with_qty' and len(match) == 3:
+                            qty = int(match[0])
+                            name = self._clean_name_improved(match[1])
+                            price = self._extract_price_improved(match[2])
+                            if price and price > 0 and name and len(name) > 2:
+                                items.append({
+                                    'name': name[:50],
+                                    'quantity': qty,
+                                    'price': price,
+                                    'total': qty * price
+                                })
+                        
+                        elif ptype == 'no_qty' and len(match) == 2:
+                            name = self._clean_name_improved(match[0])
+                            price = self._extract_price_improved(match[1])
+                            if price and price > 0 and name and len(name) > 3:
+                                if name.lower() not in skip_words:
+                                    items.append({
+                                        'name': name[:50],
+                                        'quantity': 1,
+                                        'price': price,
+                                        'total': price
+                                    })
+                        
+                        elif ptype == 'price_first' and len(match) == 2:
+                            price = self._extract_price_improved(match[0])
+                            name = self._clean_name_improved(match[1])
+                            if price and price > 0 and name and len(name) > 2:
+                                items.append({
+                                    'name': name[:50],
+                                    'quantity': 1,
+                                    'price': price,
+                                    'total': price
+                                })
+                        
+                        elif ptype == 'with_at' and len(match) == 2:
+                            name = self._clean_name_improved(match[0])
+                            price = self._extract_price_improved(match[1])
+                            if price and price > 0 and name and len(name) > 2:
+                                items.append({
+                                    'name': name[:50],
+                                    'quantity': 1,
+                                    'price': price,
+                                    'total': price
+                                })
+                    except:
+                        continue
+        
+        # Gabungkan item yang sama (quantity diakumulasi)
+        merged_items = {}
+        for item in items:
+            key = (item['name'].lower(), item['price'])
+            if key in merged_items:
+                merged_items[key]['quantity'] += item['quantity']
+                merged_items[key]['total'] = merged_items[key]['quantity'] * merged_items[key]['price']
+            else:
+                merged_items[key] = item.copy()
+        
+        return list(merged_items.values())
     
-    def _extract_price(self, price_str):
+    def _parse_items_from_raw(self, text):
+        """Fallback: parse langsung dari raw text"""
+        items = []
+        
+        # Cari semua pola "angka x teks angka"
+        pattern = re.compile(r'(\d+)\s*[xX]\s*([A-Za-z0-9\s]+?)\s*([\d.,]+)', re.IGNORECASE)
+        matches = pattern.findall(text)
+        
+        for match in matches:
+            try:
+                qty = int(match[0])
+                name = self._clean_name_improved(match[1])
+                price = self._extract_price_improved(match[2])
+                if price and price > 0 and name and len(name) > 2:
+                    items.append({
+                        'name': name[:50],
+                        'quantity': qty,
+                        'price': price,
+                        'total': qty * price
+                    })
+            except:
+                continue
+        
+        # Hapus duplikat
+        unique = []
+        seen = set()
+        for item in items:
+            key = (item['name'].lower(), item['price'])
+            if key not in seen:
+                seen.add(key)
+                unique.append(item)
+        
+        return unique
+    
+    def _clean_name_improved(self, name):
+        """Clean name tanpa menghilangkan angka penting"""
+        if not name:
+            return ""
+        # Hapus karakter aneh tapi pertahankan huruf, angka, dan spasi
+        name = re.sub(r'[^\w\s]', '', name)
+        name = re.sub(r'\s+', ' ', name).strip()
+        # Hapus angka di awal saja (bukan di tengah)
+        name = re.sub(r'^\d+\s*', '', name)
+        return name[:50]
+    
+    def _extract_price_improved(self, price_str):
         if not price_str:
             return None
+        
         price_str = str(price_str).strip()
         price_str = re.sub(r'[Rr]p\.?\s*', '', price_str)
-        price_str = price_str.replace(' ', '')
-        if ',' in price_str:
-            price_str = price_str.replace(',', '.')
-            parts = price_str.split('.')
-            if len(parts) > 2:
-                price_str = ''.join(parts[:-1]) + '.' + parts[-1]
+        price_str = re.sub(r'[^\d.,-]', '', price_str)
+        
+        # Handle format Indonesia
+        if '.' in price_str and ',' in price_str:
+            price_str = price_str.replace('.', '').replace(',', '.')
         elif '.' in price_str:
             parts = price_str.split('.')
             if len(parts) == 2 and len(parts[1]) == 3:
                 price_str = price_str.replace('.', '')
-            elif len(parts) == 2 and len(parts[1]) <= 2:
-                pass
+        elif ',' in price_str:
+            parts = price_str.split(',')
+            if len(parts) == 2 and len(parts[1]) == 3:
+                price_str = price_str.replace(',', '')
             else:
-                price_str = price_str.replace('.', '')
+                price_str = price_str.replace(',', '.')
+        
         price_str = re.sub(r'[^\d.]', '', price_str)
-        if price_str.endswith('.'):
-            price_str = price_str[:-1]
+        
         try:
             return float(price_str)
         except:
             return None
+    
+    def _extract_total_improved(self, text):
+        patterns = [
+            r'(?:GRAND TOTAL|Grand Total|TOTAL|Total)[\s:*]*([\d.,]+)',
+            r'Grand Totai?l?[\s:]*([\d.,]+)',
+            r'Amount Due[\s:]*([\d.,]+)',
+            r'([\d.,]+)\s*$',
+        ]
+        for pattern in patterns:
+            matches = re.findall(pattern, text, re.IGNORECASE)
+            if matches:
+                for match in reversed(matches):
+                    price = self._extract_price_improved(match)
+                    if price and price > 1000:
+                        return price
+        return None
+    
+    def _extract_subtotal_improved(self, text):
+        patterns = [
+            r'(?:SUB TOTAL|Sub Total|SUBTOTAL|Subtotal)[\s:]*([\d.,]+)',
+            r'Sub[\s-]?Total[\s:]*([\d.,]+)',
+        ]
+        for pattern in patterns:
+            match = re.search(pattern, text, re.IGNORECASE)
+            if match:
+                return self._extract_price_improved(match.group(1))
+        return None
+    
+    def _extract_tax_improved(self, text):
+        patterns = [
+            r'(?:PBI|PB1|PAJAK|TAX|PPN)[\s:]*([\d.,]+)',
+            r'Tax[\s:]*([\d.,]+)',
+        ]
+        for pattern in patterns:
+            match = re.search(pattern, text, re.IGNORECASE)
+            if match:
+                return self._extract_price_improved(match.group(1))
+        return None
+    
+    def _extract_cash_improved(self, text):
+        patterns = [
+            r'(?:CASH|Cash|TUNAI|Tunai)[\s:]*([\d.,]+)',
+            r'Bayar[\s:]*([\d.,]+)',
+        ]
+        for pattern in patterns:
+            match = re.search(pattern, text, re.IGNORECASE)
+            if match:
+                return self._extract_price_improved(match.group(1))
+        return None
+    
+    def _extract_change_improved(self, text):
+        patterns = [
+            r'(?:CHANGE|Change|KEMBALI|Kembali)[\s:]*([\d.,]+)',
+            r'Kembalian[\s:]*([\d.,]+)',
+        ]
+        for pattern in patterns:
+            match = re.search(pattern, text, re.IGNORECASE)
+            if match:
+                return self._extract_price_improved(match.group(1))
+        return None
+    
+    def _extract_discount_improved(self, text):
+        patterns = [
+            r'(?:DISCOUNT|Discount|DISKON|Diskon)[\s:]*([\d.,]+)',
+            r'Potongan[\s:]*([\d.,]+)',
+            r'-([\d.,]+)',
+        ]
+        for pattern in patterns:
+            match = re.search(pattern, text, re.IGNORECASE)
+            if match:
+                return self._extract_price_improved(match.group(1))
+        return None
     
     def process_image(self, image_path):
         extracted_data = self.extract_text(image_path)
@@ -329,205 +481,89 @@ class ReceiptExtractor:
         return extracted_data, parsed_data
 
 
-# PREPROCESSING ROBUST
-
-def deskew_image(image):
-    gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-    gray = cv2.bitwise_not(gray)
-    thresh = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY | cv2.THRESH_OTSU)[1]
-    edges = cv2.Canny(thresh, 50, 150, apertureSize=3)
-    lines = cv2.HoughLines(edges, 1, np.pi/180, 100)
-    if lines is None:
-        return image
-    angles = []
-    for line in lines:
-        rho, theta = line[0]
-        angle = theta * 180 / np.pi - 90
-        if -45 < angle < 45:
-            angles.append(angle)
-    if not angles:
-        return image
-    median_angle = np.median(angles)
-    if abs(median_angle) < 0.5:
-        return image
-    h, w = image.shape[:2]
-    center = (w // 2, h // 2)
-    rot_mat = cv2.getRotationMatrix2D(center, median_angle, 1.0)
-    rotated = cv2.warpAffine(image, rot_mat, (w, h), flags=cv2.INTER_LINEAR, borderMode=cv2.BORDER_REPLICATE)
-    return rotated
-
-def auto_invert_if_needed(image):
-    gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-    mean_intensity = np.mean(gray)
-    if mean_intensity < 127:
-        inverted = cv2.bitwise_not(image)
-        gray_inv = cv2.cvtColor(inverted, cv2.COLOR_BGR2GRAY)
-        if np.var(gray_inv) > np.var(gray):
-            return inverted
-    return image
-
-def sharpen_image(image, strength=1.5):
-    blurred = cv2.GaussianBlur(image, (0,0), 3.0)
-    sharpened = cv2.addWeighted(image, 1.0 + strength, blurred, -strength, 0)
-    return np.clip(sharpened, 0, 255).astype(np.uint8)
-
-def is_blurry(image, threshold=80):
-    gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-    return cv2.Laplacian(gray, cv2.CV_64F).var() < threshold
-
-def enhance_contrast_color(image):
-    lab = cv2.cvtColor(image, cv2.COLOR_BGR2LAB)
-    l, a, b = cv2.split(lab)
-    clahe = cv2.createCLAHE(clipLimit=3.0, tileGridSize=(8,8))
-    l_enh = clahe.apply(l)
-    enhanced_lab = cv2.merge((l_enh, a, b))
-    return cv2.cvtColor(enhanced_lab, cv2.COLOR_LAB2BGR)
-
-def denoise_image(image):
-    denoised = cv2.bilateralFilter(image, d=9, sigmaColor=75, sigmaSpace=75)
-    denoised = cv2.fastNlMeansDenoisingColored(denoised, None, h=10, hColor=10, templateWindowSize=7, searchWindowSize=21)
-    return denoised
-
-def upscale_if_small(image, min_size=1000):
-    h, w = image.shape[:2]
-    if max(h, w) < min_size:
-        scale = min_size / max(h, w)
-        new_w, new_h = int(w * scale), int(h * scale)
-        return cv2.resize(image, (new_w, new_h), interpolation=cv2.INTER_CUBIC)
-    return image
+# ============================================================================
+# PREPROCESS IMAGE
+# ============================================================================
 
 def preprocess_image(image_path, output_path=None):
+    """Preprocessing alternatif untuk struk"""
     img = cv2.imread(str(image_path))
     if img is None:
-        raise ValueError(f"Tidak bisa membaca gambar: {image_path}")
-    img = denoise_image(img)
-    img = upscale_if_small(img, min_size=1000)
-    img = deskew_image(img)
-    img = sharpen_image(img, strength=1.2 if is_blurry(img, 60) else 0.8)
-    img = enhance_contrast_color(img)
-    img = auto_invert_if_needed(img)
-    img = denoise_image(img)
+        raise ValueError(f"Cannot read image: {image_path}")
+    
+    # Resize
+    h, w = img.shape[:2]
+    if max(h, w) < 1000:
+        scale = 1400 / max(h, w)
+        new_w = int(w * scale)
+        new_h = int(h * scale)
+        img = cv2.resize(img, (new_w, new_h), interpolation=cv2.INTER_CUBIC)
+    
+    # Grayscale
+    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    
+    # CLAHE
+    clahe = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8, 8))
+    enhanced = clahe.apply(gray)
+    
+    # Denoise
+    denoised = cv2.fastNlMeansDenoising(enhanced, None, 10, 7, 21)
+    
+    # OTSU THRESHOLD (bukan adaptive) - lebih baik untuk teks hitam putih
+    _, binary = cv2.threshold(denoised, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
+    
+    # Invert jika perlu (teks putih di background hitam)
+    white_pixels = np.sum(binary == 255)
+    black_pixels = np.sum(binary == 0)
+    if white_pixels > black_pixels:
+        binary = cv2.bitwise_not(binary)
+    
     if output_path:
-        cv2.imwrite(str(output_path), img)
-    return img
+        cv2.imwrite(str(output_path), binary)
+    
+    return binary
 
 
-# FUNGSI PENDUKUNG UNTUK GROUPING BARIS 
-def group_into_lines(extracted_data, y_tolerance=20, x_tolerance=30):
-    
-    if not extracted_data:
-        return []
-    
-    # Ekstrak koordinat dan teks
-    items = []
-    for data in extracted_data:
-        bbox = data.get('bbox')
-        if bbox and len(bbox) >= 2:
-            y_center = (bbox[0][1] + bbox[2][1]) / 2
-            x_left = bbox[0][0]
-            x_right = bbox[2][0]
-        else:
-            y_center = 0
-            x_left = 0
-            x_right = 0
-        items.append({
-            'text': data['text'],
-            'y': y_center,
-            'x_left': x_left,
-            'x_right': x_right
-        })
-    
-    # Urutkan berdasarkan Y 
-    items.sort(key=lambda x: x['y'])
-    
-    # Fungsi untuk mendeteksi apakah teks kemungkinan harga 
-    def is_price(text):
-        # Bersihkan dari tanda baca
-        cleaned = re.sub(r'[Rp.,\s]', '', text, flags=re.IGNORECASE)
-        # Jika mengandung minimal 3 digit angka dan tidak banyak huruf, dianggap harga
-        if re.search(r'\d{3,}', cleaned):
-            huruf = re.sub(r'[\d]', '', cleaned)
-            if len(huruf) <= 3:
-                return True
-        return False
-    
-    lines_raw = []
-    current_line = []
-    last_y = None
-    for it in items:
-        if last_y is None or abs(it['y'] - last_y) <= y_tolerance:
-            current_line.append(it)
-        else:
-            current_line.sort(key=lambda x: x['x_left'])
-            lines_raw.append(current_line)
-            current_line = [it]
-        last_y = it['y']
-    if current_line:
-        current_line.sort(key=lambda x: x['x_left'])
-        lines_raw.append(current_line)
-    
-    merged_lines = []
-    i = 0
-    while i < len(lines_raw):
-        current = lines_raw[i]
-        has_price_curr = any(is_price(it['text']) for it in current)
-        
-        if i + 1 < len(lines_raw):
-            next_line = lines_raw[i+1]
-            has_price_next = any(is_price(it['text']) for it in next_line)
-            
-            if not has_price_curr and not has_price_next:
-                
-                curr_x_left = min(it['x_left'] for it in current)
-                curr_x_right = max(it['x_right'] for it in current)
-                next_x_left = min(it['x_left'] for it in next_line)
-                next_x_right = max(it['x_right'] for it in next_line)
-                
-                if (curr_x_left <= next_x_right + x_tolerance and 
-                    next_x_left <= curr_x_right + x_tolerance):
-                    
-                    combined_text = ' '.join([it['text'] for it in current] + [it['text'] for it in next_line])
-                    
-                    new_line = [{
-                        'text': combined_text,
-                        'y': (current[0]['y'] + next_line[0]['y']) / 2,
-                        'x_left': min(curr_x_left, next_x_left),
-                        'x_right': max(curr_x_right, next_x_right)
-                    }]
-                    merged_lines.append(new_line)
-                    i += 2
-                    continue
-        
-        merged_lines.append(current)
-        i += 1
-    
-    result = []
-    for line in merged_lines:
-        line.sort(key=lambda x: x['x_left'])
-        line_text = ' '.join([it['text'] for it in line])
-        result.append(line_text)
-    
-    return result
+def group_into_lines(extracted_data, y_tolerance=15, x_tolerance=50):
+    """Kompatibilitas"""
+    extractor = ReceiptExtractor()
+    return extractor._group_lines_advanced(extracted_data)
+
+
+def is_valid_image(image_path):
+    try:
+        img = cv2.imread(str(image_path))
+        if img is None:
+            return False, "Cannot read image"
+        h, w = img.shape[:2]
+        if h < 50 or w < 50:
+            return False, f"Image too small: {w}x{h}"
+        return True, "OK"
+    except Exception as e:
+        return False, str(e)
 
 
 if __name__ == "__main__":
-    print("=" * 50)
-    print("Testing Enhanced Receipt Parser")
-    print("=" * 50)
+    print("=" * 60)
+    print("🧪 TESTING UTILS.PY")
+    print("=" * 60)
+    
     extractor = ReceiptExtractor(lang='id')
+    
     test_lines = [
-        "1 BLACK PAPPER MEATBALL 15.000,00",
-        "1 GREAN TEA 10.000,00",
-        "2 ORIGINAL BREWED TEA 20.000,00",
-        "TOTAL 45.000,00"
+        "1 x AYAM BAKAR 55.000",
+        "NASI GORENG 25.000",
+        "2x ES TEH 10.000",
+        "KOPI @15.000",
     ]
-    test_data = [{'text': line, 'confidence': 0.95, 'bbox': []} for line in test_lines]
-    parsed = extractor.parse_receipt(test_data)
-    print(f"\n Parse Test Results:")
-    print(f"   Total: Rp {parsed['total']:,.0f}" if parsed['total'] else "   Total: Not detected")
-    print(f"   Items found: {len(parsed['items'])}")
-    if parsed['items']:
-        print("\n   Item Details:")
-        for item in parsed['items']:
-            print(f"      - {item['quantity']} x {item['name']} = Rp {item['total']:,.0f}")
-    print("\n utils.py ready to use!")
+    
+    print("\n📦 Testing item extraction:")
+    for line in test_lines:
+        items = extractor._parse_items_improved([line])
+        if items:
+            for item in items:
+                print(f"   '{line}' -> {item['quantity']} x {item['name']} = Rp {item['total']:,.0f}")
+        else:
+            print(f"   '{line}' -> NOT DETECTED")
+    
+    print("\n✅ utils.py ready!")

@@ -1,12 +1,36 @@
 {
   "filename": "receipt_00250.png",
   "folder": "train",
-  "processed_path": "data\\processed\\processed_train_receipt_00250.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00250.jpg",
   "original_path": "data\\raw\\train\\image\\receipt_00250.png",
-  "extracted_data": [],
+  "extracted_data": [
+    {
+      "text": "RTD Madu Aloevera 1 TBUn 15000 Sub Total embalian",
+      "confidence": 0.9488614127039909,
+      "bbox": []
+    },
+    {
+      "text": "15000 15000 15000",
+      "confidence": 0.9986229687929153,
+      "bbox": []
+    }
+  ],
   "parsed_data": {
-    "items": [],
-    "total": null,
+    "items": [
+      {
+        "name": "TBUn 15000 Sub Total embalian 15000 15000",
+        "quantity": 1,
+        "price": 15000.0,
+        "total": 15000.0
+      },
+      {
+        "name": "RTD Madu Aloevera 1 TBUn 15000 Sub Total embalian ",
+        "quantity": 1,
+        "price": 15000.0,
+        "total": 15000.0
+      }
+    ],
+    "total": 15000.0,
     "tax": null,
     "discount": null,
     "cash": null,
@@ -14,5 +38,5 @@
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T13:50:20.738147"
+  "timestamp": "2026-05-26T01:29:56.502193"
 }

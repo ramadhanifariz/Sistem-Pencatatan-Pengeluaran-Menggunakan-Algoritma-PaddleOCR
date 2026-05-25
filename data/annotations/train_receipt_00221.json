@@ -1,246 +1,28 @@
 {
   "filename": "receipt_00221.png",
   "folder": "train",
-  "processed_path": "data\\processed\\processed_train_receipt_00221.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00221.jpg",
   "original_path": "data\\raw\\train\\image\\receipt_00221.png",
   "extracted_data": [
     {
-      "text": "1 POTATO SAUSAGE BREAD",
-      "confidence": 0.9527177214622498,
-      "bbox": [
-        [
-          159.0,
-          593.0
-        ],
-        [
-          513.0,
-          593.0
-        ],
-        [
-          513.0,
-          629.0
-        ],
-        [
-          159.0,
-          629.0
-        ]
-      ]
+      "text": "POTATO SAUSAGE BREAD  OREO GREEN TEA SPREAD CARD WHITE CHOCO BANANA SPREAD TOTAL",
+      "confidence": 0.9956082366406918,
+      "bbox": []
     },
     {
-      "text": "9,000",
-      "confidence": 0.9963952898979187,
-      "bbox": [
-        [
-          641.0,
-          589.0
-        ],
-        [
-          740.0,
-          593.0
-        ],
-        [
-          739.0,
-          638.0
-        ],
-        [
-          639.0,
-          634.0
-        ]
-      ]
+      "text": "123,00 123,300",
+      "confidence": 0.973819226026535,
+      "bbox": []
     },
     {
-      "text": "1 OREO GREEN TEA SPREAD",
-      "confidence": 0.91350919008255,
-      "bbox": [
-        [
-          166.0,
-          634.0
-        ],
-        [
-          525.0,
-          634.0
-        ],
-        [
-          525.0,
-          667.0
-        ],
-        [
-          166.0,
-          667.0
-        ]
-      ]
-    },
-    {
-      "text": "'2,000",
-      "confidence": 0.9055106043815613,
-      "bbox": [
-        [
-          634.0,
-          632.0
-        ],
-        [
-          738.0,
-          632.0
-        ],
-        [
-          738.0,
-          675.0
-        ],
-        [
-          634.0,
-          675.0
-        ]
-      ]
-    },
-    {
-      "text": "1 WHITE CHOCO BANANA SPREAD",
-      "confidence": 0.9626753330230713,
-      "bbox": [
-        [
-          166.0,
-          672.0
-        ],
-        [
-          591.0,
-          672.0
-        ],
-        [
-          591.0,
-          709.0
-        ],
-        [
-          166.0,
-          709.0
-        ]
-      ]
-    },
-    {
-      "text": ";2,000",
-      "confidence": 0.9423369765281677,
-      "bbox": [
-        [
-          630.0,
-          670.0
-        ],
-        [
-          739.0,
-          674.0
-        ],
-        [
-          737.0,
-          717.0
-        ],
-        [
-          629.0,
-          714.0
-        ]
-      ]
-    },
-    {
-      "text": "TOTAL",
-      "confidence": 0.9992250204086304,
-      "bbox": [
-        [
-          185.0,
-          744.0
-        ],
-        [
-          352.0,
-          744.0
-        ],
-        [
-          352.0,
-          814.0
-        ],
-        [
-          185.0,
-          814.0
-        ]
-      ]
-    },
-    {
-      "text": "123,00",
-      "confidence": 0.9962821006774902,
-      "bbox": [
-        [
-          503.0,
-          745.0
-        ],
-        [
-          738.0,
-          750.0
-        ],
-        [
-          736.0,
-          823.0
-        ],
-        [
-          502.0,
-          818.0
-        ]
-      ]
-    },
-    {
-      "text": "CARD",
-      "confidence": 0.9995051622390747,
-      "bbox": [
-        [
-          182.0,
-          807.0
-        ],
-        [
-          329.0,
-          807.0
-        ],
-        [
-          329.0,
-          883.0
-        ],
-        [
-          182.0,
-          883.0
-        ]
-      ]
-    },
-    {
-      "text": "123,00",
-      "confidence": 0.9847829937934875,
-      "bbox": [
-        [
-          505.0,
-          807.0
-        ],
-        [
-          738.0,
-          812.0
-        ],
-        [
-          736.0,
-          889.0
-        ],
-        [
-          503.0,
-          884.0
-        ]
-      ]
+      "text": ";2,000 2,000 19,000",
+      "confidence": 0.965617373585701,
+      "bbox": []
     }
   ],
   "parsed_data": {
-    "items": [
-      {
-        "name": "POTATO SAUSAGE BREAD",
-        "quantity": 1,
-        "price": 9.0,
-        "total": 9.0
-      },
-      {
-        "name": "TOTAL",
-        "quantity": 0,
-        "price": 123.0,
-        "total": 0.0
-      }
-    ],
-    "total": 9.0,
+    "items": [],
+    "total": 19000.0,
     "tax": null,
     "discount": null,
     "cash": null,
@@ -248,5 +30,5 @@
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T13:45:39.645092"
+  "timestamp": "2026-05-26T01:28:45.201734"
 }

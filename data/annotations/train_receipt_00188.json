@@ -1,186 +1,48 @@
 {
   "filename": "receipt_00188.png",
   "folder": "train",
-  "processed_path": "data\\processed\\processed_train_receipt_00188.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00188.jpg",
   "original_path": "data\\raw\\train\\image\\receipt_00188.png",
   "extracted_data": [
     {
-      "text": "2.0",
-      "confidence": 0.5464427471160889,
-      "bbox": [
-        [
-          776.0,
-          930.0
-        ],
-        [
-          887.0,
-          930.0
-        ],
-        [
-          887.0,
-          976.0
-        ],
-        [
-          776.0,
-          976.0
-        ]
-      ]
+      "text": "mOKe BgeT + fCQ3",
+      "confidence": 0.6712422966957092,
+      "bbox": []
     },
     {
-      "text": "20.000",
-      "confidence": 0.7214708924293518,
-      "bbox": [
-        [
-          754.0,
-          1019.0
-        ],
-        [
-          882.0,
-          1025.0
-        ],
-        [
-          880.0,
-          1085.0
-        ],
-        [
-          752.0,
-          1079.0
-        ]
-      ]
+      "text": "TaOMIAHAO SubTota:",
+      "confidence": 0.5253933668136597,
+      "bbox": []
     },
     {
-      "text": "2.184",
-      "confidence": 0.584281325340271,
-      "bbox": [
-        [
-          772.0,
-          1028.0
-        ],
-        [
-          957.0,
-          1102.0
-        ],
-        [
-          917.0,
-          1202.0
-        ],
-        [
-          733.0,
-          1128.0
-        ]
-      ]
+      "text": "Chanc= :",
+      "confidence": 0.7138035893440247,
+      "bbox": []
     },
     {
-      "text": "ctal:",
-      "confidence": 0.9124919176101685,
-      "bbox": [
-        [
-          417.0,
-          1170.0
-        ],
-        [
-          570.0,
-          1170.0
-        ],
-        [
-          570.0,
-          1264.0
-        ],
-        [
-          417.0,
-          1264.0
-        ]
-      ]
+      "text": "PEE C3E",
+      "confidence": 0.4936560094356537,
+      "bbox": []
     },
     {
-      "text": "2,000",
-      "confidence": 0.9218305349349976,
-      "bbox": [
-        [
-          727.0,
-          1171.0
-        ],
-        [
-          902.0,
-          1177.0
-        ],
-        [
-          899.0,
-          1279.0
-        ],
-        [
-          724.0,
-          1273.0
-        ]
-      ]
+      "text": "21;318 2.182",
+      "confidence": 0.7178469300270081,
+      "bbox": []
     },
     {
-      "text": "25.00",
-      "confidence": 0.8030228614807129,
-      "bbox": [
-        [
-          773.0,
-          1260.0
-        ],
-        [
-          908.0,
-          1272.0
-        ],
-        [
-          901.0,
-          1346.0
-        ],
-        [
-          766.0,
-          1334.0
-        ]
-      ]
+      "text": "1it t",
+      "confidence": 0.44894975423812866,
+      "bbox": []
     },
     {
-      "text": "1.000",
-      "confidence": 0.8998487591743469,
-      "bbox": [
-        [
-          773.0,
-          1323.0
-        ],
-        [
-          887.0,
-          1317.0
-        ],
-        [
-          890.0,
-          1375.0
-        ],
-        [
-          776.0,
-          1381.0
-        ]
-      ]
+      "text": "W",
+      "confidence": 0.164348304271698,
+      "bbox": []
     }
   ],
   "parsed_data": {
-    "items": [
-      {
-        "name": "20.000",
-        "quantity": 1,
-        "price": 20000.0,
-        "total": 20000.0
-      },
-      {
-        "name": "2.184",
-        "quantity": 1,
-        "price": 2184.0,
-        "total": 2184.0
-      },
-      {
-        "name": "1.000",
-        "quantity": 1,
-        "price": 1000.0,
-        "total": 1000.0
-      }
-    ],
-    "total": 23184.0,
+    "items": [],
+    "total": null,
     "tax": null,
     "discount": null,
     "cash": null,
@@ -188,5 +50,5 @@
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T13:41:27.632183"
+  "timestamp": "2026-05-26T01:27:36.794634"
 }

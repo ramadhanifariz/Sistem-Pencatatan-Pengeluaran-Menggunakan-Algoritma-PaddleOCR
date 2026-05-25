@@ -1,30 +1,18 @@
 {
   "filename": "receipt_00029.png",
   "folder": "train",
-  "processed_path": "data\\processed\\processed_train_receipt_00029.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00029.jpg",
   "original_path": "data\\raw\\train\\image\\receipt_00029.png",
   "extracted_data": [
     {
-      "text": "1",
-      "confidence": 0.5377457737922668,
-      "bbox": [
-        [
-          508.0,
-          697.0
-        ],
-        [
-          509.0,
-          707.0
-        ],
-        [
-          514.0,
-          703.0
-        ],
-        [
-          503.0,
-          702.0
-        ]
-      ]
+      "text": "0N8 SHD 180 HSN8HD HE9808 SH5 n5IV",
+      "confidence": 0.5766336023807526,
+      "bbox": []
+    },
+    {
+      "text": "181,500.0 44,000.00",
+      "confidence": 0.9546276032924652,
+      "bbox": []
     }
   ],
   "parsed_data": {
@@ -37,5 +25,5 @@
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T13:18:20.778750"
+  "timestamp": "2026-05-26T01:21:54.847736"
 }

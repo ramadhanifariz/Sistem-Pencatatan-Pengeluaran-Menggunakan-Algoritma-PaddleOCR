@@ -1,86 +1,38 @@
 {
   "filename": "receipt_00011.png",
   "folder": "train",
-  "processed_path": "data\\processed\\processed_train_receipt_00011.jpg",
+  "processed_path": "data\\processed\\processed_receipt_00011.jpg",
   "original_path": "data\\raw\\train\\image\\receipt_00011.png",
   "extracted_data": [
     {
-      "text": "IEE",
-      "confidence": 0.5515137910842896,
-      "bbox": [
-        [
-          61.0,
-          440.0
-        ],
-        [
-          491.0,
-          440.0
-        ],
-        [
-          491.0,
-          701.0
-        ],
-        [
-          61.0,
-          701.0
-        ]
-      ]
+      "text": "* ++",
+      "confidence": 0.2925269901752472,
+      "bbox": []
     },
     {
-      "text": "90.107",
-      "confidence": 0.6952632069587708,
-      "bbox": [
-        [
-          548.0,
-          852.0
-        ],
-        [
-          802.0,
-          852.0
-        ],
-        [
-          802.0,
-          910.0
-        ],
-        [
-          548.0,
-          910.0
-        ]
-      ]
+      "text": "2",
+      "confidence": 0.2787867784500122,
+      "bbox": []
     },
     {
-      "text": "TOIA",
-      "confidence": 0.6810187697410583,
-      "bbox": [
-        [
-          124.0,
-          863.0
-        ],
-        [
-          319.0,
-          860.0
-        ],
-        [
-          320.0,
-          919.0
-        ],
-        [
-          125.0,
-          922.0
-        ]
-      ]
+      "text": "Nita Farar/Goreng Yeh Foci Avam Eahar N3si Futah Fajak Restoran IOTAL son surahe Ey",
+      "confidence": 0.44973745569586754,
+      "bbox": []
+    },
+    {
+      "text": "2",
+      "confidence": 0.3209789991378784,
+      "bbox": []
+    },
+    {
+      "text": "LOT0E2",
+      "confidence": 0.40070879459381104,
+      "bbox": []
     }
   ],
   "parsed_data": {
-    "items": [
-      {
-        "name": "IEE",
-        "quantity": 1,
-        "price": 90107.0,
-        "total": 90107.0
-      }
-    ],
-    "total": 90107.0,
+    "items": [],
+    "total": null,
     "tax": null,
     "discount": null,
     "cash": null,
@@ -88,5 +40,5 @@
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-04-30T13:15:37.929593"
+  "timestamp": "2026-05-26T01:21:16.712044"
 }
