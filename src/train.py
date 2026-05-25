@@ -14,29 +14,25 @@ import tempfile
 import os
 import sys
 
-load_dotenv()
 
 # ========== KONFIGURASI MLFLOW ==========
 PROJECT_ROOT = Path(__file__).parent.parent
-MLFLOW_DB_PATH = PROJECT_ROOT / "mlflow.db"
-MLFLOW_DB_URI = f"sqlite:///{MLFLOW_DB_PATH}"
-
-# Set tracking URI
-mlflow.set_tracking_uri(MLFLOW_DB_URI)
 
 # Set experiment
 mlflow.set_experiment("Receipt_OCR_Extraction")
 
-DATA_DIR = Path('data')
-ANNOTATIONS_DIR = DATA_DIR / 'annotations'
+load_dotenv()
 
-#dagshub.init(
-#   repro_name="Sistem-Pencatatan-Pengeluaran-Menggunakan-Algoritma-PaddleOCR",
-#   repro_owner="ramadhanifariz",
-#   mlflow="true"
-#)
+dagshub.init(
+  repo_name="Sistem-Pencatatan-Pengeluaran-Menggunakan-Algoritma-PaddleOCR",
+  repo_owner="ramadhanifariz",
+   mlflow="true"
+)
 
 print("TRACKING URI :", mlflow.get_tracking_uri())
+
+DATA_DIR = Path('data')
+ANNOTATIONS_DIR = DATA_DIR / 'annotations'
 
 def extract_features_and_target(data):
     """

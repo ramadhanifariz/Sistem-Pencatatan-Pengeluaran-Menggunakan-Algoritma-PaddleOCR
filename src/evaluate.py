@@ -25,8 +25,8 @@ RESULTS_DIR = Path('results')
 RESULTS_DIR.mkdir(exist_ok=True)
 
 dagshub.init(
-    repro_name="Sistem-Pencatatan-Pengeluaran-Menggunakan-Algoritma-PaddleOCR",
-    repro_owner="ramadhanifariz",
+    repo_name="Sistem-Pencatatan-Pengeluaran-Menggunakan-Algoritma-PaddleOCR",
+    repo_owner="ramadhanifariz",
     mlflow="true"
 )
 
