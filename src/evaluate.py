@@ -4,12 +4,18 @@ import numpy as np
 import pandas as pd
 from pathlib import Path
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
+from dotenv import load_dotenv
 import matplotlib.pyplot as plt
 import seaborn as sns
 import sys
+import dagshub
+import mlflow
 sys.path.append('src')
 from utils import ReceiptExtractor
 
+load_dotenv
+
+print(os.getenv("MLFLOW_TRACKING_USERNAME"))
 # Setup paths
 DATA_DIR = Path('data')
 ANNOTATIONS_DIR = DATA_DIR / 'annotations'
@@ -17,6 +23,15 @@ SPLITS_DIR = DATA_DIR / 'splits'
 MODELS_DIR = Path('models')
 RESULTS_DIR = Path('results')
 RESULTS_DIR.mkdir(exist_ok=True)
+
+dagshub.init(
+    repro_name="Sistem-Pencatatan-Pengeluaran-Menggunakan-Algoritma-PaddleOCR",
+    repro_owner="ramadhanifariz",
+    mlflow="true"
+)
+
+#print("TRACKING URI :", mlflow.get_tracking_uri())
+
 
 def load_test_data():
     """Load test data"""

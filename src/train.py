@@ -3,14 +3,18 @@ import numpy as np
 from pathlib import Path
 import pandas as pd
 import mlflow
+import dagshub
 import mlflow.sklearn
 from datetime import datetime
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 from sklearn.model_selection import train_test_split
+from dotenv import load_dotenv
 import tempfile
 import os
 import sys
+
+load_dotenv()
 
 # ========== KONFIGURASI MLFLOW ==========
 PROJECT_ROOT = Path(__file__).parent.parent
@@ -26,6 +30,13 @@ mlflow.set_experiment("Receipt_OCR_Extraction")
 DATA_DIR = Path('data')
 ANNOTATIONS_DIR = DATA_DIR / 'annotations'
 
+#dagshub.init(
+#   repro_name="Sistem-Pencatatan-Pengeluaran-Menggunakan-Algoritma-PaddleOCR",
+#   repro_owner="ramadhanifariz",
+#   mlflow="true"
+#)
+
+print("TRACKING URI :", mlflow.get_tracking_uri())
 
 def extract_features_and_target(data):
     """
