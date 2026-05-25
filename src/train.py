@@ -15,12 +15,6 @@ import os
 import sys
 
 
-# ========== KONFIGURASI MLFLOW ==========
-PROJECT_ROOT = Path(__file__).parent.parent
-
-# Set experiment
-mlflow.set_experiment("Receipt_OCR_Extraction")
-
 load_dotenv()
 
 dagshub.init(
@@ -29,8 +23,13 @@ dagshub.init(
    mlflow="true"
 )
 
+# Set experiment
+mlflow.set_experiment("Receipt_OCR_Extraction")
+
 print("TRACKING URI :", mlflow.get_tracking_uri())
 
+# ========== KONFIGURASI MLFLOW ==========
+PROJECT_ROOT = Path(__file__).parent.parent
 DATA_DIR = Path('data')
 ANNOTATIONS_DIR = DATA_DIR / 'annotations'
 
