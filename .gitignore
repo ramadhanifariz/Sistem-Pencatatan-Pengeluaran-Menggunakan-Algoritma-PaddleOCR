@@ -1,7 +1,24 @@
+# --- File Biner / Database ---
+*.db
+*.pkl
+*.pyc
+__pycache__/
+
+# --- File Lingkungan & Konfigurasi ---
 .env
 mlruns/
 mlflow.db
-__pycache__/
-*.pyc
+
+# --- Data & Model (jika ada) ---
+data/raw/
 data/processed/
 data/annotations/
+models/
+*.csv
+*.xlsx
+
+# --- Lainnya ---
+.dvc/
+.dvcignore
+dvc.lock
+dvc.yaml
