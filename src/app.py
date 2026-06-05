@@ -1,6 +1,5 @@
 """
-app.py - Deployment dengan MLflow Model Registry
-Sesuai materi dosen halaman 46-52
+app.py - FastAPI Deployment dengan MLflow Model Registry
 """
 
 import os
@@ -18,16 +17,22 @@ import uvicorn
 # Load environment variables
 load_dotenv()
 
-# ========== KONFIGURASI (Sesuai halaman 48) ==========
+# ========== KONFIGURASI ==========
 MODEL_NAME = os.getenv("MODEL_NAME", "Receipt_Total_Predictor")
 MODEL_ALIAS = os.getenv("MODEL_ALIAS", "champion")
-MLFLOW_TRACKING_URI = os.getenv("MLFLOW_TRACKING_URI", "http://localhost:8080")
+MLFLOW_TRACKING_URI = os.getenv("MLFLOW_TRACKING_URI")
+
+# Jika tidak ada tracking URI, coba gunakan DagsHub default
+if not MLFLOW_TRACKING_URI:
+    MLFLOW_TRACKING_URI = "https://dagshub.com/ramadhanifariz/Sistem-Pencatatan-Pengeluaran-Menggunakan-Algoritma-PaddleOCR.mlflow"
 
 # Set MLflow tracking
 mlflow.set_tracking_uri(MLFLOW_TRACKING_URI)
 
-# Load model from registry by alias (Sesuai halaman 46)
+# Load model from registry by alias
 print(f"🔄 Loading model: {MODEL_NAME} (alias: {MODEL_ALIAS})")
+print(f"🔗 Tracking URI: {MLFLOW_TRACKING_URI}")
+
 try:
     model = mlflow.pyfunc.load_model(f"models:/{MODEL_NAME}@{MODEL_ALIAS}")
     print("✅ Model loaded successfully")
@@ -70,7 +75,7 @@ def preprocess_image(image_bytes):
 
 
 def extract_features(ocr_result):
-    """Extract features from OCR result for model prediction"""
+    """Extract features from OCR result"""
     if not ocr_result or not ocr_result[0]:
         return None
     
@@ -97,7 +102,7 @@ def extract_features(ocr_result):
     return np.array([[num_items, has_tax, has_discount, avg_confidence]])
 
 
-# HTML Template (UI sederhana)
+# HTML Template
 HTML_TEMPLATE = """
 <!DOCTYPE html>
 <html>

@@ -81,9 +81,7 @@ def validate_image(img_path):
 
 
 def process_single_image(img_path, extractor):
-    """
-    Proses satu gambar dengan validasi terlebih dahulu
-    """
+    
     # Konversi ke Path jika perlu
     if isinstance(img_path, str):
         img_path = Path(img_path)
@@ -91,7 +89,7 @@ def process_single_image(img_path, extractor):
     # ========== VALIDASI GAMBAR ==========
     is_valid, msg = validate_image(img_path)
     if not is_valid:
-        print(f"      ⚠️ {msg}")
+        print(f"       {msg}")
         return [], {}, None
     
     try:
@@ -120,10 +118,10 @@ def process_single_image(img_path, extractor):
         
         for skip_error in skip_errors:
             if skip_error.lower() in error_msg.lower():
-                print(f"      ⚠️ Skip - {skip_error}")
+                print(f"       Skip - {skip_error}")
                 return [], {}, None
         
-        print(f"      ❌ Error: {error_msg}")
+        print(f"       Error: {error_msg}")
         return [], {}, None
 
 
@@ -153,10 +151,10 @@ def process_image_list(image_paths, folder_name, extractor, max_images=None):
         )
         
         if extracted_data and len(extracted_data) > 0:
-            print(f"      ✅ {len(extracted_data)} text blocks extracted")
+            print(f"       {len(extracted_data)} text blocks extracted")
             
             # ========== TAMPILKAN SEMUA TEKS (TIDAK DIBATASI) ==========
-            print(f"      📝 ALL TEXT DETECTED ({len(extracted_data)} blocks):")
+            print(f"       ALL TEXT DETECTED ({len(extracted_data)} blocks):")
             for i, item in enumerate(extracted_data):
                 text_preview = item['text'][:60] + '...' if len(item['text']) > 60 else item['text']
                 print(f"         {i+1}. {text_preview} (conf: {item['confidence']:.2%})")
@@ -180,19 +178,19 @@ def process_image_list(image_paths, folder_name, extractor, max_images=None):
             
             total_val = parsed_data.get('total')
             if total_val:
-                print(f"      💰 Total: Rp {total_val:,.0f}")
+                print(f"       Total: Rp {total_val:,.0f}")
             else:
-                print(f"      ⚠️ Total not detected")
+                print(f"       Total not detected")
         
         # Bersihkan memory setiap 10 gambar
         if idx % 10 == 0:
             free_memory()
             if HAS_PSUTIL:
-                print(f"      💾 Memory: {get_memory_usage():.1f} MB")
+                print(f"       Memory: {get_memory_usage():.1f} MB")
     
     # Report failed images
     if failed_images:
-        print(f"\n   ⚠️ {len(failed_images)} gambar gagal diproses:")
+        print(f"\n    {len(failed_images)} gambar gagal diproses:")
         for fname in failed_images[:10]:
             print(f"      - {fname}")
         if len(failed_images) > 10:
@@ -206,17 +204,17 @@ def run_preprocess(max_train=50, max_test=20):
     Menjalankan pipeline preprocessing
     """
     print("=" * 60)
-    print("🚀 PREPROCESSING & OCR EXTRACTION")
+    print(" PREPROCESSING & OCR EXTRACTION")
     print("=" * 60)
     
     if HAS_PSUTIL:
-        print(f"\n💻 Memory awal: {get_memory_usage():.1f} MB")
+        print(f"\n Memory awal: {get_memory_usage():.1f} MB")
     
     # Load daftar gambar
     images_list_path = DATA_DIR / 'splits' / 'images_list.json'
     
     if not images_list_path.exists():
-        print("\n❌ images_list.json tidak ditemukan!")
+        print("\n images_list.json tidak ditemukan!")
         print("   Jalankan 'python src/prepare.py' terlebih dahulu")
         return
     
@@ -227,13 +225,13 @@ def run_preprocess(max_train=50, max_test=20):
     train_paths = [Path(p) for p in data_info.get('train', [])]
     test_paths = [Path(p) for p in data_info.get('test', [])]
     
-    print(f"\n📊 Data yang akan diproses:")
+    print(f"\n Data yang akan diproses:")
     print(f"   Training: {min(len(train_paths), max_train)}/{len(train_paths)} gambar")
     print(f"   Testing : {min(len(test_paths), max_test)}/{len(test_paths)} gambar")
     
     # Inisialisasi OCR extractor
-    print("\n🔄 Initializing PaddleOCR...")
-    print("   ⏳ Ini mungkin memakan waktu 10-30 detik...")
+    print("\n Initializing PaddleOCR...")
+    print("    Ini mungkin memakan waktu 10-30 detik...")
     
     try:
         extractor = ReceiptExtractor(lang='id')
@@ -244,18 +242,18 @@ def run_preprocess(max_train=50, max_test=20):
     
     # Proses training images
     print("\n" + "=" * 40)
-    print("📸 Processing TRAINING images...")
+    print(" Processing TRAINING images...")
     print("=" * 40)
     train_data = process_image_list(train_paths, 'train', extractor, max_train)
     
     # Bersihkan memory
     free_memory()
     if HAS_PSUTIL:
-        print(f"\n💾 Memory setelah training: {get_memory_usage():.1f} MB")
+        print(f"\n Memory setelah training: {get_memory_usage():.1f} MB")
     
     # Proses test images
     print("\n" + "=" * 40)
-    print("📸 Processing TESTING images...")
+    print(" Processing TESTING images...")
     print("=" * 40)
     test_data = process_image_list(test_paths, 'test', extractor, max_test)
     
@@ -275,16 +273,16 @@ def run_preprocess(max_train=50, max_test=20):
         json.dump(split_info, f, indent=2)
     
     print("\n" + "=" * 60)
-    print("✅ PREPROCESSING COMPLETE!")
+    print(" PREPROCESSING COMPLETE!")
     print("=" * 60)
     print(f"   Training: {len(train_data)} images processed")
     print(f"   Testing : {len(test_data)} images processed")
-    print(f"\n📁 Hasil disimpan di:")
+    print(f"\n Hasil disimpan di:")
     print(f"   - Annotations: {ANNOTATIONS_DIR}")
     print(f"   - Split info: {SPLITS_DIR / 'data_splits.json'}")
     
     if HAS_PSUTIL:
-        print(f"\n💾 Memory akhir: {get_memory_usage():.1f} MB")
+        print(f"\n Memory akhir: {get_memory_usage():.1f} MB")
 
 
 if __name__ == "__main__":

@@ -8,23 +8,22 @@ from paddleocr import PaddleOCR
 class ReceiptExtractor:
    
     def __init__(self, lang='id', use_gpu=False):
-        print(f"🔄 Initializing PaddleOCR with language: {lang}")
+        print(f" Initializing PaddleOCR with language: {lang}")
         
         self.ocr = PaddleOCR(
             use_angle_cls=True,
             lang=lang,
             show_log=False,
-            # DETECTION - lebih agresif
-            det_db_thresh=0.1,              # LEBIH RENDAH (dari 0.2)
-            det_db_box_thresh=0.1,          # LEBIH RENDAH
-            det_db_unclip_ratio=1.5,        # LEBIH KECIL (dari 2.5)
-            # RECOGNITION
+            det_limit_side_len=2500,
+            det_db_thresh=0.3,              
+            det_db_box_thresh=0.5,          
+            det_db_unclip_ratio=1.2,         
             rec_batch_num=6,
-            drop_score=0.1,                 # LEBIH RENDAH (dari 0.2)
+            drop_score=0.1,                 
             max_text_length=50,
             use_space_char=True,
         )
-        print("✅ PaddleOCR initialized")
+        print(" PaddleOCR initialized")
     
     def extract_text(self, image_path):
         try:
@@ -43,12 +42,10 @@ class ReceiptExtractor:
                             'bbox': line[0] if len(line) > 0 else []
                         })
             
-            # TAMBAHKAN: Gabungkan teks yang berdekatan
-            extracted_data = self._merge_nearby_texts(extracted_data, distance_threshold=30)
             
             return extracted_data
         except Exception as e:
-            print(f"❌ OCR Error: {str(e)[:100]}")
+            print(f" OCR Error: {str(e)[:100]}")
             return []
     
     def parse_receipt(self, extracted_data):
@@ -82,12 +79,7 @@ class ReceiptExtractor:
         
         return receipt_data
     
-    def _group_lines_advanced(self, extracted_data, y_tolerance=25, x_tolerance=30):
-        """
-        Mengelompokkan teks per baris dengan tolerance yang lebih besar
-        y_tolerance: toleransi perbedaan Y (tinggi) untuk dianggap satu baris
-        x_tolerance: toleransi perbedaan X (jarak) untuk menggabungkan teks dalam satu baris
-        """
+    def _group_lines_advanced(self, extracted_data, y_tolerance=20, x_tolerance=200):
         if not extracted_data:
             return []
         
@@ -116,7 +108,6 @@ class ReceiptExtractor:
         if not items:
             return []
         
-        # Urutkan berdasarkan Y (dari atas ke bawah)
         items.sort(key=lambda x: x['y'])
         
         # ========== KELOMPOKKAN BERDASARKAN Y ==========
@@ -150,11 +141,10 @@ class ReceiptExtractor:
                 if not text:
                     continue
                 
-                # Jika ada jarak terlalu jauh dengan teks sebelumnya, tambah spasi
                 if previous_x_right is not None:
                     gap = item['x_left'] - previous_x_right
                     if gap > x_tolerance:
-                        combined.append(' ')  # Tambah spasi untuk pemisah
+                        combined.append(' ')  
                 
                 combined.append(text)
                 previous_x_right = item['x_right']
@@ -167,9 +157,7 @@ class ReceiptExtractor:
         
         return result
     def _merge_nearby_texts(self, extracted_data, distance_threshold=50):
-        """
-        Menggabungkan teks yang berdekatan (OCR sering memecah kata)
-        """
+        
         if not extracted_data:
             return extracted_data
         
@@ -216,7 +204,7 @@ class ReceiptExtractor:
         return merged
 
     def _parse_items_improved(self, lines):
-        """Improved item parsing dengan lebih banyak pattern"""
+        
         items = []
         
         # Kata-kata yang harus di-skip
@@ -486,46 +474,29 @@ class ReceiptExtractor:
 # ============================================================================
 
 def preprocess_image(image_path, output_path=None):
-    """Preprocessing alternatif untuk struk"""
     img = cv2.imread(str(image_path))
     if img is None:
         raise ValueError(f"Cannot read image: {image_path}")
-    
-    # Resize
+
+    # Kembalikan ke rasio normal (tanpa manipulasi tinggi)
     h, w = img.shape[:2]
-    if max(h, w) < 1000:
-        scale = 1400 / max(h, w)
+    if w < 1000:
+        scale = 1000 / w
         new_w = int(w * scale)
         new_h = int(h * scale)
         img = cv2.resize(img, (new_w, new_h), interpolation=cv2.INTER_CUBIC)
-    
-    # Grayscale
+
+    # Grayscale bersih
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-    
-    # CLAHE
-    clahe = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8, 8))
-    enhanced = clahe.apply(gray)
-    
-    # Denoise
-    denoised = cv2.fastNlMeansDenoising(enhanced, None, 10, 7, 21)
-    
-    # OTSU THRESHOLD (bukan adaptive) - lebih baik untuk teks hitam putih
-    _, binary = cv2.threshold(denoised, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
-    
-    # Invert jika perlu (teks putih di background hitam)
-    white_pixels = np.sum(binary == 255)
-    black_pixels = np.sum(binary == 0)
-    if white_pixels > black_pixels:
-        binary = cv2.bitwise_not(binary)
-    
+
     if output_path:
-        cv2.imwrite(str(output_path), binary)
-    
-    return binary
+        cv2.imwrite(str(output_path), gray)
+
+    return gray
 
 
 def group_into_lines(extracted_data, y_tolerance=15, x_tolerance=50):
-    """Kompatibilitas"""
+    
     extractor = ReceiptExtractor()
     return extractor._group_lines_advanced(extracted_data)
 
@@ -545,7 +516,7 @@ def is_valid_image(image_path):
 
 if __name__ == "__main__":
     print("=" * 60)
-    print("🧪 TESTING UTILS.PY")
+    print(" TESTING UTILS.PY")
     print("=" * 60)
     
     extractor = ReceiptExtractor(lang='id')
@@ -557,7 +528,7 @@ if __name__ == "__main__":
         "KOPI @15.000",
     ]
     
-    print("\n📦 Testing item extraction:")
+    print("\n Testing item extraction:")
     for line in test_lines:
         items = extractor._parse_items_improved([line])
         if items:
@@ -566,4 +537,4 @@ if __name__ == "__main__":
         else:
             print(f"   '{line}' -> NOT DETECTED")
     
-    print("\n✅ utils.py ready!")
+    print("\n utils.py ready!")

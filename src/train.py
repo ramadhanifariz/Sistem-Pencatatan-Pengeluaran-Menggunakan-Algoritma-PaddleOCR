@@ -17,6 +17,9 @@ import sys
 
 load_dotenv()
 
+if os.getenv("MLFLOW_TRACKING_URI"):
+    mlflow.set_tracking_uri(os.getenv("MLFLOW_TRACKING_URI"))
+    
 dagshub.init(
   repo_name="Sistem-Pencatatan-Pengeluaran-Menggunakan-Algoritma-PaddleOCR",
   repo_owner="ramadhanifariz",
@@ -73,7 +76,7 @@ def load_annotations():
             with open(ann_file, 'r', encoding='utf-8') as f:
                 data.append(json.load(f))
         except Exception as e:
-            print(f"⚠️ Error loading {ann_file}: {e}")
+            print(f" Error loading {ann_file}: {e}")
     
     return data
 
@@ -83,13 +86,13 @@ def evaluate_ocr_accuracy():
     Evaluasi akurasi ekstraksi OCR
     """
     print("=" * 60)
-    print("📊 EVALUASI AKURASI EKSTRAKSI OCR")
+    print(" EVALUASI AKURASI EKSTRAKSI OCR")
     print("=" * 60)
     
     all_annotations = list(ANNOTATIONS_DIR.glob('*.json'))
     
     if not all_annotations:
-        print("❌ Tidak ada file anotasi!")
+        print(" Tidak ada file anotasi!")
         return None
     
     results = []
@@ -120,7 +123,7 @@ def evaluate_ocr_accuracy():
     
     df = pd.DataFrame(results)
     
-    print("\n📈 STATISTIK EKSTRAKSI OCR:")
+    print("\n STATISTIK EKSTRAKSI OCR:")
     print("-" * 40)
     print(f"   Total gambar diproses: {len(df)}")
     print(f"   Rata-rata item terdeteksi: {df['num_items_detected'].mean():.1f}")
@@ -137,7 +140,7 @@ def log_ocr_evaluation_to_mlflow(df_results):
     Log hasil evaluasi OCR ke MLflow
     """
     if df_results is None or df_results.empty:
-        print("⚠️ Tidak ada data evaluasi")
+        print(" Tidak ada data evaluasi")
         return
     
     with mlflow.start_run(run_name="OCR_Evaluation") as run:
@@ -162,7 +165,7 @@ def log_ocr_evaluation_to_mlflow(df_results):
         
         for key, value in metrics.items():
             mlflow.log_metric(key, value)
-            print(f"   📈 {key}: {value:.4f}")
+            print(f"    {key}: {value:.4f}")
         
         # Log artifacts - menggunakan path biasa (bukan tempfile)
         artifact_dir = Path("mlflow_artifacts")
@@ -173,7 +176,7 @@ def log_ocr_evaluation_to_mlflow(df_results):
         df_results.to_csv(summary_path, index=False)
         mlflow.log_artifact(str(summary_path), artifact_path="evaluation")
         
-        print(f"\n✅ OCR Evaluation logged to MLflow")
+        print(f"\n OCR Evaluation logged to MLflow")
         print(f"   Run ID: {run.info.run_id}")
 
 
@@ -182,22 +185,22 @@ def train_and_track_model():
     Training model dengan MLflow tracking
     """
     print("=" * 60)
-    print("🚀 TRAINING MODEL DENGAN MLflow TRACKING")
+    print(" TRAINING MODEL DENGAN MLflow TRACKING")
     print("=" * 60)
     
     # Load data
     data = load_annotations()
     if len(data) == 0:
-        print("❌ Tidak ada data anotasi!")
+        print(" Tidak ada data anotasi!")
         return None
     
     # Extract features
     X, y = extract_features_and_target(data)
     if len(X) == 0:
-        print("❌ Tidak ada data valid untuk training!")
+        print(" Tidak ada data valid untuk training!")
         return None
     
-    print(f"\n📊 Data shape: X={X.shape}, y={y.shape}")
+    print(f"\n Data shape: X={X.shape}, y={y.shape}")
     
     # Split data
     X_train, X_test, y_train, y_test = train_test_split(
@@ -238,7 +241,7 @@ def train_and_track_model():
             "test_r2": r2
         })
         
-        print(f"\n📈 Model Performance on Test Set:")
+        print(f"\n Model Performance on Test Set:")
         print(f"   MAE : Rp {mae:,.0f}")
         print(f"   RMSE: Rp {rmse:,.0f}")
         print(f"   R²  : {r2:.4f}")
@@ -265,9 +268,9 @@ def train_and_track_model():
         model_uri = f"runs:/{run.info.run_id}/random_forest_model"
         try:
             mlflow.register_model(model_uri, "Receipt_Total_Predictor")
-            print(f"\n✅ Model registered to Model Registry: 'Receipt_Total_Predictor'")
+            print(f"\n Model registered to Model Registry: 'Receipt_Total_Predictor'")
         except Exception as e:
-            print(f"\n⚠️ Model registration failed (maybe already exists): {e}")
+            print(f"\n Model registration failed (maybe already exists): {e}")
         
         print(f"   Run ID: {run.info.run_id}")
         
@@ -276,25 +279,25 @@ def train_and_track_model():
 
 if __name__ == "__main__":
     print("\n" + "=" * 60)
-    print("📊 MLflow EXPERIMENT TRACKING (Sesuai Materi Dosen)")
+    print(" MLflow EXPERIMENT TRACKING (Sesuai Materi Dosen)")
     print("=" * 60)
     
     # Step 1: Evaluasi OCR
-    print("\n📋 STEP 1: Evaluasi Akurasi OCR")
+    print("\n STEP 1: Evaluasi Akurasi OCR")
     df_results = evaluate_ocr_accuracy()
     
     if df_results is not None and len(df_results) > 0:
         # Step 2: Log OCR evaluation ke MLflow
-        print("\n📋 STEP 2: Logging OCR Evaluation to MLflow")
+        print("\n STEP 2: Logging OCR Evaluation to MLflow")
         log_ocr_evaluation_to_mlflow(df_results)
     
     # Step 3: Train model dengan MLflow tracking
-    print("\n📋 STEP 3: Training Model dengan MLflow Tracking")
+    print("\n STEP 3: Training Model dengan MLflow Tracking")
     train_and_track_model()
     
     print("\n" + "=" * 60)
-    print("✅ SEMUA PROSES SELESAI!")
+    print(" PROSES SELESAI!")
     print("=" * 60)
-    print("\n💡 Untuk melihat dashboard MLflow, jalankan di terminal:")
+    print("\n Untuk melihat dashboard MLflow, jalankan di terminal:")
     print(f"   mlflow server --port 5000")
-    print(f"   Kemudian buka: http://localhost:5000")
+    print(f"   Kemudian buka: http://localhost:5001")

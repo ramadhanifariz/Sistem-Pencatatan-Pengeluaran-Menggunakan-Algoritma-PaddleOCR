@@ -904,9 +904,9 @@
     "data\\annotations\\test_receipt_00099.json"
   ],
   "stats": {
-    "train_count": 788,
-    "test_count": 51,
-    "total": 839
+    "train_count": 800,
+    "test_count": 100,
+    "total": 900
   },
-  "timestamp": "2026-05-26T01:53:05.877259"
+  "timestamp": "2026-06-05T13:39:43.841236"
 }

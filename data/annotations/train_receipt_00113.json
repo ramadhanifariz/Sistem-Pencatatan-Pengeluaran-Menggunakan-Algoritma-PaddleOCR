@@ -5,40 +5,110 @@
   "original_path": "data\\raw\\train\\image\\receipt_00113.png",
   "extracted_data": [
     {
-      "text": "CASH ICEO",
-      "confidence": 0.9355776906013489,
-      "bbox": []
+      "text": "22.000",
+      "confidence": 0.9363078474998474,
+      "bbox": [
+        [
+          626.0,
+          974.0
+        ],
+        [
+          830.0,
+          979.0
+        ],
+        [
+          829.0,
+          1020.0
+        ],
+        [
+          625.0,
+          1015.0
+        ]
+      ]
     },
     {
-      "text": "C M",
-      "confidence": 0.9454131126403809,
-      "bbox": []
+      "text": "ICEO CM",
+      "confidence": 0.8965387344360352,
+      "bbox": [
+        [
+          91.0,
+          991.0
+        ],
+        [
+          304.0,
+          982.0
+        ],
+        [
+          306.0,
+          1025.0
+        ],
+        [
+          93.0,
+          1034.0
+        ]
+      ]
     },
     {
       "text": "22.000",
-      "confidence": 0.7493969798088074,
-      "bbox": []
+      "confidence": 0.6732673645019531,
+      "bbox": [
+        [
+          481.0,
+          1027.0
+        ],
+        [
+          823.0,
+          1037.0
+        ],
+        [
+          822.0,
+          1078.0
+        ],
+        [
+          480.0,
+          1069.0
+        ]
+      ]
     },
     {
-      "text": "-22.000",
-      "confidence": 0.9335111975669861,
-      "bbox": []
-    },
-    {
-      "text": ".",
-      "confidence": 0.25409358739852905,
-      "bbox": []
+      "text": "CASH",
+      "confidence": 0.9923442006111145,
+      "bbox": [
+        [
+          85.0,
+          1050.0
+        ],
+        [
+          211.0,
+          1044.0
+        ],
+        [
+          213.0,
+          1087.0
+        ],
+        [
+          87.0,
+          1093.0
+        ]
+      ]
     }
   ],
   "parsed_data": {
-    "items": [],
-    "total": null,
+    "items": [
+      {
+        "name": "ICEO CM",
+        "quantity": 1,
+        "price": 22000.0,
+        "total": 22000.0
+      }
+    ],
+    "total": 22000.0,
     "tax": null,
-    "discount": 22000.0,
-    "cash": null,
+    "discount": null,
+    "cash": 22000.0,
     "change": null,
     "subtotal": null,
     "service_charge": null
   },
-  "timestamp": "2026-05-26T01:24:37.030072"
+  "timestamp": "2026-06-05T13:07:35.393799"
 }
